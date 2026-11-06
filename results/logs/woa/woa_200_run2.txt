@@ -1,0 +1,790 @@
+﻿Starting WOA_TaskScheduling...
+Initialising...
+Dataset loaded: dataset/GoCJ_Dataset_200.txt (200 jobs available)
+
+========== CONFIGURATION ==========
+Datacenters : 1
+Hosts       : 10 (5 Class A + 5 Class B)
+VMs         : 20
+Cloudlets   : 200
+Algorithm   : WOA (Whale Optimization Algorithm)
+Parameters  : whales=30, iterations=100, b=1.0
+Run / Seed  : 2 / 2
+Estimated makespan             : 671.3333 s
+Fitness (makespan + tie-break) : 671.5447
+Scheduling time              : 28.8132 ms
+
+VM assignment distribution:
+VM 0 -> 0 cloudlets
+VM 1 -> 0 cloudlets
+VM 2 -> 2 cloudlets
+VM 3 -> 2 cloudlets
+VM 4 -> 5 cloudlets
+VM 5 -> 4 cloudlets
+VM 6 -> 8 cloudlets
+VM 7 -> 12 cloudlets
+VM 8 -> 9 cloudlets
+VM 9 -> 13 cloudlets
+VM 10 -> 10 cloudlets
+VM 11 -> 11 cloudlets
+VM 12 -> 13 cloudlets
+VM 13 -> 12 cloudlets
+VM 14 -> 12 cloudlets
+VM 15 -> 14 cloudlets
+VM 16 -> 11 cloudlets
+VM 17 -> 10 cloudlets
+VM 18 -> 19 cloudlets
+VM 19 -> 33 cloudlets
+
+First 20 WOA assignments:
+Cloudlet 0 -> VM 9
+Cloudlet 1 -> VM 12
+Cloudlet 2 -> VM 15
+Cloudlet 3 -> VM 9
+Cloudlet 4 -> VM 6
+Cloudlet 5 -> VM 19
+Cloudlet 6 -> VM 19
+Cloudlet 7 -> VM 9
+Cloudlet 8 -> VM 14
+Cloudlet 9 -> VM 9
+Cloudlet 10 -> VM 10
+Cloudlet 11 -> VM 18
+Cloudlet 12 -> VM 19
+Cloudlet 13 -> VM 19
+Cloudlet 14 -> VM 7
+Cloudlet 15 -> VM 15
+Cloudlet 16 -> VM 9
+Cloudlet 17 -> VM 2
+Cloudlet 18 -> VM 7
+Cloudlet 19 -> VM 13
+Starting CloudSim version 7.0
+0.0: Datacenter_0 is starting...
+0.0: WOA_Broker is starting...
+Entities started.
+0.0: WOA_Broker: Cloud Resource List received with 1 datacenter(s)
+0.0: WOA_Broker: Trying to Create Vm #0 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #1 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #2 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #3 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #4 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #5 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #6 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #7 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #8 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #9 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #10 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #11 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #12 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #13 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #14 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #15 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #16 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #17 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #18 in Datacenter_0
+0.0: WOA_Broker: Trying to Create Vm #19 in Datacenter_0
+0.0: Datacenter_0.guestAllocator: Vm #0 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #1 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #2 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #3 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #4 has been allocated to Host #9
+0.0: Datacenter_0.guestAllocator: Vm #5 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #6 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #7 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #8 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #9 has been allocated to Host #9
+0.0: Datacenter_0.guestAllocator: Vm #10 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #11 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #12 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #13 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #14 has been allocated to Host #9
+0.0: Datacenter_0.guestAllocator: Vm #15 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #16 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #17 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #18 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #19 has been allocated to Host #9
+0.01: WOA_Broker: Vm #0 has been created in Datacenter #2, Host #5
+0.01: WOA_Broker: Vm #1 has been created in Datacenter #2, Host #6
+0.01: WOA_Broker: Vm #2 has been created in Datacenter #2, Host #7
+0.01: WOA_Broker: Vm #3 has been created in Datacenter #2, Host #8
+0.01: WOA_Broker: Vm #4 has been created in Datacenter #2, Host #9
+0.01: WOA_Broker: Vm #5 has been created in Datacenter #2, Host #5
+0.01: WOA_Broker: Vm #6 has been created in Datacenter #2, Host #6
+0.01: WOA_Broker: Vm #7 has been created in Datacenter #2, Host #7
+0.01: WOA_Broker: Vm #8 has been created in Datacenter #2, Host #8
+0.01: WOA_Broker: Vm #9 has been created in Datacenter #2, Host #9
+0.01: WOA_Broker: Vm #10 has been created in Datacenter #2, Host #5
+0.01: WOA_Broker: Vm #11 has been created in Datacenter #2, Host #6
+0.01: WOA_Broker: Vm #12 has been created in Datacenter #2, Host #7
+0.01: WOA_Broker: Vm #13 has been created in Datacenter #2, Host #8
+0.01: WOA_Broker: Vm #14 has been created in Datacenter #2, Host #9
+0.01: WOA_Broker: Vm #15 has been created in Datacenter #2, Host #5
+0.01: WOA_Broker: Vm #16 has been created in Datacenter #2, Host #6
+0.01: WOA_Broker: Vm #17 has been created in Datacenter #2, Host #7
+0.01: WOA_Broker: Vm #18 has been created in Datacenter #2, Host #8
+0.01: WOA_Broker: Vm #19 has been created in Datacenter #2, Host #9
+0.01: WOA_Broker: Sending Cloudlet #0 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #1 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #2 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #3 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #4 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #5 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #6 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #7 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #8 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #9 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #10 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #11 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #12 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #13 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #14 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #15 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #16 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #17 to Vm #2
+0.01: WOA_Broker: Sending Cloudlet #18 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #19 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #20 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #21 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #22 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #23 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #24 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #25 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #26 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #27 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #28 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #29 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #30 to Vm #5
+0.01: WOA_Broker: Sending Cloudlet #31 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #32 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #33 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #34 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #35 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #36 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #37 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #38 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #39 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #40 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #41 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #42 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #43 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #44 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #45 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #46 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #47 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #48 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #49 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #50 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #51 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #52 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #53 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #54 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #55 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #56 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #57 to Vm #5
+0.01: WOA_Broker: Sending Cloudlet #58 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #59 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #60 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #61 to Vm #4
+0.01: WOA_Broker: Sending Cloudlet #62 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #63 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #64 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #65 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #66 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #67 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #68 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #69 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #70 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #71 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #72 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #73 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #74 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #75 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #76 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #77 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #78 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #79 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #80 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #81 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #82 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #83 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #84 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #85 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #86 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #87 to Vm #4
+0.01: WOA_Broker: Sending Cloudlet #88 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #89 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #90 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #91 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #92 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #93 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #94 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #95 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #96 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #97 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #98 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #99 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #100 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #101 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #102 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #103 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #104 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #105 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #106 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #107 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #108 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #109 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #110 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #111 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #112 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #113 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #114 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #115 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #116 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #117 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #118 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #119 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #120 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #121 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #122 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #123 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #124 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #125 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #126 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #127 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #128 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #129 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #130 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #131 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #132 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #133 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #134 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #135 to Vm #4
+0.01: WOA_Broker: Sending Cloudlet #136 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #137 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #138 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #139 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #140 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #141 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #142 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #143 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #144 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #145 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #146 to Vm #4
+0.01: WOA_Broker: Sending Cloudlet #147 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #148 to Vm #9
+0.01: WOA_Broker: Sending Cloudlet #149 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #150 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #151 to Vm #2
+0.01: WOA_Broker: Sending Cloudlet #152 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #153 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #154 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #155 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #156 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #157 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #158 to Vm #3
+0.01: WOA_Broker: Sending Cloudlet #159 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #160 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #161 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #162 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #163 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #164 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #165 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #166 to Vm #7
+0.01: WOA_Broker: Sending Cloudlet #167 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #168 to Vm #3
+0.01: WOA_Broker: Sending Cloudlet #169 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #170 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #171 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #172 to Vm #5
+0.01: WOA_Broker: Sending Cloudlet #173 to Vm #17
+0.01: WOA_Broker: Sending Cloudlet #174 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #175 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #176 to Vm #5
+0.01: WOA_Broker: Sending Cloudlet #177 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #178 to Vm #8
+0.01: WOA_Broker: Sending Cloudlet #179 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #180 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #181 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #182 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #183 to Vm #12
+0.01: WOA_Broker: Sending Cloudlet #184 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #185 to Vm #4
+0.01: WOA_Broker: Sending Cloudlet #186 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #187 to Vm #13
+0.01: WOA_Broker: Sending Cloudlet #188 to Vm #16
+0.01: WOA_Broker: Sending Cloudlet #189 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #190 to Vm #10
+0.01: WOA_Broker: Sending Cloudlet #191 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #192 to Vm #15
+0.01: WOA_Broker: Sending Cloudlet #193 to Vm #19
+0.01: WOA_Broker: Sending Cloudlet #194 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #195 to Vm #14
+0.01: WOA_Broker: Sending Cloudlet #196 to Vm #6
+0.01: WOA_Broker: Sending Cloudlet #197 to Vm #11
+0.01: WOA_Broker: Sending Cloudlet #198 to Vm #18
+0.01: WOA_Broker: Sending Cloudlet #199 to Vm #16
+18.810000000000002: WOA_Broker: Cloudlet #98 return received
+18.810000000000002: WOA_Broker: The number of finished Cloudlets is:1
+20.01: WOA_Broker: Cloudlet #1 return received
+20.01: WOA_Broker: The number of finished Cloudlets is:2
+22.01: WOA_Broker: Cloudlet #58 return received
+22.01: WOA_Broker: The number of finished Cloudlets is:3
+23.610000000000003: WOA_Broker: Cloudlet #15 return received
+23.610000000000003: WOA_Broker: The number of finished Cloudlets is:4
+23.610000000000003: WOA_Broker: Cloudlet #26 return received
+23.610000000000003: WOA_Broker: The number of finished Cloudlets is:5
+26.51: WOA_Broker: Cloudlet #21 return received
+26.51: WOA_Broker: The number of finished Cloudlets is:6
+26.810000000000002: WOA_Broker: Cloudlet #72 return received
+26.810000000000002: WOA_Broker: The number of finished Cloudlets is:7
+26.810000000000002: WOA_Broker: Cloudlet #6 return received
+26.810000000000002: WOA_Broker: The number of finished Cloudlets is:8
+31.343333333333334: WOA_Broker: Cloudlet #0 return received
+31.343333333333334: WOA_Broker: The number of finished Cloudlets is:9
+31.609733333333335: WOA_Broker: Cloudlet #76 return received
+31.609733333333335: WOA_Broker: The number of finished Cloudlets is:10
+31.609733333333335: WOA_Broker: Cloudlet #92 return received
+31.609733333333335: WOA_Broker: The number of finished Cloudlets is:11
+32.50973333333334: WOA_Broker: Cloudlet #48 return received
+32.50973333333334: WOA_Broker: The number of finished Cloudlets is:12
+33.20973333333334: WOA_Broker: Cloudlet #13 return received
+33.20973333333334: WOA_Broker: The number of finished Cloudlets is:13
+34.80973333333334: WOA_Broker: Cloudlet #70 return received
+34.80973333333334: WOA_Broker: The number of finished Cloudlets is:14
+35.60973333333334: WOA_Broker: Cloudlet #36 return received
+35.60973333333334: WOA_Broker: The number of finished Cloudlets is:15
+37.60973333333334: WOA_Broker: Cloudlet #124 return received
+37.60973333333334: WOA_Broker: The number of finished Cloudlets is:16
+39.34306666666667: WOA_Broker: Cloudlet #3 return received
+39.34306666666667: WOA_Broker: The number of finished Cloudlets is:17
+40.009866666666674: WOA_Broker: Cloudlet #85 return received
+40.009866666666674: WOA_Broker: The number of finished Cloudlets is:18
+42.80986666666667: WOA_Broker: Cloudlet #46 return received
+42.80986666666667: WOA_Broker: The number of finished Cloudlets is:19
+42.80986666666667: WOA_Broker: Cloudlet #107 return received
+42.80986666666667: WOA_Broker: The number of finished Cloudlets is:20
+43.3432: WOA_Broker: Cloudlet #14 return received
+43.3432: WOA_Broker: The number of finished Cloudlets is:21
+43.61: WOA_Broker: Cloudlet #62 return received
+43.61: WOA_Broker: The number of finished Cloudlets is:22
+44.41: WOA_Broker: Cloudlet #49 return received
+44.41: WOA_Broker: The number of finished Cloudlets is:23
+45.61: WOA_Broker: Cloudlet #118 return received
+45.61: WOA_Broker: The number of finished Cloudlets is:24
+47.21: WOA_Broker: Cloudlet #96 return received
+47.21: WOA_Broker: The number of finished Cloudlets is:25
+48.67666666666666: WOA_Broker: Cloudlet #43 return received
+48.67666666666666: WOA_Broker: The number of finished Cloudlets is:26
+49.20986666666666: WOA_Broker: Cloudlet #5 return received
+49.20986666666666: WOA_Broker: The number of finished Cloudlets is:27
+49.34253333333333: WOA_Broker: Cloudlet #9 return received
+49.34253333333333: WOA_Broker: The number of finished Cloudlets is:28
+50.00973333333333: WOA_Broker: Cloudlet #11 return received
+50.00973333333333: WOA_Broker: The number of finished Cloudlets is:29
+51.60973333333333: WOA_Broker: Cloudlet #12 return received
+51.60973333333333: WOA_Broker: The number of finished Cloudlets is:30
+52.50973333333333: WOA_Broker: Cloudlet #31 return received
+52.50973333333333: WOA_Broker: The number of finished Cloudlets is:31
+52.50973333333333: WOA_Broker: Cloudlet #8 return received
+52.50973333333333: WOA_Broker: The number of finished Cloudlets is:32
+52.50973333333333: WOA_Broker: Cloudlet #22 return received
+52.50973333333333: WOA_Broker: The number of finished Cloudlets is:33
+56.00973333333333: WOA_Broker: Cloudlet #80 return received
+56.00973333333333: WOA_Broker: The number of finished Cloudlets is:34
+56.00973333333333: WOA_Broker: Cloudlet #81 return received
+56.00973333333333: WOA_Broker: The number of finished Cloudlets is:35
+56.50973333333333: WOA_Broker: Cloudlet #23 return received
+56.50973333333333: WOA_Broker: The number of finished Cloudlets is:36
+60.676399999999994: WOA_Broker: Cloudlet #30 return received
+60.676399999999994: WOA_Broker: The number of finished Cloudlets is:37
+60.809999999999995: WOA_Broker: Cloudlet #95 return received
+60.809999999999995: WOA_Broker: The number of finished Cloudlets is:38
+63.51: WOA_Broker: Cloudlet #19 return received
+63.51: WOA_Broker: The number of finished Cloudlets is:39
+66.00999999999999: WOA_Broker: Cloudlet #57 return received
+66.00999999999999: WOA_Broker: The number of finished Cloudlets is:40
+66.00999999999999: WOA_Broker: Cloudlet #129 return received
+66.00999999999999: WOA_Broker: The number of finished Cloudlets is:41
+68.00999999999999: WOA_Broker: Cloudlet #7 return received
+68.00999999999999: WOA_Broker: The number of finished Cloudlets is:42
+68.4096: WOA_Broker: Cloudlet #99 return received
+68.4096: WOA_Broker: The number of finished Cloudlets is:43
+68.4096: WOA_Broker: Cloudlet #163 return received
+68.4096: WOA_Broker: The number of finished Cloudlets is:44
+70.00959999999999: WOA_Broker: Cloudlet #4 return received
+70.00959999999999: WOA_Broker: The number of finished Cloudlets is:45
+70.00959999999999: WOA_Broker: Cloudlet #35 return received
+70.00959999999999: WOA_Broker: The number of finished Cloudlets is:46
+71.2096: WOA_Broker: Cloudlet #130 return received
+71.2096: WOA_Broker: The number of finished Cloudlets is:47
+71.34293333333333: WOA_Broker: Cloudlet #27 return received
+71.34293333333333: WOA_Broker: The number of finished Cloudlets is:48
+72.80973333333334: WOA_Broker: Cloudlet #159 return received
+72.80973333333334: WOA_Broker: The number of finished Cloudlets is:49
+72.80973333333334: WOA_Broker: Cloudlet #167 return received
+72.80973333333334: WOA_Broker: The number of finished Cloudlets is:50
+72.80973333333334: WOA_Broker: Cloudlet #20 return received
+72.80973333333334: WOA_Broker: The number of finished Cloudlets is:51
+74.40973333333334: WOA_Broker: Cloudlet #25 return received
+74.40973333333334: WOA_Broker: The number of finished Cloudlets is:52
+74.80973333333334: WOA_Broker: Cloudlet #104 return received
+74.80973333333334: WOA_Broker: The number of finished Cloudlets is:53
+76.00973333333334: WOA_Broker: Cloudlet #50 return received
+76.00973333333334: WOA_Broker: The number of finished Cloudlets is:54
+76.90973333333335: WOA_Broker: Cloudlet #109 return received
+76.90973333333335: WOA_Broker: The number of finished Cloudlets is:55
+78.00973333333334: WOA_Broker: Cloudlet #84 return received
+78.00973333333334: WOA_Broker: The number of finished Cloudlets is:56
+78.50973333333334: WOA_Broker: Cloudlet #44 return received
+78.50973333333334: WOA_Broker: The number of finished Cloudlets is:57
+80.00973333333334: WOA_Broker: Cloudlet #24 return received
+80.00973333333334: WOA_Broker: The number of finished Cloudlets is:58
+84.00973333333334: WOA_Broker: Cloudlet #140 return received
+84.00973333333334: WOA_Broker: The number of finished Cloudlets is:59
+84.40973333333335: WOA_Broker: Cloudlet #173 return received
+84.40973333333335: WOA_Broker: The number of finished Cloudlets is:60
+91.20973333333335: WOA_Broker: Cloudlet #106 return received
+91.20973333333335: WOA_Broker: The number of finished Cloudlets is:61
+92.40933333333335: WOA_Broker: Cloudlet #141 return received
+92.40933333333335: WOA_Broker: The number of finished Cloudlets is:62
+93.60973333333335: WOA_Broker: Cloudlet #29 return received
+93.60973333333335: WOA_Broker: The number of finished Cloudlets is:63
+94.40933333333335: WOA_Broker: Cloudlet #182 return received
+94.40933333333335: WOA_Broker: The number of finished Cloudlets is:64
+96.01000000000002: WOA_Broker: Cloudlet #176 return received
+96.01000000000002: WOA_Broker: The number of finished Cloudlets is:65
+96.41000000000003: WOA_Broker: Cloudlet #134 return received
+96.41000000000003: WOA_Broker: The number of finished Cloudlets is:66
+100.01000000000002: WOA_Broker: Cloudlet #45 return received
+100.01000000000002: WOA_Broker: The number of finished Cloudlets is:67
+102.00960000000002: WOA_Broker: Cloudlet #33 return received
+102.00960000000002: WOA_Broker: The number of finished Cloudlets is:68
+102.80960000000002: WOA_Broker: Cloudlet #88 return received
+102.80960000000002: WOA_Broker: The number of finished Cloudlets is:69
+103.60960000000001: WOA_Broker: Cloudlet #150 return received
+103.60960000000001: WOA_Broker: The number of finished Cloudlets is:70
+105.20960000000001: WOA_Broker: Cloudlet #122 return received
+105.20960000000001: WOA_Broker: The number of finished Cloudlets is:71
+107.0096: WOA_Broker: Cloudlet #77 return received
+107.0096: WOA_Broker: The number of finished Cloudlets is:72
+114.8096: WOA_Broker: Cloudlet #188 return received
+114.8096: WOA_Broker: The number of finished Cloudlets is:73
+115.0096: WOA_Broker: Cloudlet #61 return received
+115.0096: WOA_Broker: The number of finished Cloudlets is:74
+115.5096: WOA_Broker: Cloudlet #101 return received
+115.5096: WOA_Broker: The number of finished Cloudlets is:75
+120.67626666666668: WOA_Broker: Cloudlet #54 return received
+120.67626666666668: WOA_Broker: The number of finished Cloudlets is:76
+120.80906666666668: WOA_Broker: Cloudlet #153 return received
+120.80906666666668: WOA_Broker: The number of finished Cloudlets is:77
+122.90946666666667: WOA_Broker: Cloudlet #125 return received
+122.90946666666667: WOA_Broker: The number of finished Cloudlets is:78
+123.20946666666667: WOA_Broker: Cloudlet #120 return received
+123.20946666666667: WOA_Broker: The number of finished Cloudlets is:79
+123.20946666666667: WOA_Broker: Cloudlet #52 return received
+123.20946666666667: WOA_Broker: The number of finished Cloudlets is:80
+123.60946666666668: WOA_Broker: Cloudlet #37 return received
+123.60946666666668: WOA_Broker: The number of finished Cloudlets is:81
+124.40946666666667: WOA_Broker: Cloudlet #38 return received
+124.40946666666667: WOA_Broker: The number of finished Cloudlets is:82
+125.00946666666667: WOA_Broker: Cloudlet #17 return received
+125.00946666666667: WOA_Broker: The number of finished Cloudlets is:83
+127.00996666666667: WOA_Broker: Cloudlet #51 return received
+127.00996666666667: WOA_Broker: The number of finished Cloudlets is:84
+128.6753: WOA_Broker: Cloudlet #16 return received
+128.6753: WOA_Broker: The number of finished Cloudlets is:85
+131.5093: WOA_Broker: Cloudlet #83 return received
+131.5093: WOA_Broker: The number of finished Cloudlets is:86
+132.67663333333334: WOA_Broker: Cloudlet #32 return received
+132.67663333333334: WOA_Broker: The number of finished Cloudlets is:87
+134.80943333333335: WOA_Broker: Cloudlet #40 return received
+134.80943333333335: WOA_Broker: The number of finished Cloudlets is:88
+135.00983333333335: WOA_Broker: Cloudlet #53 return received
+135.00983333333335: WOA_Broker: The number of finished Cloudlets is:89
+138.90943333333334: WOA_Broker: Cloudlet #191 return received
+138.90943333333334: WOA_Broker: The number of finished Cloudlets is:90
+142.00943333333333: WOA_Broker: Cloudlet #110 return received
+142.00943333333333: WOA_Broker: The number of finished Cloudlets is:91
+142.40983333333332: WOA_Broker: Cloudlet #170 return received
+142.40983333333332: WOA_Broker: The number of finished Cloudlets is:92
+142.80903333333333: WOA_Broker: Cloudlet #199 return received
+142.80903333333333: WOA_Broker: The number of finished Cloudlets is:93
+146.67636666666667: WOA_Broker: Cloudlet #172 return received
+146.67636666666667: WOA_Broker: The number of finished Cloudlets is:94
+147.20956666666666: WOA_Broker: Cloudlet #179 return received
+147.20956666666666: WOA_Broker: The number of finished Cloudlets is:95
+149.20876666666666: WOA_Broker: Cloudlet #186 return received
+149.20876666666666: WOA_Broker: The number of finished Cloudlets is:96
+149.22876666666664: WOA_Broker: Cloudlet #192 return received
+149.22876666666664: WOA_Broker: The number of finished Cloudlets is:97
+154.80916666666664: WOA_Broker: Cloudlet #56 return received
+154.80916666666664: WOA_Broker: The number of finished Cloudlets is:98
+160.00916666666663: WOA_Broker: Cloudlet #60 return received
+160.00916666666663: WOA_Broker: The number of finished Cloudlets is:99
+160.54249999999996: WOA_Broker: Cloudlet #164 return received
+160.54249999999996: WOA_Broker: The number of finished Cloudlets is:100
+161.34183333333328: WOA_Broker: Cloudlet #63 return received
+161.34183333333328: WOA_Broker: The number of finished Cloudlets is:101
+161.60943333333327: WOA_Broker: Cloudlet #66 return received
+161.60943333333327: WOA_Broker: The number of finished Cloudlets is:102
+166.80983333333327: WOA_Broker: Cloudlet #194 return received
+166.80983333333327: WOA_Broker: The number of finished Cloudlets is:103
+167.20863333333327: WOA_Broker: Cloudlet #198 return received
+167.20863333333327: WOA_Broker: The number of finished Cloudlets is:104
+167.22863333333325: WOA_Broker: Cloudlet #65 return received
+167.22863333333325: WOA_Broker: The number of finished Cloudlets is:105
+168.6759666666666: WOA_Broker: Cloudlet #131 return received
+168.6759666666666: WOA_Broker: The number of finished Cloudlets is:106
+176.00946666666658: WOA_Broker: Cloudlet #103 return received
+176.00946666666658: WOA_Broker: The number of finished Cloudlets is:107
+178.00946666666658: WOA_Broker: Cloudlet #87 return received
+178.00946666666658: WOA_Broker: The number of finished Cloudlets is:108
+178.8754666666666: WOA_Broker: Cloudlet #169 return received
+178.8754666666666: WOA_Broker: The number of finished Cloudlets is:109
+183.5099666666666: WOA_Broker: Cloudlet #55 return received
+183.5099666666666: WOA_Broker: The number of finished Cloudlets is:110
+184.0089666666666: WOA_Broker: Cloudlet #86 return received
+184.0089666666666: WOA_Broker: The number of finished Cloudlets is:111
+184.02896666666658: WOA_Broker: Cloudlet #73 return received
+184.02896666666658: WOA_Broker: The number of finished Cloudlets is:112
+185.20896666666658: WOA_Broker: Cloudlet #79 return received
+185.20896666666658: WOA_Broker: The number of finished Cloudlets is:113
+188.0089666666666: WOA_Broker: Cloudlet #74 return received
+188.0089666666666: WOA_Broker: The number of finished Cloudlets is:114
+194.0285666666666: WOA_Broker: Cloudlet #114 return received
+194.0285666666666: WOA_Broker: The number of finished Cloudlets is:115
+203.6093666666666: WOA_Broker: Cloudlet #94 return received
+203.6093666666666: WOA_Broker: The number of finished Cloudlets is:116
+204.0093666666666: WOA_Broker: Cloudlet #68 return received
+204.0093666666666: WOA_Broker: The number of finished Cloudlets is:117
+210.0080333333333: WOA_Broker: Cloudlet #105 return received
+210.0080333333333: WOA_Broker: The number of finished Cloudlets is:118
+210.02803333333327: WOA_Broker: Cloudlet #2 return received
+210.02803333333327: WOA_Broker: The number of finished Cloudlets is:119
+212.40883333333326: WOA_Broker: Cloudlet #119 return received
+212.40883333333326: WOA_Broker: The number of finished Cloudlets is:120
+215.20883333333327: WOA_Broker: Cloudlet #117 return received
+215.20883333333327: WOA_Broker: The number of finished Cloudlets is:121
+222.3421666666666: WOA_Broker: Cloudlet #82 return received
+222.3421666666666: WOA_Broker: The number of finished Cloudlets is:122
+223.54149999999993: WOA_Broker: Cloudlet #174 return received
+223.54149999999993: WOA_Broker: The number of finished Cloudlets is:123
+226.67549999999991: WOA_Broker: Cloudlet #171 return received
+226.67549999999991: WOA_Broker: The number of finished Cloudlets is:124
+235.36216666666658: WOA_Broker: Cloudlet #121 return received
+235.36216666666658: WOA_Broker: The number of finished Cloudlets is:125
+237.50866666666658: WOA_Broker: Cloudlet #89 return received
+237.50866666666658: WOA_Broker: The number of finished Cloudlets is:126
+237.52866666666657: WOA_Broker: Cloudlet #112 return received
+237.52866666666657: WOA_Broker: The number of finished Cloudlets is:127
+240.82826666666656: WOA_Broker: Cloudlet #123 return received
+240.82826666666656: WOA_Broker: The number of finished Cloudlets is:128
+244.80946666666657: WOA_Broker: Cloudlet #102 return received
+244.80946666666657: WOA_Broker: The number of finished Cloudlets is:129
+251.00996666666657: WOA_Broker: Cloudlet #59 return received
+251.00996666666657: WOA_Broker: The number of finished Cloudlets is:130
+252.00796666666656: WOA_Broker: Cloudlet #126 return received
+252.00796666666656: WOA_Broker: The number of finished Cloudlets is:131
+254.00896666666657: WOA_Broker: Cloudlet #151 return received
+254.00896666666657: WOA_Broker: The number of finished Cloudlets is:132
+259.20856666666657: WOA_Broker: Cloudlet #133 return received
+259.20856666666657: WOA_Broker: The number of finished Cloudlets is:133
+269.20856666666657: WOA_Broker: Cloudlet #147 return received
+269.20856666666657: WOA_Broker: The number of finished Cloudlets is:134
+270.82816666666656: WOA_Broker: Cloudlet #152 return received
+270.82816666666656: WOA_Broker: The number of finished Cloudlets is:135
+278.00866666666656: WOA_Broker: Cloudlet #113 return received
+278.00866666666656: WOA_Broker: The number of finished Cloudlets is:136
+284.67533333333324: WOA_Broker: Cloudlet #177 return received
+284.67533333333324: WOA_Broker: The number of finished Cloudlets is:137
+287.50983333333323: WOA_Broker: Cloudlet #78 return received
+287.50983333333323: WOA_Broker: The number of finished Cloudlets is:138
+291.0084999999999: WOA_Broker: Cloudlet #100 return received
+291.0084999999999: WOA_Broker: The number of finished Cloudlets is:139
+295.0094999999999: WOA_Broker: Cloudlet #71 return received
+295.0094999999999: WOA_Broker: The number of finished Cloudlets is:140
+296.0278999999999: WOA_Broker: Cloudlet #181 return received
+296.0278999999999: WOA_Broker: The number of finished Cloudlets is:141
+299.02839999999986: WOA_Broker: Cloudlet #127 return received
+299.02839999999986: WOA_Broker: The number of finished Cloudlets is:142
+301.3617333333332: WOA_Broker: Cloudlet #138 return received
+301.3617333333332: WOA_Broker: The number of finished Cloudlets is:143
+302.87439999999987: WOA_Broker: Cloudlet #196 return received
+302.87439999999987: WOA_Broker: The number of finished Cloudlets is:144
+303.3410666666665: WOA_Broker: Cloudlet #148 return received
+303.3410666666665: WOA_Broker: The number of finished Cloudlets is:145
+308.4082666666665: WOA_Broker: Cloudlet #156 return received
+308.4082666666665: WOA_Broker: The number of finished Cloudlets is:146
+312.00826666666654: WOA_Broker: Cloudlet #175 return received
+312.00826666666654: WOA_Broker: The number of finished Cloudlets is:147
+313.0092666666665: WOA_Broker: Cloudlet #135 return received
+313.0092666666665: WOA_Broker: The number of finished Cloudlets is:148
+314.50826666666654: WOA_Broker: Cloudlet #116 return received
+314.50826666666654: WOA_Broker: The number of finished Cloudlets is:149
+315.0092666666665: WOA_Broker: Cloudlet #41 return received
+315.0092666666665: WOA_Broker: The number of finished Cloudlets is:150
+321.3419333333332: WOA_Broker: Cloudlet #178 return received
+321.3419333333332: WOA_Broker: The number of finished Cloudlets is:151
+324.5094333333332: WOA_Broker: Cloudlet #160 return received
+324.5094333333332: WOA_Broker: The number of finished Cloudlets is:152
+326.0094333333332: WOA_Broker: Cloudlet #91 return received
+326.0094333333332: WOA_Broker: The number of finished Cloudlets is:153
+327.6747666666665: WOA_Broker: Cloudlet #108 return received
+327.6747666666665: WOA_Broker: The number of finished Cloudlets is:154
+329.2275666666665: WOA_Broker: Cloudlet #189 return received
+329.2275666666665: WOA_Broker: The number of finished Cloudlets is:155
+338.6091666666665: WOA_Broker: Cloudlet #132 return received
+338.6091666666665: WOA_Broker: The number of finished Cloudlets is:156
+339.0081666666665: WOA_Broker: Cloudlet #197 return received
+339.0081666666665: WOA_Broker: The number of finished Cloudlets is:157
+348.8081666666665: WOA_Broker: Cloudlet #193 return received
+348.8081666666665: WOA_Broker: The number of finished Cloudlets is:158
+349.52816666666655: WOA_Broker: Cloudlet #137 return received
+349.52816666666655: WOA_Broker: The number of finished Cloudlets is:159
+356.25966666666653: WOA_Broker: Cloudlet #10 return received
+356.25966666666653: WOA_Broker: The number of finished Cloudlets is:160
+364.3409999999999: WOA_Broker: Cloudlet #111 return received
+364.3409999999999: WOA_Broker: The number of finished Cloudlets is:161
+371.5089999999999: WOA_Broker: Cloudlet #90 return received
+371.5089999999999: WOA_Broker: The number of finished Cloudlets is:162
+377.5089999999999: WOA_Broker: Cloudlet #93 return received
+377.5089999999999: WOA_Broker: The number of finished Cloudlets is:163
+379.0089999999999: WOA_Broker: Cloudlet #139 return received
+379.0089999999999: WOA_Broker: The number of finished Cloudlets is:164
+379.7594999999999: WOA_Broker: Cloudlet #39 return received
+379.7594999999999: WOA_Broker: The number of finished Cloudlets is:165
+382.7599999999999: WOA_Broker: Cloudlet #34 return received
+382.7599999999999: WOA_Broker: The number of finished Cloudlets is:166
+391.00733333333324: WOA_Broker: Cloudlet #128 return received
+391.00733333333324: WOA_Broker: The number of finished Cloudlets is:167
+392.75883333333326: WOA_Broker: Cloudlet #144 return received
+392.75883333333326: WOA_Broker: The number of finished Cloudlets is:168
+397.02783333333326: WOA_Broker: Cloudlet #149 return received
+397.02783333333326: WOA_Broker: The number of finished Cloudlets is:169
+399.75933333333325: WOA_Broker: Cloudlet #47 return received
+399.75933333333325: WOA_Broker: The number of finished Cloudlets is:170
+401.00883333333326: WOA_Broker: Cloudlet #154 return received
+401.00883333333326: WOA_Broker: The number of finished Cloudlets is:171
+404.40963333333326: WOA_Broker: Cloudlet #136 return received
+404.40963333333326: WOA_Broker: The number of finished Cloudlets is:172
+420.0089666666666: WOA_Broker: Cloudlet #97 return received
+420.0089666666666: WOA_Broker: The number of finished Cloudlets is:173
+433.2589666666666: WOA_Broker: Cloudlet #67 return received
+433.2589666666666: WOA_Broker: The number of finished Cloudlets is:174
+436.0089666666666: WOA_Broker: Cloudlet #146 return received
+436.0089666666666: WOA_Broker: The number of finished Cloudlets is:175
+437.25996666666657: WOA_Broker: Cloudlet #157 return received
+437.25996666666657: WOA_Broker: The number of finished Cloudlets is:176
+450.00996666666657: WOA_Broker: Cloudlet #28 return received
+450.00996666666657: WOA_Broker: The number of finished Cloudlets is:177
+450.00996666666657: WOA_Broker: Cloudlet #42 return received
+450.00996666666657: WOA_Broker: The number of finished Cloudlets is:178
+460.25846666666655: WOA_Broker: Cloudlet #145 return received
+460.25846666666655: WOA_Broker: The number of finished Cloudlets is:179
+463.60926666666654: WOA_Broker: Cloudlet #184 return received
+463.60926666666654: WOA_Broker: The number of finished Cloudlets is:180
+463.6739333333332: WOA_Broker: Cloudlet #142 return received
+463.6739333333332: WOA_Broker: The number of finished Cloudlets is:181
+475.0099333333332: WOA_Broker: Cloudlet #18 return received
+475.0099333333332: WOA_Broker: The number of finished Cloudlets is:182
+476.75893333333323: WOA_Broker: Cloudlet #75 return received
+476.75893333333323: WOA_Broker: The number of finished Cloudlets is:183
+494.5099333333332: WOA_Broker: Cloudlet #165 return received
+494.5099333333332: WOA_Broker: The number of finished Cloudlets is:184
+495.5099333333332: WOA_Broker: Cloudlet #115 return received
+495.5099333333332: WOA_Broker: The number of finished Cloudlets is:185
+515.7584333333332: WOA_Broker: Cloudlet #155 return received
+515.7584333333332: WOA_Broker: The number of finished Cloudlets is:186
+525.0094333333332: WOA_Broker: Cloudlet #158 return received
+525.0094333333332: WOA_Broker: The number of finished Cloudlets is:187
+527.0067666666665: WOA_Broker: Cloudlet #166 return received
+527.0067666666665: WOA_Broker: The number of finished Cloudlets is:188
+528.5092666666666: WOA_Broker: Cloudlet #64 return received
+528.5092666666666: WOA_Broker: The number of finished Cloudlets is:189
+533.0082666666666: WOA_Broker: Cloudlet #185 return received
+533.0082666666666: WOA_Broker: The number of finished Cloudlets is:190
+534.2587666666666: WOA_Broker: Cloudlet #143 return received
+534.2587666666666: WOA_Broker: The number of finished Cloudlets is:191
+539.0097666666666: WOA_Broker: Cloudlet #161 return received
+539.0097666666666: WOA_Broker: The number of finished Cloudlets is:192
+542.2582666666666: WOA_Broker: Cloudlet #180 return received
+542.2582666666666: WOA_Broker: The number of finished Cloudlets is:193
+545.0097666666666: WOA_Broker: Cloudlet #187 return received
+545.0097666666666: WOA_Broker: The number of finished Cloudlets is:194
+569.7587666666666: WOA_Broker: Cloudlet #162 return received
+569.7587666666666: WOA_Broker: The number of finished Cloudlets is:195
+574.0087666666666: WOA_Broker: Cloudlet #168 return received
+574.0087666666666: WOA_Broker: The number of finished Cloudlets is:196
+579.7587666666666: WOA_Broker: Cloudlet #190 return received
+579.7587666666666: WOA_Broker: The number of finished Cloudlets is:197
+585.0092666666666: WOA_Broker: Cloudlet #195 return received
+585.0092666666666: WOA_Broker: The number of finished Cloudlets is:198
+659.5277666666666: WOA_Broker: Cloudlet #183 return received
+659.5277666666666: WOA_Broker: The number of finished Cloudlets is:199
+671.3424333333332: WOA_Broker: Cloudlet #69 return received
+671.3424333333332: WOA_Broker: The number of finished Cloudlets is:200
+671.3424333333332: WOA_Broker: All Cloudlets executed. Finishing...
+671.3424333333332: WOA_Broker: Destroying Vm #0
+671.3424333333332: WOA_Broker: Destroying Vm #1
+671.3424333333332: WOA_Broker: Destroying Vm #2
+671.3424333333332: WOA_Broker: Destroying Vm #3
+671.3424333333332: WOA_Broker: Destroying Vm #4
+671.3424333333332: WOA_Broker: Destroying Vm #5
+671.3424333333332: WOA_Broker: Destroying Vm #6
+671.3424333333332: WOA_Broker: Destroying Vm #7
+671.3424333333332: WOA_Broker: Destroying Vm #8
+671.3424333333332: WOA_Broker: Destroying Vm #9
+671.3424333333332: WOA_Broker: Destroying Vm #10
+671.3424333333332: WOA_Broker: Destroying Vm #11
+671.3424333333332: WOA_Broker: Destroying Vm #12
+671.3424333333332: WOA_Broker: Destroying Vm #13
+671.3424333333332: WOA_Broker: Destroying Vm #14
+671.3424333333332: WOA_Broker: Destroying Vm #15
+671.3424333333332: WOA_Broker: Destroying Vm #16
+671.3424333333332: WOA_Broker: Destroying Vm #17
+671.3424333333332: WOA_Broker: Destroying Vm #18
+671.3424333333332: WOA_Broker: Destroying Vm #19
+671.3424333333332: WOA_Broker is shutting down...
+671.3424333333332: Simulation: No more future events
+671.3424333333332: CloudInformationService is shutting down...
+671.3424333333332: CloudInformationService: Notify all CloudSim entities for shutting down.
+671.3424333333332: Datacenter_0 is shutting down...
+671.3424333333332: WOA_Broker is shutting down...
+Simulation completed.
+Simulation completed.
+
+========== CLOUDLET RESULTS ==========
+(only the first 20 successful Cloudlets are shown; METRICS below are still computed from all 200 results)
+Cloudlet ID	Status	VM ID	Exec Time	Start Time	Finish Time
+98	SUCCESS	17	18.8	0.01	18.81
+1	SUCCESS	12	20	0.01	20.01
+58	SUCCESS	16	22	0.01	22.01
+15	SUCCESS	15	23.6	0.01	23.61
+26	SUCCESS	18	23.6	0.01	23.61
+21	SUCCESS	12	26.5	0.01	26.51
+72	SUCCESS	18	26.8	0.01	26.81
+6	SUCCESS	19	26.8	0.01	26.81
+0	SUCCESS	9	31.3333	0.01	31.3433
+76	SUCCESS	15	31.5997	0.01	31.6097
+92	SUCCESS	17	31.5997	0.01	31.6097
+48	SUCCESS	11	32.4997	0.01	32.5097
+13	SUCCESS	19	33.1997	0.01	33.2097
+70	SUCCESS	18	34.7997	0.01	34.8097
+36	SUCCESS	17	35.5997	0.01	35.6097
+124	SUCCESS	17	6	31.6097	37.6097
+3	SUCCESS	9	39.3331	0.01	39.3431
+85	SUCCESS	16	17.9999	22.01	40.0099
+46	SUCCESS	15	42.7999	0.01	42.8099
+107	SUCCESS	17	42.7999	0.01	42.8099
+
+========== METRICS ==========
+Completed Cloudlets      : 200
+Makespan                 : 671.3424 s
+Degree of Imbalance      : 1.8774
+Average Waiting Time     : 140.7396 s
+Throughput               : 0.2979 cloudlets/s
+Average VM Utilization*  : 46.8495 %
+Utilization (MET formula): 105.4114 % (can exceed 100% on multi-core VMs)
+
+* Utilization = total Cloudlet CPU time / (makespan x 45 total VM PEs).
+Result appended to results\woa_raw.csv
+WOA_TaskScheduling finished!

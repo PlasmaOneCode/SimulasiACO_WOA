@@ -1,0 +1,2890 @@
+﻿Starting ACO_TaskScheduling...
+Initialising...
+Dataset loaded: dataset/GoCJ_Dataset_900.txt (900 jobs available)
+
+========== CONFIGURATION ==========
+Datacenters : 1
+Hosts       : 10 (5 Class A + 5 Class B)
+VMs         : 20
+Cloudlets   : 900
+Algorithm   : ACO (Ant Colony Optimization)
+Parameters  : ants=30, iterations=100, alpha=1.0, beta=2.0, rho=0.3, Q=1.0
+Run / Seed  : 1 / 1
+Estimated makespan             : 1478 s
+Fitness (makespan + tie-break) : 1478.6361
+Scheduling time              : 277.881 ms
+
+VM assignment distribution:
+VM 0 -> 15 cloudlets
+VM 1 -> 18 cloudlets
+VM 2 -> 17 cloudlets
+VM 3 -> 15 cloudlets
+VM 4 -> 11 cloudlets
+VM 5 -> 34 cloudlets
+VM 6 -> 46 cloudlets
+VM 7 -> 39 cloudlets
+VM 8 -> 35 cloudlets
+VM 9 -> 36 cloudlets
+VM 10 -> 52 cloudlets
+VM 11 -> 21 cloudlets
+VM 12 -> 32 cloudlets
+VM 13 -> 50 cloudlets
+VM 14 -> 47 cloudlets
+VM 15 -> 69 cloudlets
+VM 16 -> 89 cloudlets
+VM 17 -> 98 cloudlets
+VM 18 -> 103 cloudlets
+VM 19 -> 73 cloudlets
+
+First 20 ACO assignments:
+Cloudlet 0 -> VM 15
+Cloudlet 1 -> VM 17
+Cloudlet 2 -> VM 19
+Cloudlet 3 -> VM 19
+Cloudlet 4 -> VM 16
+Cloudlet 5 -> VM 10
+Cloudlet 6 -> VM 18
+Cloudlet 7 -> VM 17
+Cloudlet 8 -> VM 9
+Cloudlet 9 -> VM 18
+Cloudlet 10 -> VM 18
+Cloudlet 11 -> VM 15
+Cloudlet 12 -> VM 19
+Cloudlet 13 -> VM 18
+Cloudlet 14 -> VM 16
+Cloudlet 15 -> VM 11
+Cloudlet 16 -> VM 18
+Cloudlet 17 -> VM 15
+Cloudlet 18 -> VM 12
+Cloudlet 19 -> VM 19
+Starting CloudSim version 7.0
+0.0: Datacenter_0 is starting...
+0.0: ACO_Broker is starting...
+Entities started.
+0.0: ACO_Broker: Cloud Resource List received with 1 datacenter(s)
+0.0: ACO_Broker: Trying to Create Vm #0 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #1 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #2 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #3 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #4 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #5 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #6 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #7 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #8 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #9 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #10 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #11 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #12 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #13 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #14 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #15 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #16 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #17 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #18 in Datacenter_0
+0.0: ACO_Broker: Trying to Create Vm #19 in Datacenter_0
+0.0: Datacenter_0.guestAllocator: Vm #0 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #1 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #2 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #3 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #4 has been allocated to Host #9
+0.0: Datacenter_0.guestAllocator: Vm #5 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #6 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #7 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #8 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #9 has been allocated to Host #9
+0.0: Datacenter_0.guestAllocator: Vm #10 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #11 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #12 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #13 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #14 has been allocated to Host #9
+0.0: Datacenter_0.guestAllocator: Vm #15 has been allocated to Host #5
+0.0: Datacenter_0.guestAllocator: Vm #16 has been allocated to Host #6
+0.0: Datacenter_0.guestAllocator: Vm #17 has been allocated to Host #7
+0.0: Datacenter_0.guestAllocator: Vm #18 has been allocated to Host #8
+0.0: Datacenter_0.guestAllocator: Vm #19 has been allocated to Host #9
+0.01: ACO_Broker: Vm #0 has been created in Datacenter #2, Host #5
+0.01: ACO_Broker: Vm #1 has been created in Datacenter #2, Host #6
+0.01: ACO_Broker: Vm #2 has been created in Datacenter #2, Host #7
+0.01: ACO_Broker: Vm #3 has been created in Datacenter #2, Host #8
+0.01: ACO_Broker: Vm #4 has been created in Datacenter #2, Host #9
+0.01: ACO_Broker: Vm #5 has been created in Datacenter #2, Host #5
+0.01: ACO_Broker: Vm #6 has been created in Datacenter #2, Host #6
+0.01: ACO_Broker: Vm #7 has been created in Datacenter #2, Host #7
+0.01: ACO_Broker: Vm #8 has been created in Datacenter #2, Host #8
+0.01: ACO_Broker: Vm #9 has been created in Datacenter #2, Host #9
+0.01: ACO_Broker: Vm #10 has been created in Datacenter #2, Host #5
+0.01: ACO_Broker: Vm #11 has been created in Datacenter #2, Host #6
+0.01: ACO_Broker: Vm #12 has been created in Datacenter #2, Host #7
+0.01: ACO_Broker: Vm #13 has been created in Datacenter #2, Host #8
+0.01: ACO_Broker: Vm #14 has been created in Datacenter #2, Host #9
+0.01: ACO_Broker: Vm #15 has been created in Datacenter #2, Host #5
+0.01: ACO_Broker: Vm #16 has been created in Datacenter #2, Host #6
+0.01: ACO_Broker: Vm #17 has been created in Datacenter #2, Host #7
+0.01: ACO_Broker: Vm #18 has been created in Datacenter #2, Host #8
+0.01: ACO_Broker: Vm #19 has been created in Datacenter #2, Host #9
+0.01: ACO_Broker: Sending Cloudlet #0 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #1 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #2 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #3 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #4 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #5 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #6 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #7 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #8 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #9 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #10 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #11 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #12 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #13 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #14 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #15 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #16 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #17 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #18 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #19 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #20 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #21 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #22 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #23 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #24 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #25 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #26 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #27 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #28 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #29 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #30 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #31 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #32 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #33 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #34 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #35 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #36 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #37 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #38 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #39 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #40 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #41 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #42 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #43 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #44 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #45 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #46 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #47 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #48 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #49 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #50 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #51 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #52 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #53 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #54 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #55 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #56 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #57 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #58 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #59 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #60 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #61 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #62 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #63 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #64 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #65 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #66 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #67 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #68 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #69 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #70 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #71 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #72 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #73 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #74 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #75 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #76 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #77 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #78 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #79 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #80 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #81 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #82 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #83 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #84 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #85 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #86 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #87 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #88 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #89 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #90 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #91 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #92 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #93 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #94 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #95 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #96 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #97 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #98 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #99 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #100 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #101 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #102 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #103 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #104 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #105 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #106 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #107 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #108 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #109 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #110 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #111 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #112 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #113 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #114 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #115 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #116 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #117 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #118 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #119 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #120 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #121 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #122 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #123 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #124 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #125 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #126 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #127 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #128 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #129 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #130 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #131 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #132 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #133 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #134 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #135 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #136 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #137 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #138 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #139 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #140 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #141 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #142 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #143 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #144 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #145 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #146 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #147 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #148 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #149 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #150 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #151 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #152 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #153 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #154 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #155 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #156 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #157 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #158 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #159 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #160 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #161 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #162 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #163 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #164 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #165 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #166 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #167 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #168 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #169 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #170 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #171 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #172 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #173 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #174 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #175 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #176 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #177 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #178 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #179 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #180 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #181 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #182 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #183 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #184 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #185 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #186 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #187 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #188 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #189 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #190 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #191 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #192 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #193 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #194 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #195 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #196 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #197 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #198 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #199 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #200 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #201 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #202 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #203 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #204 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #205 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #206 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #207 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #208 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #209 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #210 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #211 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #212 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #213 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #214 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #215 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #216 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #217 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #218 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #219 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #220 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #221 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #222 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #223 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #224 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #225 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #226 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #227 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #228 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #229 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #230 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #231 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #232 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #233 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #234 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #235 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #236 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #237 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #238 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #239 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #240 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #241 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #242 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #243 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #244 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #245 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #246 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #247 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #248 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #249 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #250 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #251 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #252 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #253 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #254 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #255 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #256 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #257 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #258 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #259 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #260 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #261 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #262 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #263 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #264 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #265 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #266 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #267 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #268 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #269 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #270 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #271 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #272 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #273 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #274 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #275 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #276 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #277 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #278 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #279 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #280 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #281 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #282 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #283 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #284 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #285 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #286 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #287 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #288 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #289 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #290 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #291 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #292 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #293 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #294 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #295 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #296 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #297 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #298 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #299 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #300 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #301 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #302 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #303 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #304 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #305 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #306 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #307 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #308 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #309 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #310 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #311 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #312 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #313 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #314 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #315 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #316 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #317 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #318 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #319 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #320 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #321 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #322 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #323 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #324 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #325 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #326 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #327 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #328 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #329 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #330 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #331 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #332 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #333 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #334 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #335 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #336 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #337 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #338 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #339 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #340 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #341 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #342 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #343 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #344 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #345 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #346 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #347 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #348 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #349 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #350 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #351 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #352 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #353 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #354 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #355 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #356 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #357 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #358 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #359 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #360 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #361 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #362 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #363 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #364 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #365 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #366 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #367 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #368 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #369 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #370 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #371 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #372 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #373 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #374 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #375 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #376 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #377 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #378 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #379 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #380 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #381 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #382 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #383 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #384 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #385 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #386 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #387 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #388 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #389 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #390 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #391 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #392 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #393 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #394 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #395 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #396 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #397 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #398 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #399 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #400 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #401 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #402 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #403 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #404 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #405 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #406 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #407 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #408 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #409 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #410 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #411 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #412 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #413 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #414 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #415 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #416 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #417 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #418 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #419 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #420 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #421 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #422 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #423 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #424 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #425 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #426 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #427 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #428 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #429 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #430 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #431 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #432 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #433 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #434 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #435 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #436 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #437 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #438 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #439 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #440 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #441 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #442 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #443 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #444 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #445 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #446 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #447 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #448 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #449 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #450 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #451 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #452 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #453 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #454 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #455 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #456 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #457 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #458 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #459 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #460 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #461 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #462 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #463 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #464 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #465 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #466 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #467 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #468 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #469 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #470 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #471 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #472 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #473 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #474 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #475 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #476 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #477 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #478 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #479 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #480 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #481 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #482 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #483 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #484 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #485 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #486 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #487 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #488 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #489 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #490 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #491 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #492 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #493 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #494 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #495 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #496 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #497 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #498 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #499 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #500 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #501 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #502 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #503 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #504 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #505 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #506 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #507 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #508 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #509 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #510 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #511 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #512 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #513 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #514 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #515 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #516 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #517 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #518 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #519 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #520 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #521 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #522 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #523 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #524 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #525 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #526 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #527 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #528 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #529 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #530 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #531 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #532 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #533 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #534 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #535 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #536 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #537 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #538 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #539 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #540 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #541 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #542 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #543 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #544 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #545 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #546 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #547 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #548 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #549 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #550 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #551 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #552 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #553 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #554 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #555 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #556 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #557 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #558 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #559 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #560 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #561 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #562 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #563 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #564 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #565 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #566 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #567 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #568 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #569 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #570 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #571 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #572 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #573 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #574 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #575 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #576 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #577 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #578 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #579 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #580 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #581 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #582 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #583 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #584 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #585 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #586 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #587 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #588 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #589 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #590 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #591 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #592 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #593 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #594 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #595 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #596 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #597 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #598 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #599 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #600 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #601 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #602 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #603 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #604 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #605 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #606 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #607 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #608 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #609 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #610 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #611 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #612 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #613 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #614 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #615 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #616 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #617 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #618 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #619 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #620 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #621 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #622 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #623 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #624 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #625 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #626 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #627 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #628 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #629 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #630 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #631 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #632 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #633 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #634 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #635 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #636 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #637 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #638 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #639 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #640 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #641 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #642 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #643 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #644 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #645 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #646 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #647 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #648 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #649 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #650 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #651 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #652 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #653 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #654 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #655 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #656 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #657 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #658 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #659 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #660 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #661 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #662 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #663 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #664 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #665 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #666 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #667 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #668 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #669 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #670 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #671 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #672 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #673 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #674 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #675 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #676 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #677 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #678 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #679 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #680 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #681 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #682 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #683 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #684 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #685 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #686 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #687 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #688 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #689 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #690 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #691 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #692 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #693 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #694 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #695 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #696 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #697 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #698 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #699 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #700 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #701 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #702 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #703 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #704 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #705 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #706 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #707 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #708 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #709 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #710 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #711 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #712 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #713 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #714 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #715 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #716 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #717 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #718 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #719 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #720 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #721 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #722 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #723 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #724 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #725 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #726 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #727 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #728 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #729 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #730 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #731 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #732 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #733 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #734 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #735 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #736 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #737 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #738 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #739 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #740 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #741 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #742 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #743 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #744 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #745 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #746 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #747 to Vm #0
+0.01: ACO_Broker: Sending Cloudlet #748 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #749 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #750 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #751 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #752 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #753 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #754 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #755 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #756 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #757 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #758 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #759 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #760 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #761 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #762 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #763 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #764 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #765 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #766 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #767 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #768 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #769 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #770 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #771 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #772 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #773 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #774 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #775 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #776 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #777 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #778 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #779 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #780 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #781 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #782 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #783 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #784 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #785 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #786 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #787 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #788 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #789 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #790 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #791 to Vm #3
+0.01: ACO_Broker: Sending Cloudlet #792 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #793 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #794 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #795 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #796 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #797 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #798 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #799 to Vm #8
+0.01: ACO_Broker: Sending Cloudlet #800 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #801 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #802 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #803 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #804 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #805 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #806 to Vm #4
+0.01: ACO_Broker: Sending Cloudlet #807 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #808 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #809 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #810 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #811 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #812 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #813 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #814 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #815 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #816 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #817 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #818 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #819 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #820 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #821 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #822 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #823 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #824 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #825 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #826 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #827 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #828 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #829 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #830 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #831 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #832 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #833 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #834 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #835 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #836 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #837 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #838 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #839 to Vm #2
+0.01: ACO_Broker: Sending Cloudlet #840 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #841 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #842 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #843 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #844 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #845 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #846 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #847 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #848 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #849 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #850 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #851 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #852 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #853 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #854 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #855 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #856 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #857 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #858 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #859 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #860 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #861 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #862 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #863 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #864 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #865 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #866 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #867 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #868 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #869 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #870 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #871 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #872 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #873 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #874 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #875 to Vm #10
+0.01: ACO_Broker: Sending Cloudlet #876 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #877 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #878 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #879 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #880 to Vm #12
+0.01: ACO_Broker: Sending Cloudlet #881 to Vm #11
+0.01: ACO_Broker: Sending Cloudlet #882 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #883 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #884 to Vm #9
+0.01: ACO_Broker: Sending Cloudlet #885 to Vm #19
+0.01: ACO_Broker: Sending Cloudlet #886 to Vm #1
+0.01: ACO_Broker: Sending Cloudlet #887 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #888 to Vm #14
+0.01: ACO_Broker: Sending Cloudlet #889 to Vm #5
+0.01: ACO_Broker: Sending Cloudlet #890 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #891 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #892 to Vm #7
+0.01: ACO_Broker: Sending Cloudlet #893 to Vm #6
+0.01: ACO_Broker: Sending Cloudlet #894 to Vm #15
+0.01: ACO_Broker: Sending Cloudlet #895 to Vm #18
+0.01: ACO_Broker: Sending Cloudlet #896 to Vm #17
+0.01: ACO_Broker: Sending Cloudlet #897 to Vm #16
+0.01: ACO_Broker: Sending Cloudlet #898 to Vm #13
+0.01: ACO_Broker: Sending Cloudlet #899 to Vm #17
+15.01: ACO_Broker: Cloudlet #70 return received
+15.01: ACO_Broker: The number of finished Cloudlets is:1
+16.009999999999998: ACO_Broker: Cloudlet #1 return received
+16.009999999999998: ACO_Broker: The number of finished Cloudlets is:2
+18.34333333333333: ACO_Broker: Cloudlet #66 return received
+18.34333333333333: ACO_Broker: The number of finished Cloudlets is:3
+18.34333333333333: ACO_Broker: Cloudlet #44 return received
+18.34333333333333: ACO_Broker: The number of finished Cloudlets is:4
+19.60973333333333: ACO_Broker: Cloudlet #4 return received
+19.60973333333333: ACO_Broker: The number of finished Cloudlets is:5
+20.40973333333333: ACO_Broker: Cloudlet #13 return received
+20.40973333333333: ACO_Broker: The number of finished Cloudlets is:6
+21.209733333333332: ACO_Broker: Cloudlet #21 return received
+21.209733333333332: ACO_Broker: The number of finished Cloudlets is:7
+22.009733333333333: ACO_Broker: Cloudlet #9 return received
+22.009733333333333: ACO_Broker: The number of finished Cloudlets is:8
+23.609733333333335: ACO_Broker: Cloudlet #11 return received
+23.609733333333335: ACO_Broker: The number of finished Cloudlets is:9
+24.409733333333335: ACO_Broker: Cloudlet #22 return received
+24.409733333333335: ACO_Broker: The number of finished Cloudlets is:10
+24.509733333333337: ACO_Broker: Cloudlet #54 return received
+24.509733333333337: ACO_Broker: The number of finished Cloudlets is:11
+25.209733333333336: ACO_Broker: Cloudlet #25 return received
+25.209733333333336: ACO_Broker: The number of finished Cloudlets is:12
+25.209733333333336: ACO_Broker: Cloudlet #7 return received
+25.209733333333336: ACO_Broker: The number of finished Cloudlets is:13
+26.509733333333337: ACO_Broker: Cloudlet #28 return received
+26.509733333333337: ACO_Broker: The number of finished Cloudlets is:14
+27.509733333333337: ACO_Broker: Cloudlet #87 return received
+27.509733333333337: ACO_Broker: The number of finished Cloudlets is:15
+29.509733333333337: ACO_Broker: Cloudlet #48 return received
+29.509733333333337: ACO_Broker: The number of finished Cloudlets is:16
+30.809733333333337: ACO_Broker: Cloudlet #23 return received
+30.809733333333337: ACO_Broker: The number of finished Cloudlets is:17
+34.00973333333334: ACO_Broker: Cloudlet #6 return received
+34.00973333333334: ACO_Broker: The number of finished Cloudlets is:18
+36.50973333333334: ACO_Broker: Cloudlet #52 return received
+36.50973333333334: ACO_Broker: The number of finished Cloudlets is:19
+36.6764: ACO_Broker: Cloudlet #29 return received
+36.6764: ACO_Broker: The number of finished Cloudlets is:20
+38.5099: ACO_Broker: Cloudlet #27 return received
+38.5099: ACO_Broker: The number of finished Cloudlets is:21
+38.8099: ACO_Broker: Cloudlet #10 return received
+38.8099: ACO_Broker: The number of finished Cloudlets is:22
+38.8099: ACO_Broker: Cloudlet #2 return received
+38.8099: ACO_Broker: The number of finished Cloudlets is:23
+39.34323333333333: ACO_Broker: Cloudlet #37 return received
+39.34323333333333: ACO_Broker: The number of finished Cloudlets is:24
+40.40963333333333: ACO_Broker: Cloudlet #20 return received
+40.40963333333333: ACO_Broker: The number of finished Cloudlets is:25
+40.40963333333333: ACO_Broker: Cloudlet #3 return received
+40.40963333333333: ACO_Broker: The number of finished Cloudlets is:26
+44.6763: ACO_Broker: Cloudlet #64 return received
+44.6763: ACO_Broker: The number of finished Cloudlets is:27
+48.4099: ACO_Broker: Cloudlet #17 return received
+48.4099: ACO_Broker: The number of finished Cloudlets is:28
+49.2099: ACO_Broker: Cloudlet #19 return received
+49.2099: ACO_Broker: The number of finished Cloudlets is:29
+49.6095: ACO_Broker: Cloudlet #16 return received
+49.6095: ACO_Broker: The number of finished Cloudlets is:30
+50.009899999999995: ACO_Broker: Cloudlet #0 return received
+50.009899999999995: ACO_Broker: The number of finished Cloudlets is:31
+52.67656666666666: ACO_Broker: Cloudlet #8 return received
+52.67656666666666: ACO_Broker: The number of finished Cloudlets is:32
+53.50956666666666: ACO_Broker: Cloudlet #30 return received
+53.50956666666666: ACO_Broker: The number of finished Cloudlets is:33
+53.67623333333332: ACO_Broker: Cloudlet #67 return received
+53.67623333333332: ACO_Broker: The number of finished Cloudlets is:34
+54.00983333333332: ACO_Broker: Cloudlet #12 return received
+54.00983333333332: ACO_Broker: The number of finished Cloudlets is:35
+54.40943333333332: ACO_Broker: Cloudlet #36 return received
+54.40943333333332: ACO_Broker: The number of finished Cloudlets is:36
+55.00943333333332: ACO_Broker: Cloudlet #42 return received
+55.00943333333332: ACO_Broker: The number of finished Cloudlets is:37
+55.00943333333332: ACO_Broker: Cloudlet #57 return received
+55.00943333333332: ACO_Broker: The number of finished Cloudlets is:38
+56.40983333333332: ACO_Broker: Cloudlet #34 return received
+56.40983333333332: ACO_Broker: The number of finished Cloudlets is:39
+56.67649999999998: ACO_Broker: Cloudlet #69 return received
+56.67649999999998: ACO_Broker: The number of finished Cloudlets is:40
+56.67649999999998: ACO_Broker: Cloudlet #45 return received
+56.67649999999998: ACO_Broker: The number of finished Cloudlets is:41
+56.809699999999985: ACO_Broker: Cloudlet #40 return received
+56.809699999999985: ACO_Broker: The number of finished Cloudlets is:42
+56.809699999999985: ACO_Broker: Cloudlet #43 return received
+56.809699999999985: ACO_Broker: The number of finished Cloudlets is:43
+58.00969999999999: ACO_Broker: Cloudlet #46 return received
+58.00969999999999: ACO_Broker: The number of finished Cloudlets is:44
+58.40969999999999: ACO_Broker: Cloudlet #77 return received
+58.40969999999999: ACO_Broker: The number of finished Cloudlets is:45
+59.50969999999999: ACO_Broker: Cloudlet #5 return received
+59.50969999999999: ACO_Broker: The number of finished Cloudlets is:46
+60.809699999999985: ACO_Broker: Cloudlet #26 return received
+60.809699999999985: ACO_Broker: The number of finished Cloudlets is:47
+61.00969999999999: ACO_Broker: Cloudlet #53 return received
+61.00969999999999: ACO_Broker: The number of finished Cloudlets is:48
+67.00969999999998: ACO_Broker: Cloudlet #47 return received
+67.00969999999998: ACO_Broker: The number of finished Cloudlets is:49
+67.50969999999998: ACO_Broker: Cloudlet #15 return received
+67.50969999999998: ACO_Broker: The number of finished Cloudlets is:50
+67.50969999999998: ACO_Broker: Cloudlet #32 return received
+67.50969999999998: ACO_Broker: The number of finished Cloudlets is:51
+68.00969999999998: ACO_Broker: Cloudlet #79 return received
+68.00969999999998: ACO_Broker: The number of finished Cloudlets is:52
+68.80969999999998: ACO_Broker: Cloudlet #24 return received
+68.80969999999998: ACO_Broker: The number of finished Cloudlets is:53
+72.80929999999998: ACO_Broker: Cloudlet #59 return received
+72.80929999999998: ACO_Broker: The number of finished Cloudlets is:54
+72.82929999999999: ACO_Broker: Cloudlet #74 return received
+72.82929999999999: ACO_Broker: The number of finished Cloudlets is:55
+74.0093: ACO_Broker: Cloudlet #41 return received
+74.0093: ACO_Broker: The number of finished Cloudlets is:56
+74.4097: ACO_Broker: Cloudlet #55 return received
+74.4097: ACO_Broker: The number of finished Cloudlets is:57
+78.4093: ACO_Broker: Cloudlet #61 return received
+78.4093: ACO_Broker: The number of finished Cloudlets is:58
+80.0097: ACO_Broker: Cloudlet #92 return received
+80.0097: ACO_Broker: The number of finished Cloudlets is:59
+82.0097: ACO_Broker: Cloudlet #108 return received
+82.0097: ACO_Broker: The number of finished Cloudlets is:60
+83.0097: ACO_Broker: Cloudlet #85 return received
+83.0097: ACO_Broker: The number of finished Cloudlets is:61
+83.0097: ACO_Broker: Cloudlet #51 return received
+83.0097: ACO_Broker: The number of finished Cloudlets is:62
+83.34303333333332: ACO_Broker: Cloudlet #50 return received
+83.34303333333332: ACO_Broker: The number of finished Cloudlets is:63
+88.50903333333332: ACO_Broker: Cloudlet #100 return received
+88.50903333333332: ACO_Broker: The number of finished Cloudlets is:64
+89.00953333333332: ACO_Broker: Cloudlet #31 return received
+89.00953333333332: ACO_Broker: The number of finished Cloudlets is:65
+90.80953333333332: ACO_Broker: Cloudlet #58 return received
+90.80953333333332: ACO_Broker: The number of finished Cloudlets is:66
+94.80953333333332: ACO_Broker: Cloudlet #60 return received
+94.80953333333332: ACO_Broker: The number of finished Cloudlets is:67
+95.00953333333332: ACO_Broker: Cloudlet #38 return received
+95.00953333333332: ACO_Broker: The number of finished Cloudlets is:68
+95.00953333333332: ACO_Broker: Cloudlet #56 return received
+95.00953333333332: ACO_Broker: The number of finished Cloudlets is:69
+95.60913333333332: ACO_Broker: Cloudlet #90 return received
+95.60913333333332: ACO_Broker: The number of finished Cloudlets is:70
+98.40953333333331: ACO_Broker: Cloudlet #62 return received
+98.40953333333331: ACO_Broker: The number of finished Cloudlets is:71
+98.50953333333331: ACO_Broker: Cloudlet #107 return received
+98.50953333333331: ACO_Broker: The number of finished Cloudlets is:72
+99.6091333333333: ACO_Broker: Cloudlet #110 return received
+99.6091333333333: ACO_Broker: The number of finished Cloudlets is:73
+101.34246666666664: ACO_Broker: Cloudlet #75 return received
+101.34246666666664: ACO_Broker: The number of finished Cloudlets is:74
+102.80966666666664: ACO_Broker: Cloudlet #82 return received
+102.80966666666664: ACO_Broker: The number of finished Cloudlets is:75
+103.00966666666665: ACO_Broker: Cloudlet #120 return received
+103.00966666666665: ACO_Broker: The number of finished Cloudlets is:76
+103.50866666666664: ACO_Broker: Cloudlet #128 return received
+103.50866666666664: ACO_Broker: The number of finished Cloudlets is:77
+104.00866666666664: ACO_Broker: Cloudlet #83 return received
+104.00866666666664: ACO_Broker: The number of finished Cloudlets is:78
+104.02866666666665: ACO_Broker: Cloudlet #81 return received
+104.02866666666665: ACO_Broker: The number of finished Cloudlets is:79
+104.02866666666665: ACO_Broker: Cloudlet #78 return received
+104.02866666666665: ACO_Broker: The number of finished Cloudlets is:80
+105.20946666666666: ACO_Broker: Cloudlet #93 return received
+105.20946666666666: ACO_Broker: The number of finished Cloudlets is:81
+105.50946666666665: ACO_Broker: Cloudlet #133 return received
+105.50946666666665: ACO_Broker: The number of finished Cloudlets is:82
+106.80946666666665: ACO_Broker: Cloudlet #103 return received
+106.80946666666665: ACO_Broker: The number of finished Cloudlets is:83
+108.00946666666665: ACO_Broker: Cloudlet #96 return received
+108.00946666666665: ACO_Broker: The number of finished Cloudlets is:84
+108.00946666666665: ACO_Broker: Cloudlet #76 return received
+108.00946666666665: ACO_Broker: The number of finished Cloudlets is:85
+108.40986666666666: ACO_Broker: Cloudlet #72 return received
+108.40986666666666: ACO_Broker: The number of finished Cloudlets is:86
+108.80946666666667: ACO_Broker: Cloudlet #122 return received
+108.80946666666667: ACO_Broker: The number of finished Cloudlets is:87
+109.3428: ACO_Broker: Cloudlet #39 return received
+109.3428: ACO_Broker: The number of finished Cloudlets is:88
+109.5088: ACO_Broker: Cloudlet #154 return received
+109.5088: ACO_Broker: The number of finished Cloudlets is:89
+110.00959999999999: ACO_Broker: Cloudlet #97 return received
+110.00959999999999: ACO_Broker: The number of finished Cloudlets is:90
+110.34226666666666: ACO_Broker: Cloudlet #86 return received
+110.34226666666666: ACO_Broker: The number of finished Cloudlets is:91
+110.80946666666667: ACO_Broker: Cloudlet #49 return received
+110.80946666666667: ACO_Broker: The number of finished Cloudlets is:92
+113.3428: ACO_Broker: Cloudlet #131 return received
+113.3428: ACO_Broker: The number of finished Cloudlets is:93
+114.00919999999999: ACO_Broker: Cloudlet #91 return received
+114.00919999999999: ACO_Broker: The number of finished Cloudlets is:94
+114.80959999999999: ACO_Broker: Cloudlet #118 return received
+114.80959999999999: ACO_Broker: The number of finished Cloudlets is:95
+115.50959999999999: ACO_Broker: Cloudlet #121 return received
+115.50959999999999: ACO_Broker: The number of finished Cloudlets is:96
+118.4092: ACO_Broker: Cloudlet #65 return received
+118.4092: ACO_Broker: The number of finished Cloudlets is:97
+119.6292: ACO_Broker: Cloudlet #101 return received
+119.6292: ACO_Broker: The number of finished Cloudlets is:98
+124.80879999999999: ACO_Broker: Cloudlet #123 return received
+124.80879999999999: ACO_Broker: The number of finished Cloudlets is:99
+126.0088: ACO_Broker: Cloudlet #175 return received
+126.0088: ACO_Broker: The number of finished Cloudlets is:100
+129.6096: ACO_Broker: Cloudlet #132 return received
+129.6096: ACO_Broker: The number of finished Cloudlets is:101
+130.0091: ACO_Broker: Cloudlet #149 return received
+130.0091: ACO_Broker: The number of finished Cloudlets is:102
+130.4091: ACO_Broker: Cloudlet #127 return received
+130.4091: ACO_Broker: The number of finished Cloudlets is:103
+130.67576666666668: ACO_Broker: Cloudlet #135 return received
+130.67576666666668: ACO_Broker: The number of finished Cloudlets is:104
+132.00936666666666: ACO_Broker: Cloudlet #124 return received
+132.00936666666666: ACO_Broker: The number of finished Cloudlets is:105
+133.22856666666667: ACO_Broker: Cloudlet #114 return received
+133.22856666666667: ACO_Broker: The number of finished Cloudlets is:106
+134.50906666666666: ACO_Broker: Cloudlet #98 return received
+134.50906666666666: ACO_Broker: The number of finished Cloudlets is:107
+134.52906666666664: ACO_Broker: Cloudlet #138 return received
+134.52906666666664: ACO_Broker: The number of finished Cloudlets is:108
+136.00973333333332: ACO_Broker: Cloudlet #68 return received
+136.00973333333332: ACO_Broker: The number of finished Cloudlets is:109
+137.00906666666666: ACO_Broker: Cloudlet #89 return received
+137.00906666666666: ACO_Broker: The number of finished Cloudlets is:110
+137.34306666666666: ACO_Broker: Cloudlet #105 return received
+137.34306666666666: ACO_Broker: The number of finished Cloudlets is:111
+139.00956666666667: ACO_Broker: Cloudlet #152 return received
+139.00956666666667: ACO_Broker: The number of finished Cloudlets is:112
+140.00916666666666: ACO_Broker: Cloudlet #80 return received
+140.00916666666666: ACO_Broker: The number of finished Cloudlets is:113
+140.40916666666666: ACO_Broker: Cloudlet #155 return received
+140.40916666666666: ACO_Broker: The number of finished Cloudlets is:114
+140.50916666666666: ACO_Broker: Cloudlet #140 return received
+140.50916666666666: ACO_Broker: The number of finished Cloudlets is:115
+142.40956666666665: ACO_Broker: Cloudlet #112 return received
+142.40956666666665: ACO_Broker: The number of finished Cloudlets is:116
+143.60916666666665: ACO_Broker: Cloudlet #95 return received
+143.60916666666665: ACO_Broker: The number of finished Cloudlets is:117
+144.00916666666666: ACO_Broker: Cloudlet #94 return received
+144.00916666666666: ACO_Broker: The number of finished Cloudlets is:118
+144.80956666666665: ACO_Broker: Cloudlet #157 return received
+144.80956666666665: ACO_Broker: The number of finished Cloudlets is:119
+144.80956666666665: ACO_Broker: Cloudlet #111 return received
+144.80956666666665: ACO_Broker: The number of finished Cloudlets is:120
+145.60916666666665: ACO_Broker: Cloudlet #71 return received
+145.60916666666665: ACO_Broker: The number of finished Cloudlets is:121
+149.60916666666665: ACO_Broker: Cloudlet #126 return received
+149.60916666666665: ACO_Broker: The number of finished Cloudlets is:122
+150.10866666666666: ACO_Broker: Cloudlet #142 return received
+150.10866666666666: ACO_Broker: The number of finished Cloudlets is:123
+155.60906666666668: ACO_Broker: Cloudlet #102 return received
+155.60906666666668: ACO_Broker: The number of finished Cloudlets is:124
+162.00906666666668: ACO_Broker: Cloudlet #104 return received
+162.00906666666668: ACO_Broker: The number of finished Cloudlets is:125
+163.6094666666667: ACO_Broker: Cloudlet #144 return received
+163.6094666666667: ACO_Broker: The number of finished Cloudlets is:126
+164.00906666666668: ACO_Broker: Cloudlet #178 return received
+164.00906666666668: ACO_Broker: The number of finished Cloudlets is:127
+164.00906666666668: ACO_Broker: Cloudlet #143 return received
+164.00906666666668: ACO_Broker: The number of finished Cloudlets is:128
+164.4090666666667: ACO_Broker: Cloudlet #88 return received
+164.4090666666667: ACO_Broker: The number of finished Cloudlets is:129
+164.82906666666668: ACO_Broker: Cloudlet #113 return received
+164.82906666666668: ACO_Broker: The number of finished Cloudlets is:130
+165.6282666666667: ACO_Broker: Cloudlet #164 return received
+165.6282666666667: ACO_Broker: The number of finished Cloudlets is:131
+166.00893333333335: ACO_Broker: Cloudlet #167 return received
+166.00893333333335: ACO_Broker: The number of finished Cloudlets is:132
+166.80893333333336: ACO_Broker: Cloudlet #170 return received
+166.80893333333336: ACO_Broker: The number of finished Cloudlets is:133
+168.40853333333337: ACO_Broker: Cloudlet #158 return received
+168.40853333333337: ACO_Broker: The number of finished Cloudlets is:134
+171.34253333333336: ACO_Broker: Cloudlet #115 return received
+171.34253333333336: ACO_Broker: The number of finished Cloudlets is:135
+171.34253333333336: ACO_Broker: Cloudlet #130 return received
+171.34253333333336: ACO_Broker: The number of finished Cloudlets is:136
+172.40933333333336: ACO_Broker: Cloudlet #148 return received
+172.40933333333336: ACO_Broker: The number of finished Cloudlets is:137
+174.0086666666667: ACO_Broker: Cloudlet #191 return received
+174.0086666666667: ACO_Broker: The number of finished Cloudlets is:138
+175.5091666666667: ACO_Broker: Cloudlet #166 return received
+175.5091666666667: ACO_Broker: The number of finished Cloudlets is:139
+176.00850000000003: ACO_Broker: Cloudlet #217 return received
+176.00850000000003: ACO_Broker: The number of finished Cloudlets is:140
+176.34183333333337: ACO_Broker: Cloudlet #116 return received
+176.34183333333337: ACO_Broker: The number of finished Cloudlets is:141
+180.40903333333335: ACO_Broker: Cloudlet #117 return received
+180.40903333333335: ACO_Broker: The number of finished Cloudlets is:142
+181.50903333333335: ACO_Broker: Cloudlet #159 return received
+181.50903333333335: ACO_Broker: The number of finished Cloudlets is:143
+183.20903333333334: ACO_Broker: Cloudlet #136 return received
+183.20903333333334: ACO_Broker: The number of finished Cloudlets is:144
+184.34236666666666: ACO_Broker: Cloudlet #109 return received
+184.34236666666666: ACO_Broker: The number of finished Cloudlets is:145
+186.00886666666668: ACO_Broker: Cloudlet #147 return received
+186.00886666666668: ACO_Broker: The number of finished Cloudlets is:146
+187.20886666666667: ACO_Broker: Cloudlet #145 return received
+187.20886666666667: ACO_Broker: The number of finished Cloudlets is:147
+187.60886666666667: ACO_Broker: Cloudlet #192 return received
+187.60886666666667: ACO_Broker: The number of finished Cloudlets is:148
+188.50786666666667: ACO_Broker: Cloudlet #161 return received
+188.50786666666667: ACO_Broker: The number of finished Cloudlets is:149
+188.50786666666667: ACO_Broker: Cloudlet #150 return received
+188.50786666666667: ACO_Broker: The number of finished Cloudlets is:150
+189.60906666666668: ACO_Broker: Cloudlet #187 return received
+189.60906666666668: ACO_Broker: The number of finished Cloudlets is:151
+190.02826666666667: ACO_Broker: Cloudlet #174 return received
+190.02826666666667: ACO_Broker: The number of finished Cloudlets is:152
+190.04826666666665: ACO_Broker: Cloudlet #162 return received
+190.04826666666665: ACO_Broker: The number of finished Cloudlets is:153
+191.60946666666666: ACO_Broker: Cloudlet #125 return received
+191.60946666666666: ACO_Broker: The number of finished Cloudlets is:154
+193.20906666666667: ACO_Broker: Cloudlet #194 return received
+193.20906666666667: ACO_Broker: The number of finished Cloudlets is:155
+194.00906666666668: ACO_Broker: Cloudlet #106 return received
+194.00906666666668: ACO_Broker: The number of finished Cloudlets is:156
+194.34173333333334: ACO_Broker: Cloudlet #277 return received
+194.34173333333334: ACO_Broker: The number of finished Cloudlets is:157
+194.80933333333334: ACO_Broker: Cloudlet #181 return received
+194.80933333333334: ACO_Broker: The number of finished Cloudlets is:158
+195.20933333333335: ACO_Broker: Cloudlet #172 return received
+195.20933333333335: ACO_Broker: The number of finished Cloudlets is:159
+197.00883333333334: ACO_Broker: Cloudlet #177 return received
+197.00883333333334: ACO_Broker: The number of finished Cloudlets is:160
+198.00883333333334: ACO_Broker: Cloudlet #137 return received
+198.00883333333334: ACO_Broker: The number of finished Cloudlets is:161
+200.60833333333335: ACO_Broker: Cloudlet #151 return received
+200.60833333333335: ACO_Broker: The number of finished Cloudlets is:162
+200.80833333333334: ACO_Broker: Cloudlet #211 return received
+200.80833333333334: ACO_Broker: The number of finished Cloudlets is:163
+203.00833333333333: ACO_Broker: Cloudlet #176 return received
+203.00833333333333: ACO_Broker: The number of finished Cloudlets is:164
+204.00833333333333: ACO_Broker: Cloudlet #268 return received
+204.00833333333333: ACO_Broker: The number of finished Cloudlets is:165
+206.40873333333332: ACO_Broker: Cloudlet #204 return received
+206.40873333333332: ACO_Broker: The number of finished Cloudlets is:166
+206.8083333333333: ACO_Broker: Cloudlet #222 return received
+206.8083333333333: ACO_Broker: The number of finished Cloudlets is:167
+208.0087333333333: ACO_Broker: Cloudlet #197 return received
+208.0087333333333: ACO_Broker: The number of finished Cloudlets is:168
+209.3427333333333: ACO_Broker: Cloudlet #169 return received
+209.3427333333333: ACO_Broker: The number of finished Cloudlets is:169
+212.42873333333333: ACO_Broker: Cloudlet #183 return received
+212.42873333333333: ACO_Broker: The number of finished Cloudlets is:170
+216.00873333333334: ACO_Broker: Cloudlet #119 return received
+216.00873333333334: ACO_Broker: The number of finished Cloudlets is:171
+218.00773333333333: ACO_Broker: Cloudlet #182 return received
+218.00773333333333: ACO_Broker: The number of finished Cloudlets is:172
+218.02773333333332: ACO_Broker: Cloudlet #188 return received
+218.02773333333332: ACO_Broker: The number of finished Cloudlets is:173
+219.2089333333333: ACO_Broker: Cloudlet #139 return received
+219.2089333333333: ACO_Broker: The number of finished Cloudlets is:174
+219.3429333333333: ACO_Broker: Cloudlet #134 return received
+219.3429333333333: ACO_Broker: The number of finished Cloudlets is:175
+220.60793333333328: ACO_Broker: Cloudlet #173 return received
+220.60793333333328: ACO_Broker: The number of finished Cloudlets is:176
+220.80873333333327: ACO_Broker: Cloudlet #153 return received
+220.80873333333327: ACO_Broker: The number of finished Cloudlets is:177
+221.00773333333328: ACO_Broker: Cloudlet #146 return received
+221.00773333333328: ACO_Broker: The number of finished Cloudlets is:178
+221.20853333333326: ACO_Broker: Cloudlet #209 return received
+221.20853333333326: ACO_Broker: The number of finished Cloudlets is:179
+222.00893333333326: ACO_Broker: Cloudlet #141 return received
+222.00893333333326: ACO_Broker: The number of finished Cloudlets is:180
+222.80893333333327: ACO_Broker: Cloudlet #213 return received
+222.80893333333327: ACO_Broker: The number of finished Cloudlets is:181
+228.00893333333326: ACO_Broker: Cloudlet #186 return received
+228.00893333333326: ACO_Broker: The number of finished Cloudlets is:182
+228.50843333333327: ACO_Broker: Cloudlet #201 return received
+228.50843333333327: ACO_Broker: The number of finished Cloudlets is:183
+231.60923333333326: ACO_Broker: Cloudlet #185 return received
+231.60923333333326: ACO_Broker: The number of finished Cloudlets is:184
+232.00963333333326: ACO_Broker: Cloudlet #35 return received
+232.00963333333326: ACO_Broker: The number of finished Cloudlets is:185
+233.50763333333325: ACO_Broker: Cloudlet #200 return received
+233.50763333333325: ACO_Broker: The number of finished Cloudlets is:186
+233.62803333333324: ACO_Broker: Cloudlet #184 return received
+233.62803333333324: ACO_Broker: The number of finished Cloudlets is:187
+235.20923333333323: ACO_Broker: Cloudlet #212 return received
+235.20923333333323: ACO_Broker: The number of finished Cloudlets is:188
+236.00723333333323: ACO_Broker: Cloudlet #256 return received
+236.00723333333323: ACO_Broker: The number of finished Cloudlets is:189
+237.50873333333323: ACO_Broker: Cloudlet #165 return received
+237.50873333333323: ACO_Broker: The number of finished Cloudlets is:190
+238.80873333333324: ACO_Broker: Cloudlet #229 return received
+238.80873333333324: ACO_Broker: The number of finished Cloudlets is:191
+240.40873333333323: ACO_Broker: Cloudlet #226 return received
+240.40873333333323: ACO_Broker: The number of finished Cloudlets is:192
+240.80913333333322: ACO_Broker: Cloudlet #220 return received
+240.80913333333322: ACO_Broker: The number of finished Cloudlets is:193
+241.00846666666655: ACO_Broker: Cloudlet #129 return received
+241.00846666666655: ACO_Broker: The number of finished Cloudlets is:194
+241.60806666666656: ACO_Broker: Cloudlet #227 return received
+241.60806666666656: ACO_Broker: The number of finished Cloudlets is:195
+243.34273333333323: ACO_Broker: Cloudlet #253 return received
+243.34273333333323: ACO_Broker: The number of finished Cloudlets is:196
+243.50773333333322: ACO_Broker: Cloudlet #202 return received
+243.50773333333322: ACO_Broker: The number of finished Cloudlets is:197
+245.6085333333332: ACO_Broker: Cloudlet #236 return received
+245.6085333333332: ACO_Broker: The number of finished Cloudlets is:198
+246.67586666666654: ACO_Broker: Cloudlet #221 return received
+246.67586666666654: ACO_Broker: The number of finished Cloudlets is:199
+249.00886666666653: ACO_Broker: Cloudlet #244 return received
+249.00886666666653: ACO_Broker: The number of finished Cloudlets is:200
+249.54786666666652: ACO_Broker: Cloudlet #190 return received
+249.54786666666652: ACO_Broker: The number of finished Cloudlets is:201
+250.0085333333332: ACO_Broker: Cloudlet #195 return received
+250.0085333333332: ACO_Broker: The number of finished Cloudlets is:202
+252.00919999999985: ACO_Broker: Cloudlet #208 return received
+252.00919999999985: ACO_Broker: The number of finished Cloudlets is:203
+253.6745333333332: ACO_Broker: Cloudlet #289 return received
+253.6745333333332: ACO_Broker: The number of finished Cloudlets is:204
+254.10753333333318: ACO_Broker: Cloudlet #198 return received
+254.10753333333318: ACO_Broker: The number of finished Cloudlets is:205
+255.00803333333317: ACO_Broker: Cloudlet #259 return received
+255.00803333333317: ACO_Broker: The number of finished Cloudlets is:206
+256.40963333333315: ACO_Broker: Cloudlet #239 return received
+256.40963333333315: ACO_Broker: The number of finished Cloudlets is:207
+260.80843333333314: ACO_Broker: Cloudlet #231 return received
+260.80843333333314: ACO_Broker: The number of finished Cloudlets is:208
+261.00843333333313: ACO_Broker: Cloudlet #224 return received
+261.00843333333313: ACO_Broker: The number of finished Cloudlets is:209
+262.50993333333315: ACO_Broker: Cloudlet #18 return received
+262.50993333333315: ACO_Broker: The number of finished Cloudlets is:210
+264.5089333333332: ACO_Broker: Cloudlet #230 return received
+264.5089333333332: ACO_Broker: The number of finished Cloudlets is:211
+270.00853333333316: ACO_Broker: Cloudlet #163 return received
+270.00853333333316: ACO_Broker: The number of finished Cloudlets is:212
+270.8089333333332: ACO_Broker: Cloudlet #156 return received
+270.8089333333332: ACO_Broker: The number of finished Cloudlets is:213
+271.20893333333316: ACO_Broker: Cloudlet #228 return received
+271.20893333333316: ACO_Broker: The number of finished Cloudlets is:214
+271.60893333333314: ACO_Broker: Cloudlet #247 return received
+271.60893333333314: ACO_Broker: The number of finished Cloudlets is:215
+272.00853333333316: ACO_Broker: Cloudlet #245 return received
+272.00853333333316: ACO_Broker: The number of finished Cloudlets is:216
+272.52753333333317: ACO_Broker: Cloudlet #234 return received
+272.52753333333317: ACO_Broker: The number of finished Cloudlets is:217
+274.4095333333332: ACO_Broker: Cloudlet #273 return received
+274.4095333333332: ACO_Broker: The number of finished Cloudlets is:218
+276.4079333333332: ACO_Broker: Cloudlet #262 return received
+276.4079333333332: ACO_Broker: The number of finished Cloudlets is:219
+276.6745999999998: ACO_Broker: Cloudlet #296 return received
+276.6745999999998: ACO_Broker: The number of finished Cloudlets is:220
+277.40939999999983: ACO_Broker: Cloudlet #171 return received
+277.40939999999983: ACO_Broker: The number of finished Cloudlets is:221
+277.60859999999985: ACO_Broker: Cloudlet #275 return received
+277.60859999999985: ACO_Broker: The number of finished Cloudlets is:222
+278.00859999999983: ACO_Broker: Cloudlet #266 return received
+278.00859999999983: ACO_Broker: The number of finished Cloudlets is:223
+280.50759999999985: ACO_Broker: Cloudlet #223 return received
+280.50759999999985: ACO_Broker: The number of finished Cloudlets is:224
+281.50759999999985: ACO_Broker: Cloudlet #276 return received
+281.50759999999985: ACO_Broker: The number of finished Cloudlets is:225
+281.6091999999999: ACO_Broker: Cloudlet #189 return received
+281.6091999999999: ACO_Broker: The number of finished Cloudlets is:226
+282.0087999999999: ACO_Broker: Cloudlet #168 return received
+282.0087999999999: ACO_Broker: The number of finished Cloudlets is:227
+282.6754666666666: ACO_Broker: Cloudlet #255 return received
+282.6754666666666: ACO_Broker: The number of finished Cloudlets is:228
+284.0094666666666: ACO_Broker: Cloudlet #180 return received
+284.0094666666666: ACO_Broker: The number of finished Cloudlets is:229
+285.0064666666666: ACO_Broker: Cloudlet #306 return received
+285.0064666666666: ACO_Broker: The number of finished Cloudlets is:230
+289.2088666666666: ACO_Broker: Cloudlet #250 return received
+289.2088666666666: ACO_Broker: The number of finished Cloudlets is:231
+290.0098666666666: ACO_Broker: Cloudlet #278 return received
+290.0098666666666: ACO_Broker: The number of finished Cloudlets is:232
+294.0088666666666: ACO_Broker: Cloudlet #279 return received
+294.0088666666666: ACO_Broker: The number of finished Cloudlets is:233
+295.00819999999993: ACO_Broker: Cloudlet #218 return received
+295.00819999999993: ACO_Broker: The number of finished Cloudlets is:234
+299.34219999999993: ACO_Broker: Cloudlet #237 return received
+299.34219999999993: ACO_Broker: The number of finished Cloudlets is:235
+300.00819999999993: ACO_Broker: Cloudlet #249 return received
+300.00819999999993: ACO_Broker: The number of finished Cloudlets is:236
+303.3408666666666: ACO_Broker: Cloudlet #317 return received
+303.3408666666666: ACO_Broker: The number of finished Cloudlets is:237
+305.00819999999993: ACO_Broker: Cloudlet #263 return received
+305.00819999999993: ACO_Broker: The number of finished Cloudlets is:238
+305.0476999999999: ACO_Broker: Cloudlet #243 return received
+305.0476999999999: ACO_Broker: The number of finished Cloudlets is:239
+305.6084999999999: ACO_Broker: Cloudlet #270 return received
+305.6084999999999: ACO_Broker: The number of finished Cloudlets is:240
+306.0080999999999: ACO_Broker: Cloudlet #248 return received
+306.0080999999999: ACO_Broker: The number of finished Cloudlets is:241
+306.4084999999999: ACO_Broker: Cloudlet #206 return received
+306.4084999999999: ACO_Broker: The number of finished Cloudlets is:242
+309.6076999999999: ACO_Broker: Cloudlet #269 return received
+309.6076999999999: ACO_Broker: The number of finished Cloudlets is:243
+311.0083666666666: ACO_Broker: Cloudlet #264 return received
+311.0083666666666: ACO_Broker: The number of finished Cloudlets is:244
+311.6743666666666: ACO_Broker: Cloudlet #298 return received
+311.6743666666666: ACO_Broker: The number of finished Cloudlets is:245
+312.5083666666666: ACO_Broker: Cloudlet #207 return received
+312.5083666666666: ACO_Broker: The number of finished Cloudlets is:246
+313.2091666666666: ACO_Broker: Cloudlet #210 return received
+313.2091666666666: ACO_Broker: The number of finished Cloudlets is:247
+314.8083666666666: ACO_Broker: Cloudlet #267 return received
+314.8083666666666: ACO_Broker: The number of finished Cloudlets is:248
+315.20836666666656: ACO_Broker: Cloudlet #193 return received
+315.20836666666656: ACO_Broker: The number of finished Cloudlets is:249
+319.00736666666654: ACO_Broker: Cloudlet #196 return received
+319.00736666666654: ACO_Broker: The number of finished Cloudlets is:250
+319.0273666666665: ACO_Broker: Cloudlet #235 return received
+319.0273666666665: ACO_Broker: The number of finished Cloudlets is:251
+320.80856666666654: ACO_Broker: Cloudlet #205 return received
+320.80856666666654: ACO_Broker: The number of finished Cloudlets is:252
+321.6738999999999: ACO_Broker: Cloudlet #318 return received
+321.6738999999999: ACO_Broker: The number of finished Cloudlets is:253
+321.8090999999999: ACO_Broker: Cloudlet #203 return received
+321.8090999999999: ACO_Broker: The number of finished Cloudlets is:254
+322.00869999999986: ACO_Broker: Cloudlet #271 return received
+322.00869999999986: ACO_Broker: The number of finished Cloudlets is:255
+324.4082999999999: ACO_Broker: Cloudlet #303 return received
+324.4082999999999: ACO_Broker: The number of finished Cloudlets is:256
+328.5472999999999: ACO_Broker: Cloudlet #320 return received
+328.5472999999999: ACO_Broker: The number of finished Cloudlets is:257
+329.3412999999999: ACO_Broker: Cloudlet #284 return received
+329.3412999999999: ACO_Broker: The number of finished Cloudlets is:258
+329.5072999999999: ACO_Broker: Cloudlet #265 return received
+329.5072999999999: ACO_Broker: The number of finished Cloudlets is:259
+330.02729999999985: ACO_Broker: Cloudlet #292 return received
+330.02729999999985: ACO_Broker: The number of finished Cloudlets is:260
+334.40929999999986: ACO_Broker: Cloudlet #281 return received
+334.40929999999986: ACO_Broker: The number of finished Cloudlets is:261
+335.00829999999985: ACO_Broker: Cloudlet #246 return received
+335.00829999999985: ACO_Broker: The number of finished Cloudlets is:262
+336.4082999999998: ACO_Broker: Cloudlet #308 return received
+336.4082999999998: ACO_Broker: The number of finished Cloudlets is:263
+336.80789999999985: ACO_Broker: Cloudlet #301 return received
+336.80789999999985: ACO_Broker: The number of finished Cloudlets is:264
+340.50689999999986: ACO_Broker: Cloudlet #350 return received
+340.50689999999986: ACO_Broker: The number of finished Cloudlets is:265
+343.00739999999985: ACO_Broker: Cloudlet #285 return received
+343.00739999999985: ACO_Broker: The number of finished Cloudlets is:266
+345.60859999999985: ACO_Broker: Cloudlet #305 return received
+345.60859999999985: ACO_Broker: The number of finished Cloudlets is:267
+346.3412666666665: ACO_Broker: Cloudlet #310 return received
+346.3412666666665: ACO_Broker: The number of finished Cloudlets is:268
+347.4284666666665: ACO_Broker: Cloudlet #216 return received
+347.4284666666665: ACO_Broker: The number of finished Cloudlets is:269
+348.0064666666665: ACO_Broker: Cloudlet #314 return received
+348.0064666666665: ACO_Broker: The number of finished Cloudlets is:270
+348.3404666666665: ACO_Broker: Cloudlet #375 return received
+348.3404666666665: ACO_Broker: The number of finished Cloudlets is:271
+349.6744666666665: ACO_Broker: Cloudlet #282 return received
+349.6744666666665: ACO_Broker: The number of finished Cloudlets is:272
+351.3411333333332: ACO_Broker: Cloudlet #274 return received
+351.3411333333332: ACO_Broker: The number of finished Cloudlets is:273
+351.60753333333315: ACO_Broker: Cloudlet #291 return received
+351.60753333333315: ACO_Broker: The number of finished Cloudlets is:274
+352.40833333333313: ACO_Broker: Cloudlet #214 return received
+352.40833333333313: ACO_Broker: The number of finished Cloudlets is:275
+355.8087333333331: ACO_Broker: Cloudlet #232 return received
+355.8087333333331: ACO_Broker: The number of finished Cloudlets is:276
+356.52723333333313: ACO_Broker: Cloudlet #324 return received
+356.52723333333313: ACO_Broker: The number of finished Cloudlets is:277
+356.8080333333331: ACO_Broker: Cloudlet #293 return received
+356.8080333333331: ACO_Broker: The number of finished Cloudlets is:278
+360.0096333333331: ACO_Broker: Cloudlet #14 return received
+360.0096333333331: ACO_Broker: The number of finished Cloudlets is:279
+365.2080333333331: ACO_Broker: Cloudlet #225 return received
+365.2080333333331: ACO_Broker: The number of finished Cloudlets is:280
+366.2284333333331: ACO_Broker: Cloudlet #334 return received
+366.2284333333331: ACO_Broker: The number of finished Cloudlets is:281
+366.5069333333331: ACO_Broker: Cloudlet #312 return received
+366.5069333333331: ACO_Broker: The number of finished Cloudlets is:282
+367.6077333333331: ACO_Broker: Cloudlet #322 return received
+367.6077333333331: ACO_Broker: The number of finished Cloudlets is:283
+368.6757333333331: ACO_Broker: Cloudlet #238 return received
+368.6757333333331: ACO_Broker: The number of finished Cloudlets is:284
+369.60813333333306: ACO_Broker: Cloudlet #309 return received
+369.60813333333306: ACO_Broker: The number of finished Cloudlets is:285
+370.0471333333331: ACO_Broker: Cloudlet #321 return received
+370.0471333333331: ACO_Broker: The number of finished Cloudlets is:286
+370.5271333333331: ACO_Broker: Cloudlet #260 return received
+370.5271333333331: ACO_Broker: The number of finished Cloudlets is:287
+370.6751333333331: ACO_Broker: Cloudlet #286 return received
+370.6751333333331: ACO_Broker: The number of finished Cloudlets is:288
+372.6751333333331: ACO_Broker: Cloudlet #294 return received
+372.6751333333331: ACO_Broker: The number of finished Cloudlets is:289
+372.80753333333314: ACO_Broker: Cloudlet #295 return received
+372.80753333333314: ACO_Broker: The number of finished Cloudlets is:290
+374.3401999999998: ACO_Broker: Cloudlet #406 return received
+374.3401999999998: ACO_Broker: The number of finished Cloudlets is:291
+380.2085999999998: ACO_Broker: Cloudlet #233 return received
+380.2085999999998: ACO_Broker: The number of finished Cloudlets is:292
+380.80819999999983: ACO_Broker: Cloudlet #258 return received
+380.80819999999983: ACO_Broker: The number of finished Cloudlets is:293
+382.4089999999998: ACO_Broker: Cloudlet #179 return received
+382.4089999999998: ACO_Broker: The number of finished Cloudlets is:294
+385.20899999999983: ACO_Broker: Cloudlet #311 return received
+385.20899999999983: ACO_Broker: The number of finished Cloudlets is:295
+388.0081999999998: ACO_Broker: Cloudlet #326 return received
+388.0081999999998: ACO_Broker: The number of finished Cloudlets is:296
+388.0281999999998: ACO_Broker: Cloudlet #325 return received
+388.0281999999998: ACO_Broker: The number of finished Cloudlets is:297
+390.0077999999998: ACO_Broker: Cloudlet #329 return received
+390.0077999999998: ACO_Broker: The number of finished Cloudlets is:298
+391.4281999999998: ACO_Broker: Cloudlet #344 return received
+391.4281999999998: ACO_Broker: The number of finished Cloudlets is:299
+393.0093999999998: ACO_Broker: Cloudlet #99 return received
+393.0093999999998: ACO_Broker: The number of finished Cloudlets is:300
+398.5078999999998: ACO_Broker: Cloudlet #251 return received
+398.5078999999998: ACO_Broker: The number of finished Cloudlets is:301
+398.8098999999998: ACO_Broker: Cloudlet #33 return received
+398.8098999999998: ACO_Broker: The number of finished Cloudlets is:302
+399.0078999999998: ACO_Broker: Cloudlet #355 return received
+399.0078999999998: ACO_Broker: The number of finished Cloudlets is:303
+400.67456666666646: ACO_Broker: Cloudlet #299 return received
+400.67456666666646: ACO_Broker: The number of finished Cloudlets is:304
+404.00656666666646: ACO_Broker: Cloudlet #240 return received
+404.00656666666646: ACO_Broker: The number of finished Cloudlets is:305
+404.80776666666645: ACO_Broker: Cloudlet #283 return received
+404.80776666666645: ACO_Broker: The number of finished Cloudlets is:306
+406.00936666666644: ACO_Broker: Cloudlet #261 return received
+406.00936666666644: ACO_Broker: The number of finished Cloudlets is:307
+406.3406999999998: ACO_Broker: Cloudlet #347 return received
+406.3406999999998: ACO_Broker: The number of finished Cloudlets is:308
+408.0074999999998: ACO_Broker: Cloudlet #345 return received
+408.0074999999998: ACO_Broker: The number of finished Cloudlets is:309
+408.5469999999998: ACO_Broker: Cloudlet #328 return received
+408.5469999999998: ACO_Broker: The number of finished Cloudlets is:310
+409.0269999999998: ACO_Broker: Cloudlet #288 return received
+409.0269999999998: ACO_Broker: The number of finished Cloudlets is:311
+411.00766666666647: ACO_Broker: Cloudlet #330 return received
+411.00766666666647: ACO_Broker: The number of finished Cloudlets is:312
+412.00766666666647: ACO_Broker: Cloudlet #385 return received
+412.00766666666647: ACO_Broker: The number of finished Cloudlets is:313
+415.0066666666665: ACO_Broker: Cloudlet #327 return received
+415.0066666666665: ACO_Broker: The number of finished Cloudlets is:314
+416.3406666666665: ACO_Broker: Cloudlet #417 return received
+416.3406666666665: ACO_Broker: The number of finished Cloudlets is:315
+416.4078666666665: ACO_Broker: Cloudlet #348 return received
+416.4078666666665: ACO_Broker: The number of finished Cloudlets is:316
+417.34119999999984: ACO_Broker: Cloudlet #331 return received
+417.34119999999984: ACO_Broker: The number of finished Cloudlets is:317
+417.50619999999986: ACO_Broker: Cloudlet #353 return received
+417.50619999999986: ACO_Broker: The number of finished Cloudlets is:318
+418.5076999999999: ACO_Broker: Cloudlet #252 return received
+418.5076999999999: ACO_Broker: The number of finished Cloudlets is:319
+418.5281999999999: ACO_Broker: Cloudlet #366 return received
+418.5281999999999: ACO_Broker: The number of finished Cloudlets is:320
+419.0073999999999: ACO_Broker: Cloudlet #339 return received
+419.0073999999999: ACO_Broker: The number of finished Cloudlets is:321
+419.0073999999999: ACO_Broker: Cloudlet #358 return received
+419.0073999999999: ACO_Broker: The number of finished Cloudlets is:322
+422.8073999999999: ACO_Broker: Cloudlet #332 return received
+422.8073999999999: ACO_Broker: The number of finished Cloudlets is:323
+422.8573999999999: ACO_Broker: Cloudlet #241 return received
+422.8573999999999: ACO_Broker: The number of finished Cloudlets is:324
+423.2593999999999: ACO_Broker: Cloudlet #63 return received
+423.2593999999999: ACO_Broker: The number of finished Cloudlets is:325
+425.3420666666666: ACO_Broker: Cloudlet #242 return received
+425.3420666666666: ACO_Broker: The number of finished Cloudlets is:326
+427.0067333333333: ACO_Broker: Cloudlet #469 return received
+427.0067333333333: ACO_Broker: The number of finished Cloudlets is:327
+430.2279333333333: ACO_Broker: Cloudlet #356 return received
+430.2279333333333: ACO_Broker: The number of finished Cloudlets is:328
+430.3399333333333: ACO_Broker: Cloudlet #448 return received
+430.3399333333333: ACO_Broker: The number of finished Cloudlets is:329
+431.6079333333333: ACO_Broker: Cloudlet #323 return received
+431.6079333333333: ACO_Broker: The number of finished Cloudlets is:330
+432.40873333333326: ACO_Broker: Cloudlet #304 return received
+432.40873333333326: ACO_Broker: The number of finished Cloudlets is:331
+436.2279333333333: ACO_Broker: Cloudlet #367 return received
+436.2279333333333: ACO_Broker: The number of finished Cloudlets is:332
+438.2091333333333: ACO_Broker: Cloudlet #372 return received
+438.2091333333333: ACO_Broker: The number of finished Cloudlets is:333
+438.40873333333326: ACO_Broker: Cloudlet #333 return received
+438.40873333333326: ACO_Broker: The number of finished Cloudlets is:334
+439.20873333333327: ACO_Broker: Cloudlet #351 return received
+439.20873333333327: ACO_Broker: The number of finished Cloudlets is:335
+440.8071333333333: ACO_Broker: Cloudlet #368 return received
+440.8071333333333: ACO_Broker: The number of finished Cloudlets is:336
+442.0084666666666: ACO_Broker: Cloudlet #357 return received
+442.0084666666666: ACO_Broker: The number of finished Cloudlets is:337
+442.0469666666666: ACO_Broker: Cloudlet #371 return received
+442.0469666666666: ACO_Broker: The number of finished Cloudlets is:338
+442.3409666666666: ACO_Broker: Cloudlet #433 return received
+442.3409666666666: ACO_Broker: The number of finished Cloudlets is:339
+443.6277666666666: ACO_Broker: Cloudlet #199 return received
+443.6277666666666: ACO_Broker: The number of finished Cloudlets is:340
+446.8077666666666: ACO_Broker: Cloudlet #338 return received
+446.8077666666666: ACO_Broker: The number of finished Cloudlets is:341
+447.3411: ACO_Broker: Cloudlet #346 return received
+447.3411: ACO_Broker: The number of finished Cloudlets is:342
+447.6079: ACO_Broker: Cloudlet #363 return received
+447.6079: ACO_Broker: The number of finished Cloudlets is:343
+448.2079: ACO_Broker: Cloudlet #360 return received
+448.2079: ACO_Broker: The number of finished Cloudlets is:344
+448.5069: ACO_Broker: Cloudlet #297 return received
+448.5069: ACO_Broker: The number of finished Cloudlets is:345
+448.80969999999996: ACO_Broker: Cloudlet #379 return received
+448.80969999999996: ACO_Broker: The number of finished Cloudlets is:346
+453.0070333333333: ACO_Broker: Cloudlet #438 return received
+453.0070333333333: ACO_Broker: The number of finished Cloudlets is:347
+453.0070333333333: ACO_Broker: Cloudlet #359 return received
+453.0070333333333: ACO_Broker: The number of finished Cloudlets is:348
+455.8082333333333: ACO_Broker: Cloudlet #254 return received
+455.8082333333333: ACO_Broker: The number of finished Cloudlets is:349
+456.0078333333333: ACO_Broker: Cloudlet #365 return received
+456.0078333333333: ACO_Broker: The number of finished Cloudlets is:350
+458.7598333333333: ACO_Broker: Cloudlet #287 return received
+458.7598333333333: ACO_Broker: The number of finished Cloudlets is:351
+459.00583333333327: ACO_Broker: Cloudlet #364 return received
+459.00583333333327: ACO_Broker: The number of finished Cloudlets is:352
+462.04683333333327: ACO_Broker: Cloudlet #420 return received
+462.04683333333327: ACO_Broker: The number of finished Cloudlets is:353
+465.75933333333325: ACO_Broker: Cloudlet #337 return received
+465.75933333333325: ACO_Broker: The number of finished Cloudlets is:354
+466.5053333333332: ACO_Broker: Cloudlet #382 return received
+466.5053333333332: ACO_Broker: The number of finished Cloudlets is:355
+468.52683333333323: ACO_Broker: Cloudlet #307 return received
+468.52683333333323: ACO_Broker: The number of finished Cloudlets is:356
+469.5063333333332: ACO_Broker: Cloudlet #352 return received
+469.5063333333332: ACO_Broker: The number of finished Cloudlets is:357
+470.0087333333332: ACO_Broker: Cloudlet #380 return received
+470.0087333333332: ACO_Broker: The number of finished Cloudlets is:358
+471.0072333333332: ACO_Broker: Cloudlet #257 return received
+471.0072333333332: ACO_Broker: The number of finished Cloudlets is:359
+472.02773333333323: ACO_Broker: Cloudlet #402 return received
+472.02773333333323: ACO_Broker: The number of finished Cloudlets is:360
+474.50973333333326: ACO_Broker: Cloudlet #73 return received
+474.50973333333326: ACO_Broker: The number of finished Cloudlets is:361
+478.2089333333333: ACO_Broker: Cloudlet #215 return received
+478.2089333333333: ACO_Broker: The number of finished Cloudlets is:362
+478.3569333333333: ACO_Broker: Cloudlet #280 return received
+478.3569333333333: ACO_Broker: The number of finished Cloudlets is:363
+478.4077333333333: ACO_Broker: Cloudlet #387 return received
+478.4077333333333: ACO_Broker: The number of finished Cloudlets is:364
+479.40893333333327: ACO_Broker: Cloudlet #381 return received
+479.40893333333327: ACO_Broker: The number of finished Cloudlets is:365
+479.6729333333333: ACO_Broker: Cloudlet #470 return received
+479.6729333333333: ACO_Broker: The number of finished Cloudlets is:366
+480.62773333333325: ACO_Broker: Cloudlet #370 return received
+480.62773333333325: ACO_Broker: The number of finished Cloudlets is:367
+480.67373333333325: ACO_Broker: Cloudlet #425 return received
+480.67373333333325: ACO_Broker: The number of finished Cloudlets is:368
+480.6937333333332: ACO_Broker: Cloudlet #302 return received
+480.6937333333332: ACO_Broker: The number of finished Cloudlets is:369
+481.00706666666656: ACO_Broker: Cloudlet #389 return received
+481.00706666666656: ACO_Broker: The number of finished Cloudlets is:370
+482.0094666666666: ACO_Broker: Cloudlet #397 return received
+482.0094666666666: ACO_Broker: The number of finished Cloudlets is:371
+485.20746666666656: ACO_Broker: Cloudlet #390 return received
+485.20746666666656: ACO_Broker: The number of finished Cloudlets is:372
+488.33946666666657: ACO_Broker: Cloudlet #487 return received
+488.33946666666657: ACO_Broker: The number of finished Cloudlets is:373
+488.80866666666657: ACO_Broker: Cloudlet #400 return received
+488.80866666666657: ACO_Broker: The number of finished Cloudlets is:374
+490.80706666666657: ACO_Broker: Cloudlet #393 return received
+490.80706666666657: ACO_Broker: The number of finished Cloudlets is:375
+493.67373333333325: ACO_Broker: Cloudlet #473 return received
+493.67373333333325: ACO_Broker: The number of finished Cloudlets is:376
+495.0063999999999: ACO_Broker: Cloudlet #452 return received
+495.0063999999999: ACO_Broker: The number of finished Cloudlets is:377
+495.4079999999999: ACO_Broker: Cloudlet #403 return received
+495.4079999999999: ACO_Broker: The number of finished Cloudlets is:378
+497.0087999999999: ACO_Broker: Cloudlet #399 return received
+497.0087999999999: ACO_Broker: The number of finished Cloudlets is:379
+497.6275999999999: ACO_Broker: Cloudlet #376 return received
+497.6275999999999: ACO_Broker: The number of finished Cloudlets is:380
+499.0055999999999: ACO_Broker: Cloudlet #272 return received
+499.0055999999999: ACO_Broker: The number of finished Cloudlets is:381
+499.0255999999999: ACO_Broker: Cloudlet #458 return received
+499.0255999999999: ACO_Broker: The number of finished Cloudlets is:382
+500.0075999999999: ACO_Broker: Cloudlet #391 return received
+500.0075999999999: ACO_Broker: The number of finished Cloudlets is:383
+502.2075999999999: ACO_Broker: Cloudlet #383 return received
+502.2075999999999: ACO_Broker: The number of finished Cloudlets is:384
+502.6075999999999: ACO_Broker: Cloudlet #361 return received
+502.6075999999999: ACO_Broker: The number of finished Cloudlets is:385
+509.34159999999986: ACO_Broker: Cloudlet #436 return received
+509.34159999999986: ACO_Broker: The number of finished Cloudlets is:386
+509.60719999999986: ACO_Broker: Cloudlet #418 return received
+509.60719999999986: ACO_Broker: The number of finished Cloudlets is:387
+512.5466999999999: ACO_Broker: Cloudlet #471 return received
+512.5466999999999: ACO_Broker: The number of finished Cloudlets is:388
+513.5276999999999: ACO_Broker: Cloudlet #486 return received
+513.5276999999999: ACO_Broker: The number of finished Cloudlets is:389
+515.0084999999999: ACO_Broker: Cloudlet #404 return received
+515.0084999999999: ACO_Broker: The number of finished Cloudlets is:390
+516.2276999999999: ACO_Broker: Cloudlet #407 return received
+516.2276999999999: ACO_Broker: The number of finished Cloudlets is:391
+518.3390333333332: ACO_Broker: Cloudlet #506 return received
+518.3390333333332: ACO_Broker: The number of finished Cloudlets is:392
+520.8094333333332: ACO_Broker: Cloudlet #416 return received
+520.8094333333332: ACO_Broker: The number of finished Cloudlets is:393
+521.2594333333333: ACO_Broker: Cloudlet #362 return received
+521.2594333333333: ACO_Broker: The number of finished Cloudlets is:394
+521.5069333333332: ACO_Broker: Cloudlet #316 return received
+521.5069333333332: ACO_Broker: The number of finished Cloudlets is:395
+523.8089333333332: ACO_Broker: Cloudlet #405 return received
+523.8089333333332: ACO_Broker: The number of finished Cloudlets is:396
+523.8569333333332: ACO_Broker: Cloudlet #319 return received
+523.8569333333332: ACO_Broker: The number of finished Cloudlets is:397
+524.0059333333332: ACO_Broker: Cloudlet #395 return received
+524.0059333333332: ACO_Broker: The number of finished Cloudlets is:398
+524.6079333333332: ACO_Broker: Cloudlet #424 return received
+524.6079333333332: ACO_Broker: The number of finished Cloudlets is:399
+526.5049333333333: ACO_Broker: Cloudlet #315 return received
+526.5049333333333: ACO_Broker: The number of finished Cloudlets is:400
+526.6742666666667: ACO_Broker: Cloudlet #398 return received
+526.6742666666667: ACO_Broker: The number of finished Cloudlets is:401
+526.8074666666666: ACO_Broker: Cloudlet #414 return received
+526.8074666666666: ACO_Broker: The number of finished Cloudlets is:402
+526.8274666666666: ACO_Broker: Cloudlet #421 return received
+526.8274666666666: ACO_Broker: The number of finished Cloudlets is:403
+529.5064666666666: ACO_Broker: Cloudlet #472 return received
+529.5064666666666: ACO_Broker: The number of finished Cloudlets is:404
+530.3398: ACO_Broker: Cloudlet #497 return received
+530.3398: ACO_Broker: The number of finished Cloudlets is:405
+533.0268: ACO_Broker: Cloudlet #313 return received
+533.0268: ACO_Broker: The number of finished Cloudlets is:406
+537.0092999999999: ACO_Broker: Cloudlet #384 return received
+537.0092999999999: ACO_Broker: The number of finished Cloudlets is:407
+542.8272999999999: ACO_Broker: Cloudlet #441 return received
+542.8272999999999: ACO_Broker: The number of finished Cloudlets is:408
+548.2072999999999: ACO_Broker: Cloudlet #434 return received
+548.2072999999999: ACO_Broker: The number of finished Cloudlets is:409
+550.5057999999999: ACO_Broker: Cloudlet #412 return received
+550.5057999999999: ACO_Broker: The number of finished Cloudlets is:410
+554.0283: ACO_Broker: Cloudlet #84 return received
+554.0283: ACO_Broker: The number of finished Cloudlets is:411
+555.5268: ACO_Broker: Cloudlet #409 return received
+555.5268: ACO_Broker: The number of finished Cloudlets is:412
+556.6276: ACO_Broker: Cloudlet #451 return received
+556.6276: ACO_Broker: The number of finished Cloudlets is:413
+557.0256: ACO_Broker: Cloudlet #461 return received
+557.0256: ACO_Broker: The number of finished Cloudlets is:414
+558.0066: ACO_Broker: Cloudlet #349 return received
+558.0066: ACO_Broker: The number of finished Cloudlets is:415
+558.4274: ACO_Broker: Cloudlet #456 return received
+558.4274: ACO_Broker: The number of finished Cloudlets is:416
+559.4086: ACO_Broker: Cloudlet #454 return received
+559.4086: ACO_Broker: The number of finished Cloudlets is:417
+561.5091: ACO_Broker: Cloudlet #464 return received
+561.5091: ACO_Broker: The number of finished Cloudlets is:418
+562.0071: ACO_Broker: Cloudlet #428 return received
+562.0071: ACO_Broker: The number of finished Cloudlets is:419
+562.6075000000001: ACO_Broker: Cloudlet #422 return received
+562.6075000000001: ACO_Broker: The number of finished Cloudlets is:420
+564.0268333333335: ACO_Broker: Cloudlet #335 return received
+564.0268333333335: ACO_Broker: The number of finished Cloudlets is:421
+564.2084333333335: ACO_Broker: Cloudlet #427 return received
+564.2084333333335: ACO_Broker: The number of finished Cloudlets is:422
+568.0054333333335: ACO_Broker: Cloudlet #426 return received
+568.0054333333335: ACO_Broker: The number of finished Cloudlets is:423
+570.0081000000001: ACO_Broker: Cloudlet #535 return received
+570.0081000000001: ACO_Broker: The number of finished Cloudlets is:424
+570.0281000000001: ACO_Broker: Cloudlet #509 return received
+570.0281000000001: ACO_Broker: The number of finished Cloudlets is:425
+570.0281000000001: ACO_Broker: Cloudlet #449 return received
+570.0281000000001: ACO_Broker: The number of finished Cloudlets is:426
+573.4085000000001: ACO_Broker: Cloudlet #342 return received
+573.4085000000001: ACO_Broker: The number of finished Cloudlets is:427
+573.7590000000001: ACO_Broker: Cloudlet #396 return received
+573.7590000000001: ACO_Broker: The number of finished Cloudlets is:428
+574.2086000000002: ACO_Broker: Cloudlet #290 return received
+574.2086000000002: ACO_Broker: The number of finished Cloudlets is:429
+574.3392666666668: ACO_Broker: Cloudlet #459 return received
+574.3392666666668: ACO_Broker: The number of finished Cloudlets is:430
+576.2076666666668: ACO_Broker: Cloudlet #460 return received
+576.2076666666668: ACO_Broker: The number of finished Cloudlets is:431
+579.0072666666669: ACO_Broker: Cloudlet #457 return received
+579.0072666666669: ACO_Broker: The number of finished Cloudlets is:432
+579.5052666666669: ACO_Broker: Cloudlet #455 return received
+579.5052666666669: ACO_Broker: The number of finished Cloudlets is:433
+581.027266666667: ACO_Broker: Cloudlet #468 return received
+581.027266666667: ACO_Broker: The number of finished Cloudlets is:434
+581.4072666666669: ACO_Broker: Cloudlet #482 return received
+581.4072666666669: ACO_Broker: The number of finished Cloudlets is:435
+581.8076666666669: ACO_Broker: Cloudlet #378 return received
+581.8076666666669: ACO_Broker: The number of finished Cloudlets is:436
+583.2272666666669: ACO_Broker: Cloudlet #443 return received
+583.2272666666669: ACO_Broker: The number of finished Cloudlets is:437
+584.3567666666669: ACO_Broker: Cloudlet #374 return received
+584.3567666666669: ACO_Broker: The number of finished Cloudlets is:438
+585.6727666666669: ACO_Broker: Cloudlet #567 return received
+585.6727666666669: ACO_Broker: The number of finished Cloudlets is:439
+586.026766666667: ACO_Broker: Cloudlet #476 return received
+586.026766666667: ACO_Broker: The number of finished Cloudlets is:440
+587.546266666667: ACO_Broker: Cloudlet #501 return received
+587.546266666667: ACO_Broker: The number of finished Cloudlets is:441
+588.506266666667: ACO_Broker: Cloudlet #377 return received
+588.506266666667: ACO_Broker: The number of finished Cloudlets is:442
+589.005766666667: ACO_Broker: Cloudlet #413 return received
+589.005766666667: ACO_Broker: The number of finished Cloudlets is:443
+590.208566666667: ACO_Broker: Cloudlet #300 return received
+590.208566666667: ACO_Broker: The number of finished Cloudlets is:444
+593.528066666667: ACO_Broker: Cloudlet #512 return received
+593.528066666667: ACO_Broker: The number of finished Cloudlets is:445
+594.2080666666669: ACO_Broker: Cloudlet #429 return received
+594.2080666666669: ACO_Broker: The number of finished Cloudlets is:446
+599.4084666666669: ACO_Broker: Cloudlet #444 return received
+599.4084666666669: ACO_Broker: The number of finished Cloudlets is:447
+599.5044666666669: ACO_Broker: Cloudlet #354 return received
+599.5044666666669: ACO_Broker: The number of finished Cloudlets is:448
+600.0078000000002: ACO_Broker: Cloudlet #574 return received
+600.0078000000002: ACO_Broker: The number of finished Cloudlets is:449
+601.6718000000002: ACO_Broker: Cloudlet #519 return received
+601.6718000000002: ACO_Broker: The number of finished Cloudlets is:450
+603.4070000000002: ACO_Broker: Cloudlet #520 return received
+603.4070000000002: ACO_Broker: The number of finished Cloudlets is:451
+605.4086000000002: ACO_Broker: Cloudlet #475 return received
+605.4086000000002: ACO_Broker: The number of finished Cloudlets is:452
+605.6278000000002: ACO_Broker: Cloudlet #493 return received
+605.6278000000002: ACO_Broker: The number of finished Cloudlets is:453
+605.6724666666669: ACO_Broker: Cloudlet #499 return received
+605.6724666666669: ACO_Broker: The number of finished Cloudlets is:454
+606.8272666666669: ACO_Broker: Cloudlet #485 return received
+606.8272666666669: ACO_Broker: The number of finished Cloudlets is:455
+611.0087666666669: ACO_Broker: Cloudlet #500 return received
+611.0087666666669: ACO_Broker: The number of finished Cloudlets is:456
+612.207966666667: ACO_Broker: Cloudlet #440 return received
+612.207966666667: ACO_Broker: The number of finished Cloudlets is:457
+615.527966666667: ACO_Broker: Cloudlet #369 return received
+615.527966666667: ACO_Broker: The number of finished Cloudlets is:458
+616.0091666666669: ACO_Broker: Cloudlet #341 return received
+616.0091666666669: ACO_Broker: The number of finished Cloudlets is:459
+616.627166666667: ACO_Broker: Cloudlet #496 return received
+616.627166666667: ACO_Broker: The number of finished Cloudlets is:460
+617.008366666667: ACO_Broker: Cloudlet #430 return received
+617.008366666667: ACO_Broker: The number of finished Cloudlets is:461
+617.227166666667: ACO_Broker: Cloudlet #447 return received
+617.227166666667: ACO_Broker: The number of finished Cloudlets is:462
+619.006166666667: ACO_Broker: Cloudlet #410 return received
+619.006166666667: ACO_Broker: The number of finished Cloudlets is:463
+619.856666666667: ACO_Broker: Cloudlet #408 return received
+619.856666666667: ACO_Broker: The number of finished Cloudlets is:464
+620.2070666666671: ACO_Broker: Cloudlet #489 return received
+620.2070666666671: ACO_Broker: The number of finished Cloudlets is:465
+622.2585666666671: ACO_Broker: Cloudlet #463 return received
+622.2585666666671: ACO_Broker: The number of finished Cloudlets is:466
+624.6073666666671: ACO_Broker: Cloudlet #483 return received
+624.6073666666671: ACO_Broker: The number of finished Cloudlets is:467
+625.4081666666671: ACO_Broker: Cloudlet #510 return received
+625.4081666666671: ACO_Broker: The number of finished Cloudlets is:468
+626.6735000000004: ACO_Broker: Cloudlet #442 return received
+626.6735000000004: ACO_Broker: The number of finished Cloudlets is:469
+630.5055000000004: ACO_Broker: Cloudlet #490 return received
+630.5055000000004: ACO_Broker: The number of finished Cloudlets is:470
+630.6083000000004: ACO_Broker: Cloudlet #343 return received
+630.6083000000004: ACO_Broker: The number of finished Cloudlets is:471
+631.0083000000004: ACO_Broker: Cloudlet #537 return received
+631.0083000000004: ACO_Broker: The number of finished Cloudlets is:472
+631.0283000000004: ACO_Broker: Cloudlet #474 return received
+631.0283000000004: ACO_Broker: The number of finished Cloudlets is:473
+635.0053000000004: ACO_Broker: Cloudlet #432 return received
+635.0053000000004: ACO_Broker: The number of finished Cloudlets is:474
+635.6713000000004: ACO_Broker: Cloudlet #552 return received
+635.6713000000004: ACO_Broker: The number of finished Cloudlets is:475
+635.8069000000004: ACO_Broker: Cloudlet #531 return received
+635.8069000000004: ACO_Broker: The number of finished Cloudlets is:476
+637.8085000000004: ACO_Broker: Cloudlet #507 return received
+637.8085000000004: ACO_Broker: The number of finished Cloudlets is:477
+639.0081000000005: ACO_Broker: Cloudlet #498 return received
+639.0081000000005: ACO_Broker: The number of finished Cloudlets is:478
+642.0267666666672: ACO_Broker: Cloudlet #336 return received
+642.0267666666672: ACO_Broker: The number of finished Cloudlets is:479
+644.5267666666672: ACO_Broker: Cloudlet #516 return received
+644.5267666666672: ACO_Broker: The number of finished Cloudlets is:480
+645.6271666666672: ACO_Broker: Cloudlet #513 return received
+645.6271666666672: ACO_Broker: The number of finished Cloudlets is:481
+645.8079666666672: ACO_Broker: Cloudlet #530 return received
+645.8079666666672: ACO_Broker: The number of finished Cloudlets is:482
+649.0279666666672: ACO_Broker: Cloudlet #529 return received
+649.0279666666672: ACO_Broker: The number of finished Cloudlets is:483
+649.7584666666672: ACO_Broker: Cloudlet #524 return received
+649.7584666666672: ACO_Broker: The number of finished Cloudlets is:484
+654.0276666666672: ACO_Broker: Cloudlet #540 return received
+654.0276666666672: ACO_Broker: The number of finished Cloudlets is:485
+654.4268666666671: ACO_Broker: Cloudlet #511 return received
+654.4268666666671: ACO_Broker: The number of finished Cloudlets is:486
+655.8076666666672: ACO_Broker: Cloudlet #453 return received
+655.8076666666672: ACO_Broker: The number of finished Cloudlets is:487
+656.3566666666671: ACO_Broker: Cloudlet #415 return received
+656.3566666666671: ACO_Broker: The number of finished Cloudlets is:488
+657.0060000000004: ACO_Broker: Cloudlet #589 return received
+657.0060000000004: ACO_Broker: The number of finished Cloudlets is:489
+657.8068000000004: ACO_Broker: Cloudlet #559 return received
+657.8068000000004: ACO_Broker: The number of finished Cloudlets is:490
+658.2763000000004: ACO_Broker: Cloudlet #563 return received
+658.2763000000004: ACO_Broker: The number of finished Cloudlets is:491
+659.4271000000005: ACO_Broker: Cloudlet #515 return received
+659.4271000000005: ACO_Broker: The number of finished Cloudlets is:492
+661.4067000000005: ACO_Broker: Cloudlet #518 return received
+661.4067000000005: ACO_Broker: The number of finished Cloudlets is:493
+662.8091000000004: ACO_Broker: Cloudlet #505 return received
+662.8091000000004: ACO_Broker: The number of finished Cloudlets is:494
+664.5081000000004: ACO_Broker: Cloudlet #550 return received
+664.5081000000004: ACO_Broker: The number of finished Cloudlets is:495
+667.5061000000004: ACO_Broker: Cloudlet #411 return received
+667.5061000000004: ACO_Broker: The number of finished Cloudlets is:496
+668.6085000000004: ACO_Broker: Cloudlet #551 return received
+668.6085000000004: ACO_Broker: The number of finished Cloudlets is:497
+670.1065000000004: ACO_Broker: Cloudlet #423 return received
+670.1065000000004: ACO_Broker: The number of finished Cloudlets is:498
+671.0081000000005: ACO_Broker: Cloudlet #553 return received
+671.0081000000005: ACO_Broker: The number of finished Cloudlets is:499
+671.4073000000004: ACO_Broker: Cloudlet #508 return received
+671.4073000000004: ACO_Broker: The number of finished Cloudlets is:500
+671.6719666666671: ACO_Broker: Cloudlet #532 return received
+671.6719666666671: ACO_Broker: The number of finished Cloudlets is:501
+673.2091666666671: ACO_Broker: Cloudlet #219 return received
+673.2091666666671: ACO_Broker: The number of finished Cloudlets is:502
+674.608366666667: ACO_Broker: Cloudlet #598 return received
+674.608366666667: ACO_Broker: The number of finished Cloudlets is:503
+676.504366666667: ACO_Broker: Cloudlet #494 return received
+676.504366666667: ACO_Broker: The number of finished Cloudlets is:504
+682.407166666667: ACO_Broker: Cloudlet #522 return received
+682.407166666667: ACO_Broker: The number of finished Cloudlets is:505
+682.6079666666669: ACO_Broker: Cloudlet #528 return received
+682.6079666666669: ACO_Broker: The number of finished Cloudlets is:506
+683.3406333333336: ACO_Broker: Cloudlet #608 return received
+683.3406333333336: ACO_Broker: The number of finished Cloudlets is:507
+684.2074333333336: ACO_Broker: Cloudlet #541 return received
+684.2074333333336: ACO_Broker: The number of finished Cloudlets is:508
+686.2078333333336: ACO_Broker: Cloudlet #578 return received
+686.2078333333336: ACO_Broker: The number of finished Cloudlets is:509
+687.7758333333336: ACO_Broker: Cloudlet #570 return received
+687.7758333333336: ACO_Broker: The number of finished Cloudlets is:510
+688.0078333333336: ACO_Broker: Cloudlet #572 return received
+688.0078333333336: ACO_Broker: The number of finished Cloudlets is:511
+688.5278333333335: ACO_Broker: Cloudlet #554 return received
+688.5278333333335: ACO_Broker: The number of finished Cloudlets is:512
+690.5048333333335: ACO_Broker: Cloudlet #481 return received
+690.5048333333335: ACO_Broker: The number of finished Cloudlets is:513
+692.0088333333335: ACO_Broker: Cloudlet #514 return received
+692.0088333333335: ACO_Broker: The number of finished Cloudlets is:514
+694.6928333333335: ACO_Broker: Cloudlet #388 return received
+694.6928333333335: ACO_Broker: The number of finished Cloudlets is:515
+703.3401666666668: ACO_Broker: Cloudlet #465 return received
+703.3401666666668: ACO_Broker: The number of finished Cloudlets is:516
+704.3375000000002: ACO_Broker: Cloudlet #555 return received
+704.3375000000002: ACO_Broker: The number of finished Cloudlets is:517
+705.2580000000002: ACO_Broker: Cloudlet #579 return received
+705.2580000000002: ACO_Broker: The number of finished Cloudlets is:518
+705.5050000000001: ACO_Broker: Cloudlet #568 return received
+705.5050000000001: ACO_Broker: The number of finished Cloudlets is:519
+706.0070000000001: ACO_Broker: Cloudlet #392 return received
+706.0070000000001: ACO_Broker: The number of finished Cloudlets is:520
+706.2270000000001: ACO_Broker: Cloudlet #525 return received
+706.2270000000001: ACO_Broker: The number of finished Cloudlets is:521
+714.0274000000001: ACO_Broker: Cloudlet #571 return received
+714.0274000000001: ACO_Broker: The number of finished Cloudlets is:522
+714.4090000000001: ACO_Broker: Cloudlet #601 return received
+714.4090000000001: ACO_Broker: The number of finished Cloudlets is:523
+715.6086000000001: ACO_Broker: Cloudlet #544 return received
+715.6086000000001: ACO_Broker: The number of finished Cloudlets is:524
+719.0061000000002: ACO_Broker: Cloudlet #435 return received
+719.0061000000002: ACO_Broker: The number of finished Cloudlets is:525
+719.8073000000002: ACO_Broker: Cloudlet #546 return received
+719.8073000000002: ACO_Broker: The number of finished Cloudlets is:526
+722.0053000000001: ACO_Broker: Cloudlet #479 return received
+722.0053000000001: ACO_Broker: The number of finished Cloudlets is:527
+722.0278000000002: ACO_Broker: Cloudlet #575 return received
+722.0278000000002: ACO_Broker: The number of finished Cloudlets is:528
+724.6082000000002: ACO_Broker: Cloudlet #605 return received
+724.6082000000002: ACO_Broker: The number of finished Cloudlets is:529
+731.0055333333336: ACO_Broker: Cloudlet #619 return received
+731.0055333333336: ACO_Broker: The number of finished Cloudlets is:530
+731.0255333333336: ACO_Broker: Cloudlet #545 return received
+731.0255333333336: ACO_Broker: The number of finished Cloudlets is:531
+732.6060333333336: ACO_Broker: Cloudlet #445 return received
+732.6060333333336: ACO_Broker: The number of finished Cloudlets is:532
+734.0068333333336: ACO_Broker: Cloudlet #539 return received
+734.0068333333336: ACO_Broker: The number of finished Cloudlets is:533
+735.5078333333336: ACO_Broker: Cloudlet #604 return received
+735.5078333333336: ACO_Broker: The number of finished Cloudlets is:534
+737.6718333333336: ACO_Broker: Cloudlet #582 return received
+737.6718333333336: ACO_Broker: The number of finished Cloudlets is:535
+739.2758333333336: ACO_Broker: Cloudlet #581 return received
+739.2758333333336: ACO_Broker: The number of finished Cloudlets is:536
+740.4082333333336: ACO_Broker: Cloudlet #533 return received
+740.4082333333336: ACO_Broker: The number of finished Cloudlets is:537
+744.0069000000002: ACO_Broker: Cloudlet #640 return received
+744.0069000000002: ACO_Broker: The number of finished Cloudlets is:538
+745.8081000000002: ACO_Broker: Cloudlet #641 return received
+745.8081000000002: ACO_Broker: The number of finished Cloudlets is:539
+749.5041000000002: ACO_Broker: Cloudlet #613 return received
+749.5041000000002: ACO_Broker: The number of finished Cloudlets is:540
+751.5061000000002: ACO_Broker: Cloudlet #478 return received
+751.5061000000002: ACO_Broker: The number of finished Cloudlets is:541
+753.3401000000001: ACO_Broker: Cloudlet #466 return received
+753.3401000000001: ACO_Broker: The number of finished Cloudlets is:542
+755.5076000000001: ACO_Broker: Cloudlet #635 return received
+755.5076000000001: ACO_Broker: The number of finished Cloudlets is:543
+756.2961000000001: ACO_Broker: Cloudlet #526 return received
+756.2961000000001: ACO_Broker: The number of finished Cloudlets is:544
+757.8073000000002: ACO_Broker: Cloudlet #547 return received
+757.8073000000002: ACO_Broker: The number of finished Cloudlets is:545
+760.0085000000001: ACO_Broker: Cloudlet #560 return received
+760.0085000000001: ACO_Broker: The number of finished Cloudlets is:546
+760.2269000000001: ACO_Broker: Cloudlet #536 return received
+760.2269000000001: ACO_Broker: The number of finished Cloudlets is:547
+762.6253000000002: ACO_Broker: Cloudlet #561 return received
+762.6253000000002: ACO_Broker: The number of finished Cloudlets is:548
+763.7578000000002: ACO_Broker: Cloudlet #625 return received
+763.7578000000002: ACO_Broker: The number of finished Cloudlets is:549
+764.0274000000002: ACO_Broker: Cloudlet #623 return received
+764.0274000000002: ACO_Broker: The number of finished Cloudlets is:550
+771.0078000000002: ACO_Broker: Cloudlet #651 return received
+771.0078000000002: ACO_Broker: The number of finished Cloudlets is:551
+772.5278000000002: ACO_Broker: Cloudlet #576 return received
+772.5278000000002: ACO_Broker: The number of finished Cloudlets is:552
+776.8066000000002: ACO_Broker: Cloudlet #566 return received
+776.8066000000002: ACO_Broker: The number of finished Cloudlets is:553
+778.3379333333336: ACO_Broker: Cloudlet #617 return received
+778.3379333333336: ACO_Broker: The number of finished Cloudlets is:554
+780.7754333333336: ACO_Broker: Cloudlet #639 return received
+780.7754333333336: ACO_Broker: The number of finished Cloudlets is:555
+783.3401000000002: ACO_Broker: Cloudlet #730 return received
+783.3401000000002: ACO_Broker: The number of finished Cloudlets is:556
+784.4085000000002: ACO_Broker: Cloudlet #573 return received
+784.4085000000002: ACO_Broker: The number of finished Cloudlets is:557
+785.5035000000003: ACO_Broker: Cloudlet #615 return received
+785.5035000000003: ACO_Broker: The number of finished Cloudlets is:558
+786.2071000000003: ACO_Broker: Cloudlet #569 return received
+786.2071000000003: ACO_Broker: The number of finished Cloudlets is:559
+786.2271000000003: ACO_Broker: Cloudlet #480 return received
+786.2271000000003: ACO_Broker: The number of finished Cloudlets is:560
+787.2079000000003: ACO_Broker: Cloudlet #624 return received
+787.2079000000003: ACO_Broker: The number of finished Cloudlets is:561
+789.0074000000003: ACO_Broker: Cloudlet #653 return received
+789.0074000000003: ACO_Broker: The number of finished Cloudlets is:562
+791.8250000000003: ACO_Broker: Cloudlet #584 return received
+791.8250000000003: ACO_Broker: The number of finished Cloudlets is:563
+792.1060000000002: ACO_Broker: Cloudlet #488 return received
+792.1060000000002: ACO_Broker: The number of finished Cloudlets is:564
+794.0060000000002: ACO_Broker: Cloudlet #491 return received
+794.0060000000002: ACO_Broker: The number of finished Cloudlets is:565
+794.3386666666669: ACO_Broker: Cloudlet #710 return received
+794.3386666666669: ACO_Broker: The number of finished Cloudlets is:566
+794.6070666666669: ACO_Broker: Cloudlet #446 return received
+794.6070666666669: ACO_Broker: The number of finished Cloudlets is:567
+794.6924000000002: ACO_Broker: Cloudlet #419 return received
+794.6924000000002: ACO_Broker: The number of finished Cloudlets is:568
+795.0274000000003: ACO_Broker: Cloudlet #602 return received
+795.0274000000003: ACO_Broker: The number of finished Cloudlets is:569
+796.6707333333336: ACO_Broker: Cloudlet #646 return received
+796.6707333333336: ACO_Broker: The number of finished Cloudlets is:570
+798.0087333333336: ACO_Broker: Cloudlet #160 return received
+798.0087333333336: ACO_Broker: The number of finished Cloudlets is:571
+798.0287333333335: ACO_Broker: Cloudlet #645 return received
+798.0287333333335: ACO_Broker: The number of finished Cloudlets is:572
+800.2075333333336: ACO_Broker: Cloudlet #699 return received
+800.2075333333336: ACO_Broker: The number of finished Cloudlets is:573
+801.2063333333335: ACO_Broker: Cloudlet #585 return received
+801.2063333333335: ACO_Broker: The number of finished Cloudlets is:574
+802.8247333333335: ACO_Broker: Cloudlet #591 return received
+802.8247333333335: ACO_Broker: The number of finished Cloudlets is:575
+804.3374000000001: ACO_Broker: Cloudlet #556 return received
+804.3374000000001: ACO_Broker: The number of finished Cloudlets is:576
+806.0078000000001: ACO_Broker: Cloudlet #610 return received
+806.0078000000001: ACO_Broker: The number of finished Cloudlets is:577
+811.0048: ACO_Broker: Cloudlet #669 return received
+811.0048: ACO_Broker: The number of finished Cloudlets is:578
+811.8072000000001: ACO_Broker: Cloudlet #462 return received
+811.8072000000001: ACO_Broker: The number of finished Cloudlets is:579
+811.8272000000001: ACO_Broker: Cloudlet #538 return received
+811.8272000000001: ACO_Broker: The number of finished Cloudlets is:580
+812.2577000000001: ACO_Broker: Cloudlet #775 return received
+812.2577000000001: ACO_Broker: The number of finished Cloudlets is:581
+813.0069000000001: ACO_Broker: Cloudlet #394 return received
+813.0069000000001: ACO_Broker: The number of finished Cloudlets is:582
+813.7959000000001: ACO_Broker: Cloudlet #599 return received
+813.7959000000001: ACO_Broker: The number of finished Cloudlets is:583
+816.6732333333334: ACO_Broker: Cloudlet #484 return received
+816.6732333333334: ACO_Broker: The number of finished Cloudlets is:584
+818.5042333333334: ACO_Broker: Cloudlet #580 return received
+818.5042333333334: ACO_Broker: The number of finished Cloudlets is:585
+818.8246333333334: ACO_Broker: Cloudlet #600 return received
+818.8246333333334: ACO_Broker: The number of finished Cloudlets is:586
+819.0086333333334: ACO_Broker: Cloudlet #386 return received
+819.0086333333334: ACO_Broker: The number of finished Cloudlets is:587
+820.0062333333334: ACO_Broker: Cloudlet #607 return received
+820.0062333333334: ACO_Broker: The number of finished Cloudlets is:588
+820.5072333333334: ACO_Broker: Cloudlet #675 return received
+820.5072333333334: ACO_Broker: The number of finished Cloudlets is:589
+823.2084333333333: ACO_Broker: Cloudlet #594 return received
+823.2084333333333: ACO_Broker: The number of finished Cloudlets is:590
+824.0064333333333: ACO_Broker: Cloudlet #751 return received
+824.0064333333333: ACO_Broker: The number of finished Cloudlets is:591
+826.4284333333334: ACO_Broker: Cloudlet #655 return received
+826.4284333333334: ACO_Broker: The number of finished Cloudlets is:592
+829.2754333333334: ACO_Broker: Cloudlet #661 return received
+829.2754333333334: ACO_Broker: The number of finished Cloudlets is:593
+833.4066333333334: ACO_Broker: Cloudlet #603 return received
+833.4066333333334: ACO_Broker: The number of finished Cloudlets is:594
+838.5056333333334: ACO_Broker: Cloudlet #517 return received
+838.5056333333334: ACO_Broker: The number of finished Cloudlets is:595
+840.2068333333334: ACO_Broker: Cloudlet #590 return received
+840.2068333333334: ACO_Broker: The number of finished Cloudlets is:596
+845.3368333333334: ACO_Broker: Cloudlet #664 return received
+845.3368333333334: ACO_Broker: The number of finished Cloudlets is:597
+845.4072333333334: ACO_Broker: Cloudlet #713 return received
+845.4072333333334: ACO_Broker: The number of finished Cloudlets is:598
+848.2268333333334: ACO_Broker: Cloudlet #548 return received
+848.2268333333334: ACO_Broker: The number of finished Cloudlets is:599
+849.6715: ACO_Broker: Cloudlet #752 return received
+849.6715: ACO_Broker: The number of finished Cloudlets is:600
+850.8067000000001: ACO_Broker: Cloudlet #401 return received
+850.8067000000001: ACO_Broker: The number of finished Cloudlets is:601
+852.5037000000001: ACO_Broker: Cloudlet #632 return received
+852.5037000000001: ACO_Broker: The number of finished Cloudlets is:602
+855.6269000000001: ACO_Broker: Cloudlet #521 return received
+855.6269000000001: ACO_Broker: The number of finished Cloudlets is:603
+858.2959000000001: ACO_Broker: Cloudlet #654 return received
+858.2959000000001: ACO_Broker: The number of finished Cloudlets is:604
+858.5039: ACO_Broker: Cloudlet #618 return received
+858.5039: ACO_Broker: The number of finished Cloudlets is:605
+860.7754: ACO_Broker: Cloudlet #677 return received
+860.7754: ACO_Broker: The number of finished Cloudlets is:606
+861.3420666666667: ACO_Broker: Cloudlet #450 return received
+861.3420666666667: ACO_Broker: The number of finished Cloudlets is:607
+863.8064666666667: ACO_Broker: Cloudlet #622 return received
+863.8064666666667: ACO_Broker: The number of finished Cloudlets is:608
+864.4060666666667: ACO_Broker: Cloudlet #633 return received
+864.4060666666667: ACO_Broker: The number of finished Cloudlets is:609
+864.4268666666667: ACO_Broker: Cloudlet #593 return received
+864.4268666666667: ACO_Broker: The number of finished Cloudlets is:610
+867.1058666666667: ACO_Broker: Cloudlet #504 return received
+867.1058666666667: ACO_Broker: The number of finished Cloudlets is:611
+869.7573666666667: ACO_Broker: Cloudlet #781 return received
+869.7573666666667: ACO_Broker: The number of finished Cloudlets is:612
+870.0081666666667: ACO_Broker: Cloudlet #638 return received
+870.0081666666667: ACO_Broker: The number of finished Cloudlets is:613
+870.0281666666667: ACO_Broker: Cloudlet #437 return received
+870.0281666666667: ACO_Broker: The number of finished Cloudlets is:614
+876.5031666666667: ACO_Broker: Cloudlet #652 return received
+876.5031666666667: ACO_Broker: The number of finished Cloudlets is:615
+878.0283666666668: ACO_Broker: Cloudlet #671 return received
+878.0283666666668: ACO_Broker: The number of finished Cloudlets is:616
+878.3370333333335: ACO_Broker: Cloudlet #583 return received
+878.3370333333335: ACO_Broker: The number of finished Cloudlets is:617
+878.8246333333335: ACO_Broker: Cloudlet #614 return received
+878.8246333333335: ACO_Broker: The number of finished Cloudlets is:618
+879.6753000000002: ACO_Broker: Cloudlet #492 return received
+879.6753000000002: ACO_Broker: The number of finished Cloudlets is:619
+883.4065000000002: ACO_Broker: Cloudlet #616 return received
+883.4065000000002: ACO_Broker: The number of finished Cloudlets is:620
+885.0070000000002: ACO_Broker: Cloudlet #676 return received
+885.0070000000002: ACO_Broker: The number of finished Cloudlets is:621
+888.2062000000002: ACO_Broker: Cloudlet #630 return received
+888.2062000000002: ACO_Broker: The number of finished Cloudlets is:622
+894.4266000000002: ACO_Broker: Cloudlet #587 return received
+894.4266000000002: ACO_Broker: The number of finished Cloudlets is:623
+895.2266000000002: ACO_Broker: Cloudlet #723 return received
+895.2266000000002: ACO_Broker: The number of finished Cloudlets is:624
+896.6266000000002: ACO_Broker: Cloudlet #586 return received
+896.6266000000002: ACO_Broker: The number of finished Cloudlets is:625
+897.6056000000002: ACO_Broker: Cloudlet #558 return received
+897.6056000000002: ACO_Broker: The number of finished Cloudlets is:626
+897.7956000000003: ACO_Broker: Cloudlet #658 return received
+897.7956000000003: ACO_Broker: The number of finished Cloudlets is:627
+900.0056000000003: ACO_Broker: Cloudlet #549 return received
+900.0056000000003: ACO_Broker: The number of finished Cloudlets is:628
+900.2571000000003: ACO_Broker: Cloudlet #800 return received
+900.2571000000003: ACO_Broker: The number of finished Cloudlets is:629
+902.0031000000002: ACO_Broker: Cloudlet #679 return received
+902.0031000000002: ACO_Broker: The number of finished Cloudlets is:630
+902.0231000000002: ACO_Broker: Cloudlet #439 return received
+902.0231000000002: ACO_Broker: The number of finished Cloudlets is:631
+904.2751000000002: ACO_Broker: Cloudlet #681 return received
+904.2751000000002: ACO_Broker: The number of finished Cloudlets is:632
+912.8059000000002: ACO_Broker: Cloudlet #648 return received
+912.8059000000002: ACO_Broker: The number of finished Cloudlets is:633
+913.6079000000002: ACO_Broker: Cloudlet #660 return received
+913.6079000000002: ACO_Broker: The number of finished Cloudlets is:634
+913.6699000000002: ACO_Broker: Cloudlet #592 return received
+913.6699000000002: ACO_Broker: The number of finished Cloudlets is:635
+915.7589000000003: ACO_Broker: Cloudlet #340 return received
+915.7589000000003: ACO_Broker: The number of finished Cloudlets is:636
+918.0039000000003: ACO_Broker: Cloudlet #715 return received
+918.0039000000003: ACO_Broker: The number of finished Cloudlets is:637
+919.8063000000003: ACO_Broker: Cloudlet #643 return received
+919.8063000000003: ACO_Broker: The number of finished Cloudlets is:638
+920.3416333333337: ACO_Broker: Cloudlet #557 return received
+920.3416333333337: ACO_Broker: The number of finished Cloudlets is:639
+921.2268333333337: ACO_Broker: Cloudlet #597 return received
+921.2268333333337: ACO_Broker: The number of finished Cloudlets is:640
+923.2953333333337: ACO_Broker: Cloudlet #672 return received
+923.2953333333337: ACO_Broker: The number of finished Cloudlets is:641
+926.5053333333337: ACO_Broker: Cloudlet #621 return received
+926.5053333333337: ACO_Broker: The number of finished Cloudlets is:642
+926.6946666666671: ACO_Broker: Cloudlet #527 return received
+926.6946666666671: ACO_Broker: The number of finished Cloudlets is:643
+927.5066666666671: ACO_Broker: Cloudlet #685 return received
+927.5066666666671: ACO_Broker: The number of finished Cloudlets is:644
+928.0242666666671: ACO_Broker: Cloudlet #642 return received
+928.0242666666671: ACO_Broker: The number of finished Cloudlets is:645
+928.8282666666671: ACO_Broker: Cloudlet #684 return received
+928.8282666666671: ACO_Broker: The number of finished Cloudlets is:646
+929.0042666666671: ACO_Broker: Cloudlet #766 return received
+929.0042666666671: ACO_Broker: The number of finished Cloudlets is:647
+930.1052666666671: ACO_Broker: Cloudlet #562 return received
+930.1052666666671: ACO_Broker: The number of finished Cloudlets is:648
+930.8060666666671: ACO_Broker: Cloudlet #674 return received
+930.8060666666671: ACO_Broker: The number of finished Cloudlets is:649
+931.0067333333337: ACO_Broker: Cloudlet #467 return received
+931.0067333333337: ACO_Broker: The number of finished Cloudlets is:650
+934.8263333333338: ACO_Broker: Cloudlet #588 return received
+934.8263333333338: ACO_Broker: The number of finished Cloudlets is:651
+937.3363333333338: ACO_Broker: Cloudlet #680 return received
+937.3363333333338: ACO_Broker: The number of finished Cloudlets is:652
+939.6055333333337: ACO_Broker: Cloudlet #663 return received
+939.6055333333337: ACO_Broker: The number of finished Cloudlets is:653
+941.0075333333338: ACO_Broker: Cloudlet #662 return received
+941.0075333333338: ACO_Broker: The number of finished Cloudlets is:654
+942.8067333333338: ACO_Broker: Cloudlet #595 return received
+942.8067333333338: ACO_Broker: The number of finished Cloudlets is:655
+946.4063333333338: ACO_Broker: Cloudlet #534 return received
+946.4063333333338: ACO_Broker: The number of finished Cloudlets is:656
+948.2059333333339: ACO_Broker: Cloudlet #656 return received
+948.2059333333339: ACO_Broker: The number of finished Cloudlets is:657
+949.6059333333338: ACO_Broker: Cloudlet #686 return received
+949.6059333333338: ACO_Broker: The number of finished Cloudlets is:658
+950.0239333333338: ACO_Broker: Cloudlet #678 return received
+950.0239333333338: ACO_Broker: The number of finished Cloudlets is:659
+951.0064333333338: ACO_Broker: Cloudlet #716 return received
+951.0064333333338: ACO_Broker: The number of finished Cloudlets is:660
+956.6264333333338: ACO_Broker: Cloudlet #606 return received
+956.6264333333338: ACO_Broker: The number of finished Cloudlets is:661
+957.0031000000005: ACO_Broker: Cloudlet #649 return received
+957.0031000000005: ACO_Broker: The number of finished Cloudlets is:662
+961.5031000000005: ACO_Broker: Cloudlet #644 return received
+961.5031000000005: ACO_Broker: The number of finished Cloudlets is:663
+961.6055000000005: ACO_Broker: Cloudlet #683 return received
+961.6055000000005: ACO_Broker: The number of finished Cloudlets is:664
+964.7750000000004: ACO_Broker: Cloudlet #714 return received
+964.7750000000004: ACO_Broker: The number of finished Cloudlets is:665
+964.8266000000004: ACO_Broker: Cloudlet #667 return received
+964.8266000000004: ACO_Broker: The number of finished Cloudlets is:666
+966.2586000000005: ACO_Broker: Cloudlet #431 return received
+966.2586000000005: ACO_Broker: The number of finished Cloudlets is:667
+969.4058000000005: ACO_Broker: Cloudlet #688 return received
+969.4058000000005: ACO_Broker: The number of finished Cloudlets is:668
+971.2078000000005: ACO_Broker: Cloudlet #609 return received
+971.2078000000005: ACO_Broker: The number of finished Cloudlets is:669
+971.7778000000005: ACO_Broker: Cloudlet #373 return received
+971.7778000000005: ACO_Broker: The number of finished Cloudlets is:670
+975.2262000000005: ACO_Broker: Cloudlet #612 return received
+975.2262000000005: ACO_Broker: The number of finished Cloudlets is:671
+975.2567000000005: ACO_Broker: Cloudlet #831 return received
+975.2567000000005: ACO_Broker: The number of finished Cloudlets is:672
+976.4059000000004: ACO_Broker: Cloudlet #722 return received
+976.4059000000004: ACO_Broker: The number of finished Cloudlets is:673
+979.0039000000004: ACO_Broker: Cloudlet #767 return received
+979.0039000000004: ACO_Broker: The number of finished Cloudlets is:674
+979.6279000000004: ACO_Broker: Cloudlet #704 return received
+979.6279000000004: ACO_Broker: The number of finished Cloudlets is:675
+980.4071000000004: ACO_Broker: Cloudlet #718 return received
+980.4071000000004: ACO_Broker: The number of finished Cloudlets is:676
+980.7951000000004: ACO_Broker: Cloudlet #692 return received
+980.7951000000004: ACO_Broker: The number of finished Cloudlets is:677
+981.027766666667: ACO_Broker: Cloudlet #577 return received
+981.027766666667: ACO_Broker: The number of finished Cloudlets is:678
+984.023766666667: ACO_Broker: Cloudlet #724 return received
+984.023766666667: ACO_Broker: The number of finished Cloudlets is:679
+984.806566666667: ACO_Broker: Cloudlet #720 return received
+984.806566666667: ACO_Broker: The number of finished Cloudlets is:680
+986.207366666667: ACO_Broker: Cloudlet #712 return received
+986.207366666667: ACO_Broker: The number of finished Cloudlets is:681
+987.503366666667: ACO_Broker: Cloudlet #636 return received
+987.503366666667: ACO_Broker: The number of finished Cloudlets is:682
+989.2061666666671: ACO_Broker: Cloudlet #620 return received
+989.2061666666671: ACO_Broker: The number of finished Cloudlets is:683
+990.506166666667: ACO_Broker: Cloudlet #740 return received
+990.506166666667: ACO_Broker: The number of finished Cloudlets is:684
+991.503166666667: ACO_Broker: Cloudlet #694 return received
+991.503166666667: ACO_Broker: The number of finished Cloudlets is:685
+991.605166666667: ACO_Broker: Cloudlet #687 return received
+991.605166666667: ACO_Broker: The number of finished Cloudlets is:686
+991.6731666666669: ACO_Broker: Cloudlet #523 return received
+991.6731666666669: ACO_Broker: The number of finished Cloudlets is:687
+994.0051666666669: ACO_Broker: Cloudlet #626 return received
+994.0051666666669: ACO_Broker: The number of finished Cloudlets is:688
+996.4263666666669: ACO_Broker: Cloudlet #691 return received
+996.4263666666669: ACO_Broker: The number of finished Cloudlets is:689
+996.694366666667: ACO_Broker: Cloudlet #611 return received
+996.694366666667: ACO_Broker: The number of finished Cloudlets is:690
+997.2075666666669: ACO_Broker: Cloudlet #647 return received
+997.2075666666669: ACO_Broker: The number of finished Cloudlets is:691
+998.758566666667: ACO_Broker: Cloudlet #696 return received
+998.758566666667: ACO_Broker: The number of finished Cloudlets is:692
+999.408966666667: ACO_Broker: Cloudlet #629 return received
+999.408966666667: ACO_Broker: The number of finished Cloudlets is:693
+1002.026166666667: ACO_Broker: Cloudlet #659 return received
+1002.026166666667: ACO_Broker: The number of finished Cloudlets is:694
+1004.606966666667: ACO_Broker: Cloudlet #543 return received
+1004.606966666667: ACO_Broker: The number of finished Cloudlets is:695
+1007.426166666667: ACO_Broker: Cloudlet #634 return received
+1007.426166666667: ACO_Broker: The number of finished Cloudlets is:696
+1010.2746666666669: ACO_Broker: Cloudlet #756 return received
+1010.2746666666669: ACO_Broker: The number of finished Cloudlets is:697
+1011.4054666666669: ACO_Broker: Cloudlet #732 return received
+1011.4054666666669: ACO_Broker: The number of finished Cloudlets is:698
+1016.669466666667: ACO_Broker: Cloudlet #690 return received
+1016.669466666667: ACO_Broker: The number of finished Cloudlets is:699
+1017.0034666666669: ACO_Broker: Cloudlet #739 return received
+1017.0034666666669: ACO_Broker: The number of finished Cloudlets is:700
+1017.6941333333335: ACO_Broker: Cloudlet #709 return received
+1017.6941333333335: ACO_Broker: The number of finished Cloudlets is:701
+1017.8073333333335: ACO_Broker: Cloudlet #760 return received
+1017.8073333333335: ACO_Broker: The number of finished Cloudlets is:702
+1018.0077333333335: ACO_Broker: Cloudlet #759 return received
+1018.0077333333335: ACO_Broker: The number of finished Cloudlets is:703
+1020.0049333333335: ACO_Broker: Cloudlet #725 return received
+1020.0049333333335: ACO_Broker: The number of finished Cloudlets is:704
+1020.3416000000002: ACO_Broker: Cloudlet #596 return received
+1020.3416000000002: ACO_Broker: The number of finished Cloudlets is:705
+1020.8260000000002: ACO_Broker: Cloudlet #673 return received
+1020.8260000000002: ACO_Broker: The number of finished Cloudlets is:706
+1021.8072000000002: ACO_Broker: Cloudlet #631 return received
+1021.8072000000002: ACO_Broker: The number of finished Cloudlets is:707
+1022.0057000000002: ACO_Broker: Cloudlet #757 return received
+1022.0057000000002: ACO_Broker: The number of finished Cloudlets is:708
+1023.0227000000002: ACO_Broker: Cloudlet #495 return received
+1023.0227000000002: ACO_Broker: The number of finished Cloudlets is:709
+1024.4063: ACO_Broker: Cloudlet #733 return received
+1024.4063: ACO_Broker: The number of finished Cloudlets is:710
+1025.2583000000002: ACO_Broker: Cloudlet #707 return received
+1025.2583000000002: ACO_Broker: The number of finished Cloudlets is:711
+1025.6279000000002: ACO_Broker: Cloudlet #721 return received
+1025.6279000000002: ACO_Broker: The number of finished Cloudlets is:712
+1028.7564000000002: ACO_Broker: Cloudlet #832 return received
+1028.7564000000002: ACO_Broker: The number of finished Cloudlets is:713
+1030.4056000000003: ACO_Broker: Cloudlet #745 return received
+1030.4056000000003: ACO_Broker: The number of finished Cloudlets is:714
+1031.0029333333337: ACO_Broker: Cloudlet #650 return received
+1031.0029333333337: ACO_Broker: The number of finished Cloudlets is:715
+1031.0229333333336: ACO_Broker: Cloudlet #773 return received
+1031.0229333333336: ACO_Broker: The number of finished Cloudlets is:716
+1032.4237333333335: ACO_Broker: Cloudlet #748 return received
+1032.4237333333335: ACO_Broker: The number of finished Cloudlets is:717
+1035.2261333333336: ACO_Broker: Cloudlet #735 return received
+1035.2261333333336: ACO_Broker: The number of finished Cloudlets is:718
+1035.7746333333337: ACO_Broker: Cloudlet #774 return received
+1035.7746333333337: ACO_Broker: The number of finished Cloudlets is:719
+1037.2946333333336: ACO_Broker: Cloudlet #706 return received
+1037.2946333333336: ACO_Broker: The number of finished Cloudlets is:720
+1038.4074333333338: ACO_Broker: Cloudlet #815 return received
+1038.4074333333338: ACO_Broker: The number of finished Cloudlets is:721
+1039.0054333333337: ACO_Broker: Cloudlet #477 return received
+1039.0054333333337: ACO_Broker: The number of finished Cloudlets is:722
+1041.0066333333336: ACO_Broker: Cloudlet #705 return received
+1041.0066333333336: ACO_Broker: The number of finished Cloudlets is:723
+1043.669966666667: ACO_Broker: Cloudlet #790 return received
+1043.669966666667: ACO_Broker: The number of finished Cloudlets is:724
+1044.427566666667: ACO_Broker: Cloudlet #808 return received
+1044.427566666667: ACO_Broker: The number of finished Cloudlets is:725
+1044.605166666667: ACO_Broker: Cloudlet #768 return received
+1044.605166666667: ACO_Broker: The number of finished Cloudlets is:726
+1048.007566666667: ACO_Broker: Cloudlet #784 return received
+1048.007566666667: ACO_Broker: The number of finished Cloudlets is:727
+1048.6075666666668: ACO_Broker: Cloudlet #665 return received
+1048.6075666666668: ACO_Broker: The number of finished Cloudlets is:728
+1051.8071666666667: ACO_Broker: Cloudlet #763 return received
+1051.8071666666667: ACO_Broker: The number of finished Cloudlets is:729
+1054.6938333333335: ACO_Broker: Cloudlet #689 return received
+1054.6938333333335: ACO_Broker: The number of finished Cloudlets is:730
+1056.5048333333334: ACO_Broker: Cloudlet #670 return received
+1056.5048333333334: ACO_Broker: The number of finished Cloudlets is:731
+1056.6260333333335: ACO_Broker: Cloudlet #711 return received
+1056.6260333333335: ACO_Broker: The number of finished Cloudlets is:732
+1057.5270333333335: ACO_Broker: Cloudlet #637 return received
+1057.5270333333335: ACO_Broker: The number of finished Cloudlets is:733
+1061.2054333333335: ACO_Broker: Cloudlet #777 return received
+1061.2054333333335: ACO_Broker: The number of finished Cloudlets is:734
+1062.2066333333335: ACO_Broker: Cloudlet #737 return received
+1062.2066333333335: ACO_Broker: The number of finished Cloudlets is:735
+1063.6258333333335: ACO_Broker: Cloudlet #726 return received
+1063.6258333333335: ACO_Broker: The number of finished Cloudlets is:736
+1064.5028333333335: ACO_Broker: Cloudlet #744 return received
+1064.5028333333335: ACO_Broker: The number of finished Cloudlets is:737
+1067.8072333333334: ACO_Broker: Cloudlet #792 return received
+1067.8072333333334: ACO_Broker: The number of finished Cloudlets is:738
+1068.0032333333334: ACO_Broker: Cloudlet #746 return received
+1068.0032333333334: ACO_Broker: The number of finished Cloudlets is:739
+1069.2048333333335: ACO_Broker: Cloudlet #755 return received
+1069.2048333333335: ACO_Broker: The number of finished Cloudlets is:740
+1069.3355000000001: ACO_Broker: Cloudlet #729 return received
+1069.3355000000001: ACO_Broker: The number of finished Cloudlets is:741
+1070.4063: ACO_Broker: Cloudlet #807 return received
+1070.4063: ACO_Broker: The number of finished Cloudlets is:742
+1070.6227000000001: ACO_Broker: Cloudlet #825 return received
+1070.6227000000001: ACO_Broker: The number of finished Cloudlets is:743
+1073.2071: ACO_Broker: Cloudlet #838 return received
+1073.2071: ACO_Broker: The number of finished Cloudlets is:744
+1077.0075000000002: ACO_Broker: Cloudlet #780 return received
+1077.0075000000002: ACO_Broker: The number of finished Cloudlets is:745
+1077.2259000000001: ACO_Broker: Cloudlet #776 return received
+1077.2259000000001: ACO_Broker: The number of finished Cloudlets is:746
+1077.6725666666669: ACO_Broker: Cloudlet #542 return received
+1077.6725666666669: ACO_Broker: The number of finished Cloudlets is:747
+1079.6725666666669: ACO_Broker: Cloudlet #503 return received
+1079.6725666666669: ACO_Broker: The number of finished Cloudlets is:748
+1080.8233666666667: ACO_Broker: Cloudlet #778 return received
+1080.8233666666667: ACO_Broker: The number of finished Cloudlets is:749
+1083.4257666666667: ACO_Broker: Cloudlet #741 return received
+1083.4257666666667: ACO_Broker: The number of finished Cloudlets is:750
+1085.2073666666668: ACO_Broker: Cloudlet #821 return received
+1085.2073666666668: ACO_Broker: The number of finished Cloudlets is:751
+1085.8049666666668: ACO_Broker: Cloudlet #797 return received
+1085.8049666666668: ACO_Broker: The number of finished Cloudlets is:752
+1087.2559666666668: ACO_Broker: Cloudlet #861 return received
+1087.2559666666668: ACO_Broker: The number of finished Cloudlets is:753
+1090.502966666667: ACO_Broker: Cloudlet #695 return received
+1090.502966666667: ACO_Broker: The number of finished Cloudlets is:754
+1093.0076333333336: ACO_Broker: Cloudlet #693 return received
+1093.0076333333336: ACO_Broker: The number of finished Cloudlets is:755
+1093.7946333333336: ACO_Broker: Cloudlet #719 return received
+1093.7946333333336: ACO_Broker: The number of finished Cloudlets is:756
+1094.335966666667: ACO_Broker: Cloudlet #657 return received
+1094.335966666667: ACO_Broker: The number of finished Cloudlets is:757
+1097.005466666667: ACO_Broker: Cloudlet #819 return received
+1097.005466666667: ACO_Broker: The number of finished Cloudlets is:758
+1098.0268000000003: ACO_Broker: Cloudlet #697 return received
+1098.0268000000003: ACO_Broker: The number of finished Cloudlets is:759
+1098.2743000000003: ACO_Broker: Cloudlet #826 return received
+1098.2743000000003: ACO_Broker: The number of finished Cloudlets is:760
+1099.0268000000003: ACO_Broker: Cloudlet #738 return received
+1099.0268000000003: ACO_Broker: The number of finished Cloudlets is:761
+1099.8224000000002: ACO_Broker: Cloudlet #851 return received
+1099.8224000000002: ACO_Broker: The number of finished Cloudlets is:762
+1100.0048000000002: ACO_Broker: Cloudlet #793 return received
+1100.0048000000002: ACO_Broker: The number of finished Cloudlets is:763
+1102.0048000000002: ACO_Broker: Cloudlet #682 return received
+1102.0048000000002: ACO_Broker: The number of finished Cloudlets is:764
+1102.3608000000002: ACO_Broker: Cloudlet #753 return received
+1102.3608000000002: ACO_Broker: The number of finished Cloudlets is:765
+1102.4052000000001: ACO_Broker: Cloudlet #803 return received
+1102.4052000000001: ACO_Broker: The number of finished Cloudlets is:766
+1106.806: ACO_Broker: Cloudlet #850 return received
+1106.806: ACO_Broker: The number of finished Cloudlets is:767
+1110.8224: ACO_Broker: Cloudlet #873 return received
+1110.8224: ACO_Broker: The number of finished Cloudlets is:768
+1114.4256: ACO_Broker: Cloudlet #764 return received
+1114.4256: ACO_Broker: The number of finished Cloudlets is:769
+1116.8072: ACO_Broker: Cloudlet #853 return received
+1116.8072: ACO_Broker: The number of finished Cloudlets is:770
+1117.6068: ACO_Broker: Cloudlet #857 return received
+1117.6068: ACO_Broker: The number of finished Cloudlets is:771
+1118.0232: ACO_Broker: Cloudlet #811 return received
+1118.0232: ACO_Broker: The number of finished Cloudlets is:772
+1120.0222: ACO_Broker: Cloudlet #565 return received
+1120.0222: ACO_Broker: The number of finished Cloudlets is:773
+1122.5032: ACO_Broker: Cloudlet #747 return received
+1122.5032: ACO_Broker: The number of finished Cloudlets is:774
+1123.5022000000001: ACO_Broker: Cloudlet #789 return received
+1123.5022000000001: ACO_Broker: The number of finished Cloudlets is:775
+1124.0258000000001: ACO_Broker: Cloudlet #798 return received
+1124.0258000000001: ACO_Broker: The number of finished Cloudlets is:776
+1124.6074: ACO_Broker: Cloudlet #795 return received
+1124.6074: ACO_Broker: The number of finished Cloudlets is:777
+1128.0058000000001: ACO_Broker: Cloudlet #874 return received
+1128.0058000000001: ACO_Broker: The number of finished Cloudlets is:778
+1129.5048000000002: ACO_Broker: Cloudlet #708 return received
+1129.5048000000002: ACO_Broker: The number of finished Cloudlets is:779
+1129.6224000000002: ACO_Broker: Cloudlet #890 return received
+1129.6224000000002: ACO_Broker: The number of finished Cloudlets is:780
+1133.0057333333336: ACO_Broker: Cloudlet #564 return received
+1133.0057333333336: ACO_Broker: The number of finished Cloudlets is:781
+1135.5267333333336: ACO_Broker: Cloudlet #822 return received
+1135.5267333333336: ACO_Broker: The number of finished Cloudlets is:782
+1135.7557333333336: ACO_Broker: Cloudlet #880 return received
+1135.7557333333336: ACO_Broker: The number of finished Cloudlets is:783
+1135.8065333333336: ACO_Broker: Cloudlet #628 return received
+1135.8065333333336: ACO_Broker: The number of finished Cloudlets is:784
+1137.359866666667: ACO_Broker: Cloudlet #717 return received
+1137.359866666667: ACO_Broker: The number of finished Cloudlets is:785
+1140.527366666667: ACO_Broker: Cloudlet #698 return received
+1140.527366666667: ACO_Broker: The number of finished Cloudlets is:786
+1142.004566666667: ACO_Broker: Cloudlet #809 return received
+1142.004566666667: ACO_Broker: The number of finished Cloudlets is:787
+1146.804966666667: ACO_Broker: Cloudlet #844 return received
+1146.804966666667: ACO_Broker: The number of finished Cloudlets is:788
+1150.0016333333338: ACO_Broker: Cloudlet #758 return received
+1150.0016333333338: ACO_Broker: The number of finished Cloudlets is:789
+1151.0076333333338: ACO_Broker: Cloudlet #700 return received
+1151.0076333333338: ACO_Broker: The number of finished Cloudlets is:790
+1152.004633333334: ACO_Broker: Cloudlet #734 return received
+1152.004633333334: ACO_Broker: The number of finished Cloudlets is:791
+1157.807033333334: ACO_Broker: Cloudlet #818 return received
+1157.807033333334: ACO_Broker: The number of finished Cloudlets is:792
+1159.0057000000006: ACO_Broker: Cloudlet #666 return received
+1159.0057000000006: ACO_Broker: The number of finished Cloudlets is:793
+1159.6253000000006: ACO_Broker: Cloudlet #771 return received
+1159.6253000000006: ACO_Broker: The number of finished Cloudlets is:794
+1160.5053000000007: ACO_Broker: Cloudlet #828 return received
+1160.5053000000007: ACO_Broker: The number of finished Cloudlets is:795
+1161.0263000000007: ACO_Broker: Cloudlet #871 return received
+1161.0263000000007: ACO_Broker: The number of finished Cloudlets is:796
+1161.2055000000007: ACO_Broker: Cloudlet #885 return received
+1161.2055000000007: ACO_Broker: The number of finished Cloudlets is:797
+1162.4043000000006: ACO_Broker: Cloudlet #823 return received
+1162.4043000000006: ACO_Broker: The number of finished Cloudlets is:798
+1164.3389666666674: ACO_Broker: Cloudlet #702 return received
+1164.3389666666674: ACO_Broker: The number of finished Cloudlets is:799
+1167.6257666666675: ACO_Broker: Cloudlet #813 return received
+1167.6257666666675: ACO_Broker: The number of finished Cloudlets is:800
+1170.5017666666674: ACO_Broker: Cloudlet #879 return received
+1170.5017666666674: ACO_Broker: The number of finished Cloudlets is:801
+1173.6691000000008: ACO_Broker: Cloudlet #703 return received
+1173.6691000000008: ACO_Broker: The number of finished Cloudlets is:802
+1178.6255000000008: ACO_Broker: Cloudlet #867 return received
+1178.6255000000008: ACO_Broker: The number of finished Cloudlets is:803
+1180.0047000000009: ACO_Broker: Cloudlet #869 return received
+1180.0047000000009: ACO_Broker: The number of finished Cloudlets is:804
+1181.027200000001: ACO_Broker: Cloudlet #736 return received
+1181.027200000001: ACO_Broker: The number of finished Cloudlets is:805
+1183.5022000000008: ACO_Broker: Cloudlet #727 return received
+1183.5022000000008: ACO_Broker: The number of finished Cloudlets is:806
+1183.8070000000007: ACO_Broker: Cloudlet #827 return received
+1183.8070000000007: ACO_Broker: The number of finished Cloudlets is:807
+1185.0062000000007: ACO_Broker: Cloudlet #855 return received
+1185.0062000000007: ACO_Broker: The number of finished Cloudlets is:808
+1186.4250000000006: ACO_Broker: Cloudlet #772 return received
+1186.4250000000006: ACO_Broker: The number of finished Cloudlets is:809
+1191.6042000000007: ACO_Broker: Cloudlet #866 return received
+1191.6042000000007: ACO_Broker: The number of finished Cloudlets is:810
+1195.0032000000006: ACO_Broker: Cloudlet #791 return received
+1195.0032000000006: ACO_Broker: The number of finished Cloudlets is:811
+1195.6718666666673: ACO_Broker: Cloudlet #749 return received
+1195.6718666666673: ACO_Broker: The number of finished Cloudlets is:812
+1197.2062666666673: ACO_Broker: Cloudlet #743 return received
+1197.2062666666673: ACO_Broker: The number of finished Cloudlets is:813
+1199.0052666666672: ACO_Broker: Cloudlet #842 return received
+1199.0052666666672: ACO_Broker: The number of finished Cloudlets is:814
+1201.0052666666672: ACO_Broker: Cloudlet #742 return received
+1201.0052666666672: ACO_Broker: The number of finished Cloudlets is:815
+1202.3606000000007: ACO_Broker: Cloudlet #769 return received
+1202.3606000000007: ACO_Broker: The number of finished Cloudlets is:816
+1205.4254000000008: ACO_Broker: Cloudlet #870 return received
+1205.4254000000008: ACO_Broker: The number of finished Cloudlets is:817
+1209.5044000000007: ACO_Broker: Cloudlet #761 return received
+1209.5044000000007: ACO_Broker: The number of finished Cloudlets is:818
+1212.6930666666674: ACO_Broker: Cloudlet #785 return received
+1212.6930666666674: ACO_Broker: The number of finished Cloudlets is:819
+1217.0066666666673: ACO_Broker: Cloudlet #887 return received
+1217.0066666666673: ACO_Broker: The number of finished Cloudlets is:820
+1218.3406666666674: ACO_Broker: Cloudlet #787 return received
+1218.3406666666674: ACO_Broker: The number of finished Cloudlets is:821
+1220.8046666666673: ACO_Broker: Cloudlet #835 return received
+1220.8046666666673: ACO_Broker: The number of finished Cloudlets is:822
+1223.5016666666672: ACO_Broker: Cloudlet #886 return received
+1223.5016666666672: ACO_Broker: The number of finished Cloudlets is:823
+1224.5261666666672: ACO_Broker: Cloudlet #888 return received
+1224.5261666666672: ACO_Broker: The number of finished Cloudlets is:824
+1227.0048333333339: ACO_Broker: Cloudlet #805 return received
+1227.0048333333339: ACO_Broker: The number of finished Cloudlets is:825
+1227.6688333333339: ACO_Broker: Cloudlet #779 return received
+1227.6688333333339: ACO_Broker: The number of finished Cloudlets is:826
+1230.404033333334: ACO_Broker: Cloudlet #897 return received
+1230.404033333334: ACO_Broker: The number of finished Cloudlets is:827
+1233.0040333333338: ACO_Broker: Cloudlet #782 return received
+1233.0040333333338: ACO_Broker: The number of finished Cloudlets is:828
+1233.3347000000006: ACO_Broker: Cloudlet #804 return received
+1233.3347000000006: ACO_Broker: The number of finished Cloudlets is:829
+1233.5272000000007: ACO_Broker: Cloudlet #786 return received
+1233.5272000000007: ACO_Broker: The number of finished Cloudlets is:830
+1233.6060000000007: ACO_Broker: Cloudlet #801 return received
+1233.6060000000007: ACO_Broker: The number of finished Cloudlets is:831
+1234.0044000000007: ACO_Broker: Cloudlet #882 return received
+1234.0044000000007: ACO_Broker: The number of finished Cloudlets is:832
+1239.0060000000008: ACO_Broker: Cloudlet #896 return received
+1239.0060000000008: ACO_Broker: The number of finished Cloudlets is:833
+1239.0260000000007: ACO_Broker: Cloudlet #701 return received
+1239.0260000000007: ACO_Broker: The number of finished Cloudlets is:834
+1246.4248000000007: ACO_Broker: Cloudlet #788 return received
+1246.4248000000007: ACO_Broker: The number of finished Cloudlets is:835
+1252.360133333334: ACO_Broker: Cloudlet #817 return received
+1252.360133333334: ACO_Broker: The number of finished Cloudlets is:836
+1255.2265333333341: ACO_Broker: Cloudlet #731 return received
+1255.2265333333341: ACO_Broker: The number of finished Cloudlets is:837
+1255.505033333334: ACO_Broker: Cloudlet #859 return received
+1255.505033333334: ACO_Broker: The number of finished Cloudlets is:838
+1260.3403666666675: ACO_Broker: Cloudlet #840 return received
+1260.3403666666675: ACO_Broker: The number of finished Cloudlets is:839
+1261.8071666666674: ACO_Broker: Cloudlet #783 return received
+1261.8071666666674: ACO_Broker: The number of finished Cloudlets is:840
+1262.6925000000008: ACO_Broker: Cloudlet #820 return received
+1262.6925000000008: ACO_Broker: The number of finished Cloudlets is:841
+1266.5040000000008: ACO_Broker: Cloudlet #829 return received
+1266.5040000000008: ACO_Broker: The number of finished Cloudlets is:842
+1267.606000000001: ACO_Broker: Cloudlet #802 return received
+1267.606000000001: ACO_Broker: The number of finished Cloudlets is:843
+1270.5020000000009: ACO_Broker: Cloudlet #794 return received
+1270.5020000000009: ACO_Broker: The number of finished Cloudlets is:844
+1274.2060000000008: ACO_Broker: Cloudlet #668 return received
+1274.2060000000008: ACO_Broker: The number of finished Cloudlets is:845
+1277.0046666666674: ACO_Broker: Cloudlet #854 return received
+1277.0046666666674: ACO_Broker: The number of finished Cloudlets is:846
+1286.3551666666674: ACO_Broker: Cloudlet #627 return received
+1286.3551666666674: ACO_Broker: The number of finished Cloudlets is:847
+1287.0051666666675: ACO_Broker: Cloudlet #872 return received
+1287.0051666666675: ACO_Broker: The number of finished Cloudlets is:848
+1287.7581666666674: ACO_Broker: Cloudlet #728 return received
+1287.7581666666674: ACO_Broker: The number of finished Cloudlets is:849
+1289.6057666666675: ACO_Broker: Cloudlet #814 return received
+1289.6057666666675: ACO_Broker: The number of finished Cloudlets is:850
+1293.0267666666675: ACO_Broker: Cloudlet #796 return received
+1293.0267666666675: ACO_Broker: The number of finished Cloudlets is:851
+1297.0067666666675: ACO_Broker: Cloudlet #849 return received
+1297.0067666666675: ACO_Broker: The number of finished Cloudlets is:852
+1301.5052666666675: ACO_Broker: Cloudlet #864 return received
+1301.5052666666675: ACO_Broker: The number of finished Cloudlets is:853
+1302.0047666666674: ACO_Broker: Cloudlet #863 return received
+1302.0047666666674: ACO_Broker: The number of finished Cloudlets is:854
+1306.0007666666675: ACO_Broker: Cloudlet #860 return received
+1306.0007666666675: ACO_Broker: The number of finished Cloudlets is:855
+1307.6055666666675: ACO_Broker: Cloudlet #834 return received
+1307.6055666666675: ACO_Broker: The number of finished Cloudlets is:856
+1310.0255666666676: ACO_Broker: Cloudlet #754 return received
+1310.0255666666676: ACO_Broker: The number of finished Cloudlets is:857
+1313.0262333333342: ACO_Broker: Cloudlet #876 return received
+1313.0262333333342: ACO_Broker: The number of finished Cloudlets is:858
+1317.6682333333342: ACO_Broker: Cloudlet #868 return received
+1317.6682333333342: ACO_Broker: The number of finished Cloudlets is:859
+1320.5267333333343: ACO_Broker: Cloudlet #858 return received
+1320.5267333333343: ACO_Broker: The number of finished Cloudlets is:860
+1323.4059333333344: ACO_Broker: Cloudlet #824 return received
+1323.4059333333344: ACO_Broker: The number of finished Cloudlets is:861
+1329.4275333333344: ACO_Broker: Cloudlet #816 return received
+1329.4275333333344: ACO_Broker: The number of finished Cloudlets is:862
+1331.0035333333344: ACO_Broker: Cloudlet #830 return received
+1331.0035333333344: ACO_Broker: The number of finished Cloudlets is:863
+1331.0235333333344: ACO_Broker: Cloudlet #892 return received
+1331.0235333333344: ACO_Broker: The number of finished Cloudlets is:864
+1340.2580333333344: ACO_Broker: Cloudlet #812 return received
+1340.2580333333344: ACO_Broker: The number of finished Cloudlets is:865
+1340.4068333333344: ACO_Broker: Cloudlet #765 return received
+1340.4068333333344: ACO_Broker: The number of finished Cloudlets is:866
+1347.8548333333345: ACO_Broker: Cloudlet #836 return received
+1347.8548333333345: ACO_Broker: The number of finished Cloudlets is:867
+1352.8072333333344: ACO_Broker: Cloudlet #833 return received
+1352.8072333333344: ACO_Broker: The number of finished Cloudlets is:868
+1355.5032333333343: ACO_Broker: Cloudlet #848 return received
+1355.5032333333343: ACO_Broker: The number of finished Cloudlets is:869
+1355.5232333333342: ACO_Broker: Cloudlet #898 return received
+1355.5232333333342: ACO_Broker: The number of finished Cloudlets is:870
+1358.6672333333343: ACO_Broker: Cloudlet #877 return received
+1358.6672333333343: ACO_Broker: The number of finished Cloudlets is:871
+1359.2052333333343: ACO_Broker: Cloudlet #841 return received
+1359.2052333333343: ACO_Broker: The number of finished Cloudlets is:872
+1362.691900000001: ACO_Broker: Cloudlet #852 return received
+1362.691900000001: ACO_Broker: The number of finished Cloudlets is:873
+1363.6712333333344: ACO_Broker: Cloudlet #889 return received
+1363.6712333333344: ACO_Broker: The number of finished Cloudlets is:874
+1363.8056333333343: ACO_Broker: Cloudlet #843 return received
+1363.8056333333343: ACO_Broker: The number of finished Cloudlets is:875
+1364.0266333333343: ACO_Broker: Cloudlet #881 return received
+1364.0266333333343: ACO_Broker: The number of finished Cloudlets is:876
+1368.4254333333342: ACO_Broker: Cloudlet #770 return received
+1368.4254333333342: ACO_Broker: The number of finished Cloudlets is:877
+1375.026100000001: ACO_Broker: Cloudlet #893 return received
+1375.026100000001: ACO_Broker: The number of finished Cloudlets is:878
+1377.6734333333343: ACO_Broker: Cloudlet #856 return received
+1377.6734333333343: ACO_Broker: The number of finished Cloudlets is:879
+1381.4246333333342: ACO_Broker: Cloudlet #810 return received
+1381.4246333333342: ACO_Broker: The number of finished Cloudlets is:880
+1393.6699666666675: ACO_Broker: Cloudlet #799 return received
+1393.6699666666675: ACO_Broker: The number of finished Cloudlets is:881
+1396.3544666666676: ACO_Broker: Cloudlet #875 return received
+1396.3544666666676: ACO_Broker: The number of finished Cloudlets is:882
+1400.4048666666677: ACO_Broker: Cloudlet #845 return received
+1400.4048666666677: ACO_Broker: The number of finished Cloudlets is:883
+1402.6064666666678: ACO_Broker: Cloudlet #894 return received
+1402.6064666666678: ACO_Broker: The number of finished Cloudlets is:884
+1405.5014666666677: ACO_Broker: Cloudlet #839 return received
+1405.5014666666677: ACO_Broker: The number of finished Cloudlets is:885
+1408.0250666666677: ACO_Broker: Cloudlet #862 return received
+1408.0250666666677: ACO_Broker: The number of finished Cloudlets is:886
+1408.2054666666677: ACO_Broker: Cloudlet #847 return received
+1408.2054666666677: ACO_Broker: The number of finished Cloudlets is:887
+1416.672800000001: ACO_Broker: Cloudlet #502 return received
+1416.672800000001: ACO_Broker: The number of finished Cloudlets is:888
+1424.0061333333342: ACO_Broker: Cloudlet #762 return received
+1424.0061333333342: ACO_Broker: The number of finished Cloudlets is:889
+1424.0261333333342: ACO_Broker: Cloudlet #895 return received
+1424.0261333333342: ACO_Broker: The number of finished Cloudlets is:890
+1429.0245333333341: ACO_Broker: Cloudlet #865 return received
+1429.0245333333341: ACO_Broker: The number of finished Cloudlets is:891
+1430.8045333333341: ACO_Broker: Cloudlet #899 return received
+1430.8045333333341: ACO_Broker: The number of finished Cloudlets is:892
+1434.0252000000007: ACO_Broker: Cloudlet #883 return received
+1434.0252000000007: ACO_Broker: The number of finished Cloudlets is:893
+1438.3398666666674: ACO_Broker: Cloudlet #884 return received
+1438.3398666666674: ACO_Broker: The number of finished Cloudlets is:894
+1443.2046666666674: ACO_Broker: Cloudlet #891 return received
+1443.2046666666674: ACO_Broker: The number of finished Cloudlets is:895
+1445.0246666666674: ACO_Broker: Cloudlet #806 return received
+1445.0246666666674: ACO_Broker: The number of finished Cloudlets is:896
+1450.0441666666675: ACO_Broker: Cloudlet #750 return received
+1450.0441666666675: ACO_Broker: The number of finished Cloudlets is:897
+1454.5241666666675: ACO_Broker: Cloudlet #837 return received
+1454.5241666666675: ACO_Broker: The number of finished Cloudlets is:898
+1476.8069666666674: ACO_Broker: Cloudlet #878 return received
+1476.8069666666674: ACO_Broker: The number of finished Cloudlets is:899
+1478.0229666666673: ACO_Broker: Cloudlet #846 return received
+1478.0229666666673: ACO_Broker: The number of finished Cloudlets is:900
+1478.0229666666673: ACO_Broker: All Cloudlets executed. Finishing...
+1478.0229666666673: ACO_Broker: Destroying Vm #0
+1478.0229666666673: ACO_Broker: Destroying Vm #1
+1478.0229666666673: ACO_Broker: Destroying Vm #2
+1478.0229666666673: ACO_Broker: Destroying Vm #3
+1478.0229666666673: ACO_Broker: Destroying Vm #4
+1478.0229666666673: ACO_Broker: Destroying Vm #5
+1478.0229666666673: ACO_Broker: Destroying Vm #6
+1478.0229666666673: ACO_Broker: Destroying Vm #7
+1478.0229666666673: ACO_Broker: Destroying Vm #8
+1478.0229666666673: ACO_Broker: Destroying Vm #9
+1478.0229666666673: ACO_Broker: Destroying Vm #10
+1478.0229666666673: ACO_Broker: Destroying Vm #11
+1478.0229666666673: ACO_Broker: Destroying Vm #12
+1478.0229666666673: ACO_Broker: Destroying Vm #13
+1478.0229666666673: ACO_Broker: Destroying Vm #14
+1478.0229666666673: ACO_Broker: Destroying Vm #15
+1478.0229666666673: ACO_Broker: Destroying Vm #16
+1478.0229666666673: ACO_Broker: Destroying Vm #17
+1478.0229666666673: ACO_Broker: Destroying Vm #18
+1478.0229666666673: ACO_Broker: Destroying Vm #19
+1478.0229666666673: ACO_Broker is shutting down...
+1478.0229666666673: Simulation: No more future events
+1478.0229666666673: CloudInformationService is shutting down...
+1478.0229666666673: CloudInformationService: Notify all CloudSim entities for shutting down.
+1478.0229666666673: Datacenter_0 is shutting down...
+1478.0229666666673: ACO_Broker is shutting down...
+Simulation completed.
+Simulation completed.
+
+========== CLOUDLET RESULTS ==========
+(only the first 20 successful Cloudlets are shown; METRICS below are still computed from all 900 results)
+Cloudlet ID	Status	VM ID	Exec Time	Start Time	Finish Time
+70	SUCCESS	0	15	0.01	15.01
+1	SUCCESS	17	16	0.01	16.01
+66	SUCCESS	6	18.3333	0.01	18.3433
+44	SUCCESS	8	18.3333	0.01	18.3433
+4	SUCCESS	16	19.5997	0.01	19.6097
+13	SUCCESS	18	20.3997	0.01	20.4097
+21	SUCCESS	16	21.1997	0.01	21.2097
+9	SUCCESS	18	21.9997	0.01	22.0097
+11	SUCCESS	15	23.5997	0.01	23.6097
+22	SUCCESS	15	24.3997	0.01	24.4097
+54	SUCCESS	13	24.4997	0.01	24.5097
+25	SUCCESS	16	25.1997	0.01	25.2097
+7	SUCCESS	17	25.1997	0.01	25.2097
+28	SUCCESS	11	26.4997	0.01	26.5097
+87	SUCCESS	1	27.4997	0.01	27.5097
+48	SUCCESS	13	29.4997	0.01	29.5097
+23	SUCCESS	17	30.7997	0.01	30.8097
+6	SUCCESS	18	33.9997	0.01	34.0097
+52	SUCCESS	14	36.4997	0.01	36.5097
+29	SUCCESS	5	36.6664	0.01	36.6764
+
+========== METRICS ==========
+Completed Cloudlets      : 900
+Makespan                 : 1478.023 s
+Degree of Imbalance      : 1.5255
+Average Waiting Time     : 569.3794 s
+Throughput               : 0.6089 cloudlets/s
+Average VM Utilization*  : 90.3163 %
+Utilization (MET formula): 203.2118 % (can exceed 100% on multi-core VMs)
+
+* Utilization = total Cloudlet CPU time / (makespan x 45 total VM PEs).
+Result appended to results\aco_raw.csv
+ACO_TaskScheduling finished!

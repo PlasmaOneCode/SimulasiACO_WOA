@@ -1,0 +1,19 @@
+# Maven
+**/target/
+
+# Java
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hasil run manual / demo (bukan bagian eksperimen utama)
+results/*_manual.csv
