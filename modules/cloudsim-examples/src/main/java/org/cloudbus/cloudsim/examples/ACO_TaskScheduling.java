@@ -39,54 +39,87 @@ import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 /**
- * ACO_TaskScheduling: Ant Colony Optimization task scheduling using CloudSim.
+ * Runner CloudSim sekaligus implementasi Ant Colony Optimization (ACO) untuk
+ * memetakan setiap Cloudlet ke satu VM. Cloudlet adalah pekerjaan dengan panjang
+ * dalam MI, sedangkan VM memiliki kecepatan MIPS dan sejumlah PE.
  *
- * Scenario:
- * 1 Datacenter
- * 10 heterogeneous Hosts
- * 20 heterogeneous VMs
- * N Cloudlets read from dataset/GoCJ_Dataset_N.txt (GoCJ file of that size)
+ * Alur kerja:
+ * 1. Membuat CloudSim, datacenter, broker, 20 VM, dan Cloudlet dari dataset.
+ * 2. Menjalankan ACO untuk membangun dan memperbaiki pemetaan Cloudlet ke VM.
+ * 3. Mengikat pemetaan ke Cloudlet melalui setGuestId, menjalankan simulasi,
+ *    lalu menghitung metrik dari hasil CloudSim dan menulis CSV.
  *
- * ACO searches for a Cloudlet-to-VM mapping that minimizes the makespan.
- * 30 ants x 100 iterations = 3000 fitness evaluations.
+ * Input kelas ini adalah argumen jumlah task, nomor run, seed, path CSV, dan
+ * path dataset. Outputnya adalah log konfigurasi dan hasil, enam metrik simulasi,
+ * serta satu baris CSV. Analogi ACO-nya adalah semut yang mencoba rute: pilihan
+ * yang baik meninggalkan pheromone (jejak feromon) agar semut berikutnya lebih
+ * sering mencoba pilihan tersebut.
  *
- * The resulting assignment is bound through DatacenterBroker (setGuestId)
- * before the simulation, exactly like the MET reference implementation.
+ * Cara membaca hubungan antar-method:
+ * - main memanggil createVmList untuk membuat VM, lalu loadGoCJ dan
+ *   createCloudletList untuk mengubah data MI menjadi Cloudlet.
+ * - main membuat VmModel dan array panjang job, lalu memberikannya ke runACO
+ *   bersama Random. runACO mengulang ITERATIONS kali; pada setiap iterasi,
+ *   ANTS semut membangun assignment dan memberikannya ke VmModel.fitness.
+ * - Setelah runACO mengembalikan Solution terbaik, main membaca assignment,
+ *   mengubah indeks VM menjadi VM ID, lalu memanggil setGuestId.
+ * - Setelah CloudSim selesai, main memberikan hasil ke printMetrics, lalu
+ *   array metrik diberikan ke appendCsv.
  *
- * Usage (run from the repository root):
- *   ACO_TaskScheduling [numTasks] [run] [seed] [outputCsv] [datasetPath]
- * Defaults: 1000 tasks, run 1, seed = run, results/aco_manual.csv,
- *           dataset/GoCJ_Dataset_<numTasks>.txt
+ * Jalankan dari root repository:
+ * ACO_TaskScheduling [numTasks] [run] [seed] [outputCsv] [datasetPath]
  */
 public class ACO_TaskScheduling {
 
+    /** Jumlah pengguna CloudSim; satu broker mewakili satu eksperimen. */
     private static final int NUM_USERS = 1;
+    /** Jumlah host; dibesarkan menambah kapasitas, tetapi juga sumber daya simulasi. */
     private static final int NUM_HOSTS = 10;
+    /** Jumlah VM kandidat; dibesarkan memperluas pilihan penjadwalan. */
     private static final int NUM_VMS = 20;
 
     /* Dataset GoCJ per ukuran: dataset/GoCJ_Dataset_<jumlahTask>.txt */
+    /** Membentuk path dataset default dari jumlah Cloudlet yang diminta. */
     private static String defaultDatasetPath(int numTasks) {
         return "dataset/GoCJ_Dataset_" + numTasks + ".txt";
     }
+    /** File CSV default untuk hasil run ACO. */
     private static final String DEFAULT_CSV = "results/aco_manual.csv";
+    /** Label keluarga dataset yang ditulis ke CSV. */
     private static final String FAMILY = "GoCJ";
 
     /* Locale.ROOT agar titik desimal tetap '.' di komputer berlokal Indonesia */
+    /** Format angka log dan CSV agar pemisah desimal selalu titik. */
     private static final DecimalFormat DF =
             new DecimalFormat("0.####", DecimalFormatSymbols.getInstance(Locale.ROOT));
 
     /* ---------- Parameter ACO ---------- */
+    /** Jumlah semut per iterasi; lebih besar memperluas eksplorasi tetapi lebih lambat. */
     private static final int ANTS = 30;
+    /** Jumlah iterasi; lebih besar memberi kesempatan belajar lebih lama. */
     private static final int ITERATIONS = 100;       // 30 x 100 = 3000 evaluasi
+    /** Bobot pheromone; lebih besar lebih mengikuti pengalaman semut sebelumnya. */
     private static final double ALPHA = 1.0;         // bobot feromon
+    /** Bobot heuristik; lebih besar lebih memilih VM yang cepat saat ini. */
     private static final double BETA = 2.0;          // bobot heuristik
+    /** Laju penguapan; lebih besar melupakan jejak lama lebih cepat. */
     private static final double RHO = 0.3;           // laju penguapan
+    /** Skala deposit pheromone; lebih besar memperkuat solusi terpilih. */
     private static final double Q = 1.0;             // konstanta deposit feromon
+    /** Nilai awal pheromone; lebih besar membuat awal pencarian lebih netral. */
     private static final double TAU_INIT = 1.0;
+    /** Batas bawah pheromone agar pilihan tidak hilang sepenuhnya. */
     private static final double TAU_MIN = 0.01;
+    /** Batas atas pheromone agar satu pilihan tidak mendominasi tanpa batas. */
     private static final double TAU_MAX = 2.0 * Q / RHO;
 
 
+    /**
+     * Parameter: args berisi jumlah task, run, seed, CSV, dan dataset opsional.
+     * Nilai kembali: tidak ada. Efeknya menjalankan simulasi dan menulis output.
+     * Urutan tahap sengaja mengikuti alur presentasi: konfigurasi, VM, Cloudlet,
+     * penjadwalan, simulasi, lalu metrik.
+     */
     public static void main(String[] args) {
         int numTasks = args.length > 0 ? Integer.parseInt(args[0]) : 1000;
         int run = args.length > 1 ? Integer.parseInt(args[1]) : 1;
@@ -96,16 +129,20 @@ public class ACO_TaskScheduling {
 
         Log.println("Starting ACO_TaskScheduling...");
         try {
-            /* Membuat datacenter dan broker */
+            /* BAGIAN 1: Konfigurasi datacenter dan host, lalu broker. */
             CloudSim.init(NUM_USERS, Calendar.getInstance(), false);
 
             Datacenter datacenter = createDatacenter("Datacenter_0");
             DatacenterBroker broker = new DatacenterBroker("ACO_Broker");
             int brokerId = broker.getId();
 
-            /* Menyiapkan VM dan membaca N panjang pekerjaan pertama */
+            /* BAGIAN 2 dan 3: Menyiapkan VM dan membaca N panjang pekerjaan
+               pertama dari dataset untuk dibuat menjadi Cloudlet. */
+            // createVmList menerima brokerId dan mengembalikan daftar VM.
             List<Vm> vmList = createVmList(brokerId);
 
+            // loadGoCJ membaca nilai MI dari file, lalu createCloudletList
+            // mengubah setiap nilai MI menjadi satu Cloudlet milik broker.
             List<Long> jobLengths = loadGoCJ(Paths.get(datasetPath));
             Log.println("Dataset loaded: " + datasetPath
                     + " (" + jobLengths.size() + " jobs available)");
@@ -124,7 +161,9 @@ public class ACO_TaskScheduling {
 
             broker.submitGuestList(vmList);
 
-            /* Menjalankan algoritma metaheuristik untuk menentukan VM tiap Cloudlet */
+            /* BAGIAN 4: Penjadwalan. ACO memilih indeks VM untuk setiap Cloudlet. */
+            // runACO menerima panjang job, model VM, dan sumber acak. Di dalamnya
+            // ada loop ITERATIONS x ANTS; setiap assignment dikirim ke fitness().
             VmModel model = new VmModel(vmList);
             double[] length = new double[jobLengths.size()];
             for (int i = 0; i < length.length; i++) {
@@ -137,6 +176,8 @@ public class ACO_TaskScheduling {
             double schedulingMs = (System.nanoTime() - startNs) / 1_000_000.0;
 
             Map<Integer, Integer> assignment = new LinkedHashMap<>();
+            // Solution.assign berisi indeks VM, bukan VM ID. Indeks itu dibaca
+            // dari vmList untuk mendapatkan ID yang dipakai CloudSim.
             for (int i = 0; i < cloudletList.size(); i++) {
                 Cloudlet cloudlet = cloudletList.get(i);
                 int vmId = vmList.get(solution.assign[i]).getId();
@@ -152,13 +193,14 @@ public class ACO_TaskScheduling {
             printConfiguration(jobLengths, vmList, assignment,
                     run, seed, solution, schedulingMs);
 
-            /* Menjalankan simulasi dan mengambil hasilnya */
+            /* BAGIAN 5: Menjalankan simulasi CloudSim dan mengambil hasilnya. */
             CloudSim.startSimulation();
             CloudSim.stopSimulation();
 
             List<Cloudlet> results = broker.getCloudletReceivedList();
 
             printCloudletResults(results);
+            /* BAGIAN 6: Menghitung metrik dari seluruh hasil CloudSim. */
             double[] metrics = printMetrics(results, vmList);
 
             appendCsv(Paths.get(csvPath), numTasks, run, seed,
@@ -177,12 +219,13 @@ public class ACO_TaskScheduling {
     /* Algoritma                                                              */
     /* ====================================================================== */
 
-    /** Hasil penjadwalan: indeks VM untuk setiap Cloudlet dan nilai fitness. */
+    /** Menyimpan pemetaan indeks VM, fitness terendah, dan makespan estimasi. */
     private static final class Solution {
         final int[] assign;
         final double fitness;   // makespan + tie-break (yang diminimalkan)
         final double makespan;  // estimasi makespan murni
 
+        /** Parameter: pemetaan, fitness, dan makespan; return: objek solusi baru. */
         Solution(int[] assign, double fitness, double makespan) {
             this.assign = assign;
             this.fitness = fitness;
@@ -203,6 +246,11 @@ public class ACO_TaskScheduling {
         final int[] offset;
         final int totalPes;
 
+        /**
+         * Parameter: vmList sebagai sumber MIPS dan PE; return: model VM baru.
+         * Alasan: susunan PE diringkas sekali agar fitness tidak membuat objek
+         * CloudSim berulang kali.
+         */
         VmModel(List<Vm> vmList) {
             count = vmList.size();
             mips = new double[count];
@@ -226,11 +274,16 @@ public class ACO_TaskScheduling {
          * sama, misalnya saat satu Cloudlet terbesar sudah menentukan
          * makespan pada jumlah task kecil.
          */
+        /** Bobot rata-rata selesai; lebih besar lebih kuat memecah tie makespan. */
         static final double TIE_BREAK = 0.001;
 
         private double lastMakespan;
 
-        /** Simulasi antrean per VM; mengembalikan jumlah waktu selesai. */
+        /**
+         * Parameter: assignment, panjang MI, dan buffer waktu bebas PE.
+         * Return: jumlah waktu selesai semua Cloudlet; makespan disimpan internal.
+         * Alasan: ini meniru antrean FIFO CloudletSchedulerSpaceShared secara cepat.
+         */
         private double simulate(int[] assign, double[] length, double[] peFree) {
             Arrays.fill(peFree, 0.0);
             double max = 0.0;
@@ -260,13 +313,17 @@ public class ACO_TaskScheduling {
             return sumFinish;
         }
 
-        /** Fitness yang diminimalkan: makespan + TIE_BREAK x rata-rata selesai. */
+        /**
+         * Parameter: assignment, panjang MI, dan buffer PE; return: fitness yang
+         * diminimalkan. Makespan menjadi tujuan utama, sedangkan rata-rata selesai
+         * berbobot kecil memecah solusi yang memiliki makespan sama.
+         */
         double fitness(int[] assign, double[] length, double[] peFree) {
             double sumFinish = simulate(assign, length, peFree);
             return lastMakespan + TIE_BREAK * sumFinish / assign.length;
         }
 
-        /** Estimasi makespan murni untuk satu solusi. */
+        /** Parameter: assignment, panjang MI, buffer PE; return: makespan estimasi. */
         double makespan(int[] assign, double[] length, double[] peFree) {
             simulate(assign, length, peFree);
             return lastMakespan;
@@ -277,12 +334,14 @@ public class ACO_TaskScheduling {
     /* ACO (Ant Colony Optimization)                                          */
     /* ====================================================================== */
 
+    /** Return: ringkasan parameter ACO untuk log, tanpa mengubah parameter. */
     private static String parameterSummary() {
         return "ants=" + ANTS + ", iterations=" + ITERATIONS
                 + ", alpha=" + ALPHA + ", beta=" + BETA
                 + ", rho=" + RHO + ", Q=" + Q;
     }
 
+    /** Parameter: basis dan pangkat; return: hasil pangkat dengan jalur cepat. */
     private static double pow(double x, double e) {
         if (e == 1.0) {
             return x;
@@ -333,6 +392,8 @@ public class ACO_TaskScheduling {
                     double sum = 0.0;
 
                     for (int j = 0; j < m; j++) {
+                        // eta memasukkan waktu antrean, sehingga VM cepat yang sudah
+                        // penuh tidak selalu mengalahkan VM lain yang lebih kosong.
                         double completion =
                                 earliest[j] + length[i] / model.mips[j];
                         double eta = 1.0 / completion;
@@ -340,6 +401,8 @@ public class ACO_TaskScheduling {
                         sum += weight[j];
                     }
 
+                    // Roulette memberi peluang proporsional, bukan selalu memilih
+                    // bobot terbesar, sehingga eksplorasi tetap berlangsung.
                     int chosen = roulette(weight, sum, rnd);
                     assign[i] = chosen;
 
@@ -374,6 +437,8 @@ public class ACO_TaskScheduling {
                 bestAssign = iterAssign.clone();
             }
 
+            /* tau_ij = (1 - rho) x tau_ij: jejak lama dikurangi agar solusi baru
+               tetap dapat masuk, lalu deposit memperkuat pilihan yang baik. */
             /* Penguapan feromon */
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < m; j++) {
@@ -381,7 +446,8 @@ public class ACO_TaskScheduling {
                 }
             }
 
-            /* Deposit: semut terbaik iterasi (relatif terhadap terbaik global) */
+            /* Deposit semut terbaik iterasi diberi rasio terhadap terbaik global:
+               semakin dekat kualitasnya, semakin besar tambahan jejaknya. */
             double iterDeposit = Q * (bestFit / iterFit);
             for (int i = 0; i < n; i++) {
                 int j = iterAssign[i];
@@ -399,6 +465,10 @@ public class ACO_TaskScheduling {
                 model.makespan(bestAssign, length, peFree));
     }
 
+    /**
+     * Parameter: bobot pilihan, jumlah bobot, dan sumber acak; return: indeks VM.
+     * Alasan: pemilihan proporsional menjaga keseimbangan eksplorasi dan eksploitasi.
+     */
     private static int roulette(double[] weight, double sum, Random rnd) {
         if (!(sum > 0.0) || Double.isNaN(sum) || Double.isInfinite(sum)) {
             return rnd.nextInt(weight.length);
@@ -422,6 +492,11 @@ public class ACO_TaskScheduling {
     /* Infrastruktur CloudSim (sama dengan referensi MET)                     */
     /* ====================================================================== */
 
+    /**
+     * Parameter: nama datacenter; return: datacenter berisi 10 host heterogen.
+     * Alasan: infrastruktur tetap sama dengan pembanding agar perbedaan hasil
+     * terutama berasal dari algoritma penjadwalan.
+     */
     private static Datacenter createDatacenter(String name) {
         /* Membuat host dengan dua kelas spesifikasi */
         List<Host> hostList = new ArrayList<>();
@@ -496,6 +571,10 @@ public class ACO_TaskScheduling {
         }
     }
 
+    /**
+     * Parameter: id broker pemilik VM; return: 20 VM dalam empat tipe.
+     * Alasan: heterogenitas MIPS dan PE membuat pemetaan task menjadi masalah optimasi.
+     */
     private static List<Vm> createVmList(int brokerId) {
         List<Vm> list = new ArrayList<>();
 
@@ -540,6 +619,10 @@ public class ACO_TaskScheduling {
         return list;
     }
 
+    /**
+     * Parameter: brokerId dan panjang job dalam MI; return: Cloudlet satu-PE.
+     * Alasan: setiap nilai dataset menjadi satu task yang dapat diikat ke VM.
+     */
     private static List<Cloudlet> createCloudletList(
             int brokerId,
             List<Long> jobLengths) {
@@ -572,6 +655,11 @@ public class ACO_TaskScheduling {
         return list;
     }
 
+    /**
+     * Parameter: path dataset; return: daftar MI positif.
+     * Alasan: header, komentar, dan baris nonangka dilewati agar input GoCJ
+     * dapat dibaca tanpa mengubah data valid; IOException menandai input gagal.
+     */
     private static List<Long> loadGoCJ(Path path) throws IOException {
         if (!Files.exists(path)) {
             throw new IOException("Dataset file not found: " + path);
@@ -617,6 +705,10 @@ public class ACO_TaskScheduling {
     /* Output dan metrik                                                      */
     /* ====================================================================== */
 
+    /**
+     * Parameter: panjang job, VM, assignment, run, seed, solusi, waktu algoritma.
+     * Return: tidak ada. Menampilkan konfigurasi dan sebagian pemetaan untuk audit.
+     */
     private static void printConfiguration(
             List<Long> jobLengths,
             List<Vm> vmList,
@@ -679,6 +771,7 @@ public class ACO_TaskScheduling {
         }
     }
 
+    /** Parameter: hasil CloudSim; return: tidak ada. Menampilkan maksimal 20 hasil sukses. */
     private static void printCloudletResults(List<Cloudlet> list) {
         Log.println();
         Log.println("========== CLOUDLET RESULTS ==========");
@@ -717,6 +810,7 @@ public class ACO_TaskScheduling {
     }
 
     /**
+     * Parameter: hasil CloudSim dan daftar VM; return: enam metrik dalam urutan CSV.
      * Menghitung dan mencetak metrik (sama dengan referensi MET, kecuali utilisasi yang berbasis PE).
      *
      * @return {makespan, degreeOfImbalance, averageWaitingTime,
@@ -782,6 +876,11 @@ public class ACO_TaskScheduling {
                     .min()
                     .orElse(0.0);
 
+        // DoI = (beban maksimum - beban minimum) / beban rata-rata.
+        /*
+         * Rumus DoI = (beban maksimum - beban minimum) / beban rata-rata.
+         * Nilai lebih kecil berarti pembagian beban antar VM lebih seimbang.
+         */
         double degreeOfImbalance =
                 averageLoad == 0.0
                 ? 0.0
@@ -793,9 +892,19 @@ public class ACO_TaskScheduling {
                     .mapToDouble(Cloudlet::getActualCPUTime)
                     .sum();
 
+        // Waiting time di implementasi ini memakai waktu mulai Cloudlet sejak t=0.
+        /*
+         * Rumus average waiting time = jumlah waktu mulai Cloudlet / jumlah
+         * hasil. Kode memakai start sejak waktu simulasi 0 sebagai proksi antrean.
+         */
         double averageWaitingTime =
                 totalWaitingTime / results.size();
 
+        // Throughput = jumlah Cloudlet selesai / makespan.
+        /*
+         * Rumus throughput = jumlah Cloudlet selesai / makespan, dalam
+         * Cloudlet per detik.
+         */
         double throughput =
                 makespan == 0.0
                 ? 0.0
@@ -813,11 +922,18 @@ public class ACO_TaskScheduling {
             totalPes += vm.getNumberOfPes();
         }
 
+        // Utilisasi = total waktu CPU / (makespan x total PE) x 100%.
+        /*
+         * Rumus utilization = total waktu CPU Cloudlet /
+         * (makespan x total PE VM) x 100 persen.
+         */
         double utilization =
                 makespan == 0.0
                 ? 0.0
                 : (totalActualCpuTime / (makespan * totalPes)) * 100.0;
 
+        // Rumus lama MET memakai jumlah VM, bukan total PE, dan dipertahankan
+        // hanya untuk pembanding pada CSV.
         double utilizationLegacy =
                 makespan == 0.0
                 ? 0.0
@@ -847,6 +963,11 @@ public class ACO_TaskScheduling {
     }
 
     /** Menambahkan satu baris hasil ke file CSV (header dibuat otomatis). */
+    /**
+     * Parameter: path, ukuran run, seed, jumlah hasil, metrik, makespan estimasi,
+     * dan waktu penjadwalan; return: tidak ada. Menambah header bila perlu lalu
+     * menulis satu baris hasil agar eksperimen dapat digabungkan.
+     */
     private static void appendCsv(
             Path path,
             int numTasks,

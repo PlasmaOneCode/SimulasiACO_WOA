@@ -39,48 +39,75 @@ import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 /**
- * WOA_TaskScheduling: Whale Optimization Algorithm task scheduling using CloudSim.
+ * Runner CloudSim sekaligus implementasi Whale Optimization Algorithm (WOA)
+ * untuk memetakan setiap Cloudlet ke VM. Cloudlet adalah pekerjaan dalam MI,
+ * sedangkan VM menjalankan pekerjaan dengan kapasitas MIPS dan PE tertentu.
  *
- * Scenario:
- * 1 Datacenter
- * 10 heterogeneous Hosts
- * 20 heterogeneous VMs
- * N Cloudlets read from dataset/GoCJ_Dataset_N.txt (GoCJ file of that size)
+ * Alur kerja:
+ * 1. Membuat CloudSim, datacenter, broker, VM, dan Cloudlet dari dataset.
+ * 2. Menyimpan satu posisi kontinu per paus, mendekodekannya ke indeks VM,
+ *    dan memilih posisi terbaik menurut fitness.
+ * 3. Mengikat posisi terbaik ke Cloudlet, menjalankan CloudSim, menghitung
+ *    metrik, dan menulis hasil ke CSV.
  *
- * WOA searches for a Cloudlet-to-VM mapping that minimizes the makespan.
- * 30 whales x 100 iterations = 3000 fitness evaluations.
+ * Analogi WOA adalah kawanan paus: paus mendekati mangsa terbaik, kadang
+ * mengikuti paus acak untuk mencari wilayah lain, atau bergerak spiral.
+ * Inputnya adalah argumen jumlah task, run, seed, path CSV, dan dataset.
+ * Outputnya adalah log, hasil simulasi CloudSim, metrik, dan satu baris CSV.
  *
- * The resulting assignment is bound through DatacenterBroker (setGuestId)
- * before the simulation, exactly like the MET reference implementation.
+ * Cara membaca hubungan antar-method:
+ * - main memanggil createVmList untuk membuat VM, lalu loadGoCJ dan
+ *   createCloudletList untuk membentuk Cloudlet dari data MI.
+ * - main membuat VmModel dan array panjang job, lalu memberikannya ke runWOA
+ *   bersama Random. runWOA membuat WHALES posisi awal dan mengulang
+ *   ITERATIONS kali; setiap posisi diterjemahkan menjadi assignment lalu
+ *   diberikan ke VmModel.fitness.
+ * - Setelah runWOA mengembalikan Solution terbaik, main membaca assignment,
+ *   mengubah indeks VM menjadi VM ID, lalu memanggil setGuestId.
+ * - Setelah CloudSim selesai, main memberikan hasil ke printMetrics, lalu
+ *   array metrik diberikan ke appendCsv.
  *
- * Usage (run from the repository root):
- *   WOA_TaskScheduling [numTasks] [run] [seed] [outputCsv] [datasetPath]
- * Defaults: 1000 tasks, run 1, seed = run, results/woa_manual.csv,
- *           dataset/GoCJ_Dataset_<numTasks>.txt
+ * Jalankan dari root repository:
+ * WOA_TaskScheduling [numTasks] [run] [seed] [outputCsv] [datasetPath]
  */
 public class WOA_TaskScheduling {
 
+    /** Jumlah pengguna CloudSim; satu broker mewakili satu eksperimen. */
     private static final int NUM_USERS = 1;
+    /** Jumlah host; lebih besar menambah kapasitas infrastruktur simulasi. */
     private static final int NUM_HOSTS = 10;
+    /** Jumlah VM; lebih besar memperluas ruang solusi dan biaya evaluasi. */
     private static final int NUM_VMS = 20;
 
     /* Dataset GoCJ per ukuran: dataset/GoCJ_Dataset_<jumlahTask>.txt */
+    /** Membentuk path dataset default dari jumlah Cloudlet. */
     private static String defaultDatasetPath(int numTasks) {
         return "dataset/GoCJ_Dataset_" + numTasks + ".txt";
     }
+    /** File CSV default untuk hasil run WOA. */
     private static final String DEFAULT_CSV = "results/woa_manual.csv";
+    /** Label keluarga dataset yang ditulis ke CSV. */
     private static final String FAMILY = "GoCJ";
 
     /* Locale.ROOT agar titik desimal tetap '.' di komputer berlokal Indonesia */
+    /** Format angka agar titik desimal konsisten di semua lokal komputer. */
     private static final DecimalFormat DF =
             new DecimalFormat("0.####", DecimalFormatSymbols.getInstance(Locale.ROOT));
 
     /* ---------- Parameter WOA ---------- */
+    /** Jumlah paus; lebih besar memperluas pencarian tetapi memperlama run. */
     private static final int WHALES = 30;
+    /** Jumlah iterasi; lebih besar memberi lebih banyak pembaruan posisi. */
     private static final int ITERATIONS = 100;       // 30 x 100 = 3000 evaluasi
+    /** Bentuk spiral; nilai lebih besar memperlebar perubahan spiral. */
     private static final double B = 1.0;             // konstanta bentuk spiral
 
 
+    /**
+     * Parameter: args berisi jumlah task, run, seed, CSV, dan dataset opsional.
+     * Return: tidak ada. Menjalankan urutan konfigurasi, penjadwalan, simulasi,
+     * dan pelaporan hasil.
+     */
     public static void main(String[] args) {
         int numTasks = args.length > 0 ? Integer.parseInt(args[0]) : 1000;
         int run = args.length > 1 ? Integer.parseInt(args[1]) : 1;
@@ -90,16 +117,20 @@ public class WOA_TaskScheduling {
 
         Log.println("Starting WOA_TaskScheduling...");
         try {
-            /* Membuat datacenter dan broker */
+            /* BAGIAN 1: Konfigurasi datacenter dan host, lalu broker. */
             CloudSim.init(NUM_USERS, Calendar.getInstance(), false);
 
             Datacenter datacenter = createDatacenter("Datacenter_0");
             DatacenterBroker broker = new DatacenterBroker("WOA_Broker");
             int brokerId = broker.getId();
 
-            /* Menyiapkan VM dan membaca N panjang pekerjaan pertama */
+            /* BAGIAN 2 dan 3: Menyiapkan VM dan membaca N panjang pekerjaan
+               pertama dari dataset untuk dibuat menjadi Cloudlet. */
+            // createVmList menghasilkan daftar VM berdasarkan brokerId.
             List<Vm> vmList = createVmList(brokerId);
 
+            // loadGoCJ menghasilkan daftar panjang MI, lalu method berikutnya
+            // membungkus tiap nilai MI menjadi Cloudlet milik broker.
             List<Long> jobLengths = loadGoCJ(Paths.get(datasetPath));
             Log.println("Dataset loaded: " + datasetPath
                     + " (" + jobLengths.size() + " jobs available)");
@@ -118,7 +149,9 @@ public class WOA_TaskScheduling {
 
             broker.submitGuestList(vmList);
 
-            /* Menjalankan algoritma metaheuristik untuk menentukan VM tiap Cloudlet */
+            /* BAGIAN 4: Penjadwalan. WOA memilih indeks VM untuk setiap Cloudlet. */
+            // runWOA menerima panjang job, model VM, dan sumber acak. Di dalamnya
+            // ada loop ITERATIONS x WHALES dan setiap posisi dinilai oleh fitness().
             VmModel model = new VmModel(vmList);
             double[] length = new double[jobLengths.size()];
             for (int i = 0; i < length.length; i++) {
@@ -131,6 +164,8 @@ public class WOA_TaskScheduling {
             double schedulingMs = (System.nanoTime() - startNs) / 1_000_000.0;
 
             Map<Integer, Integer> assignment = new LinkedHashMap<>();
+            // Solution.assign adalah indeks VM hasil decoding, sedangkan
+            // setGuestId membutuhkan VM ID yang dibaca dari vmList.
             for (int i = 0; i < cloudletList.size(); i++) {
                 Cloudlet cloudlet = cloudletList.get(i);
                 int vmId = vmList.get(solution.assign[i]).getId();
@@ -146,13 +181,14 @@ public class WOA_TaskScheduling {
             printConfiguration(jobLengths, vmList, assignment,
                     run, seed, solution, schedulingMs);
 
-            /* Menjalankan simulasi dan mengambil hasilnya */
+            /* BAGIAN 5: Menjalankan simulasi CloudSim dan mengambil hasilnya. */
             CloudSim.startSimulation();
             CloudSim.stopSimulation();
 
             List<Cloudlet> results = broker.getCloudletReceivedList();
 
             printCloudletResults(results);
+            /* BAGIAN 6: Menghitung metrik dari seluruh hasil CloudSim. */
             double[] metrics = printMetrics(results, vmList);
 
             appendCsv(Paths.get(csvPath), numTasks, run, seed,
@@ -171,12 +207,13 @@ public class WOA_TaskScheduling {
     /* Algoritma                                                              */
     /* ====================================================================== */
 
-    /** Hasil penjadwalan: indeks VM untuk setiap Cloudlet dan nilai fitness. */
+    /** Menyimpan indeks VM, fitness terendah, dan makespan estimasi solusi. */
     private static final class Solution {
         final int[] assign;
         final double fitness;   // makespan + tie-break (yang diminimalkan)
         final double makespan;  // estimasi makespan murni
 
+        /** Parameter: pemetaan, fitness, makespan; return: solusi baru. */
         Solution(int[] assign, double fitness, double makespan) {
             this.assign = assign;
             this.fitness = fitness;
@@ -197,6 +234,10 @@ public class WOA_TaskScheduling {
         final int[] offset;
         final int totalPes;
 
+        /**
+         * Parameter: daftar VM; return: ringkasan MIPS, PE, dan offset PE.
+         * Alasan: fitness dapat meniru antrean tanpa membuat event CloudSim.
+         */
         VmModel(List<Vm> vmList) {
             count = vmList.size();
             mips = new double[count];
@@ -220,11 +261,16 @@ public class WOA_TaskScheduling {
          * sama, misalnya saat satu Cloudlet terbesar sudah menentukan
          * makespan pada jumlah task kecil.
          */
+        /** Bobot rata-rata selesai; lebih besar lebih kuat memecah tie makespan. */
         static final double TIE_BREAK = 0.001;
 
         private double lastMakespan;
 
-        /** Simulasi antrean per VM; mengembalikan jumlah waktu selesai. */
+        /**
+         * Parameter: assignment, panjang MI, buffer waktu bebas PE.
+         * Return: jumlah waktu selesai; makespan terakhir disimpan internal.
+         * Alasan: meniru FIFO CloudletSchedulerSpaceShared untuk evaluasi cepat.
+         */
         private double simulate(int[] assign, double[] length, double[] peFree) {
             Arrays.fill(peFree, 0.0);
             double max = 0.0;
@@ -254,13 +300,13 @@ public class WOA_TaskScheduling {
             return sumFinish;
         }
 
-        /** Fitness yang diminimalkan: makespan + TIE_BREAK x rata-rata selesai. */
+        /** Parameter: assignment, panjang, buffer PE; return: fitness minimum. */
         double fitness(int[] assign, double[] length, double[] peFree) {
             double sumFinish = simulate(assign, length, peFree);
             return lastMakespan + TIE_BREAK * sumFinish / assign.length;
         }
 
-        /** Estimasi makespan murni untuk satu solusi. */
+        /** Parameter: assignment, panjang, buffer PE; return: makespan estimasi. */
         double makespan(int[] assign, double[] length, double[] peFree) {
             simulate(assign, length, peFree);
             return lastMakespan;
@@ -271,6 +317,7 @@ public class WOA_TaskScheduling {
     /* WOA (Whale Optimization Algorithm)                                     */
     /* ====================================================================== */
 
+    /** Return: ringkasan parameter WOA untuk log konfigurasi. */
     private static String parameterSummary() {
         return "whales=" + WHALES + ", iterations=" + ITERATIONS
                 + ", b=" + B;
@@ -316,6 +363,8 @@ public class WOA_TaskScheduling {
                 for (int w = 0; w < WHALES; w++) {
                     double r1 = rnd.nextDouble();
                     double r2 = rnd.nextDouble();
+                    // A = 2ar - a dan C = 2r; a turun dari 2 menuju 0,
+                    // sehingga pencarian acak berkurang dan pengepungan meningkat.
                     double bigA = 2.0 * a * r1 - a;
                     double bigC = 2.0 * r2;
                     double l = (a2 - 1.0) * rnd.nextDouble() + 1.0;
@@ -327,16 +376,19 @@ public class WOA_TaskScheduling {
 
                         if (p < 0.5) {
                             if (Math.abs(bigA) >= 1.0) {
-                                /* Fase pencarian: ikuti paus acak */
+                                /* Fase pencarian: ikuti paus acak agar tidak cepat
+                                   terkunci pada leader yang belum tentu terbaik global. */
                                 double xr = pos[rnd.nextInt(WHALES)][d];
                                 next = xr - bigA * Math.abs(bigC * xr - x);
                             } else {
-                                /* Fase pengepungan: dekati posisi terbaik */
+                                /* Fase pengepungan: X berikutnya mendekati leader
+                                   memakai D = |C x X* - X|. */
                                 next = leader[d]
                                         - bigA * Math.abs(bigC * leader[d] - x);
                             }
                         } else {
-                            /* Fase spiral mengitari posisi terbaik */
+                            /* Fase spiral: D' x exp(b x l) x cos(2 pi l) + X*,
+                               dengan l acak pada interval [-1, 1]. */
                             double dist = Math.abs(leader[d] - x);
                             next = dist * Math.exp(B * l)
                                     * Math.cos(2.0 * Math.PI * l) + leader[d];
@@ -350,6 +402,8 @@ public class WOA_TaskScheduling {
             /* Mengevaluasi seluruh paus dan memperbarui posisi terbaik */
             for (int w = 0; w < WHALES; w++) {
                 for (int d = 0; d < n; d++) {
+                    // Posisi kontinu [0, jumlah VM) dipetakan dengan floor implisit
+                    // dari cast int; batas upper m - epsilon mencegah indeks m.
                     assign[d] = (int) pos[w][d];
                 }
 
@@ -372,6 +426,10 @@ public class WOA_TaskScheduling {
     /* Infrastruktur CloudSim (sama dengan referensi MET)                     */
     /* ====================================================================== */
 
+    /**
+     * Parameter: nama datacenter; return: datacenter dengan 10 host heterogen.
+     * Alasan: konfigurasi sama dengan ACO agar perbandingan hanya berbeda algoritma.
+     */
     private static Datacenter createDatacenter(String name) {
         /* Membuat host dengan dua kelas spesifikasi */
         List<Host> hostList = new ArrayList<>();
@@ -446,6 +504,10 @@ public class WOA_TaskScheduling {
         }
     }
 
+    /**
+     * Parameter: id broker; return: 20 VM dari empat tipe kapasitas.
+     * Alasan: variasi MIPS dan PE menyediakan ruang keputusan task scheduling.
+     */
     private static List<Vm> createVmList(int brokerId) {
         List<Vm> list = new ArrayList<>();
 
@@ -490,6 +552,10 @@ public class WOA_TaskScheduling {
         return list;
     }
 
+    /**
+     * Parameter: brokerId dan panjang job MI; return: daftar Cloudlet satu PE.
+     * Alasan: satu elemen dataset merepresentasikan satu task CloudSim.
+     */
     private static List<Cloudlet> createCloudletList(
             int brokerId,
             List<Long> jobLengths) {
@@ -522,6 +588,11 @@ public class WOA_TaskScheduling {
         return list;
     }
 
+    /**
+     * Parameter: path dataset; return: nilai MI positif.
+     * Alasan: header dan baris nonangka dilewati, sedangkan file kosong atau
+     * tidak ada dilaporkan sebagai IOException.
+     */
     private static List<Long> loadGoCJ(Path path) throws IOException {
         if (!Files.exists(path)) {
             throw new IOException("Dataset file not found: " + path);
@@ -567,6 +638,10 @@ public class WOA_TaskScheduling {
     /* Output dan metrik                                                      */
     /* ====================================================================== */
 
+    /**
+     * Parameter: input run, assignment, solusi, dan waktu penjadwalan.
+     * Return: tidak ada. Menampilkan parameter dan distribusi assignment.
+     */
     private static void printConfiguration(
             List<Long> jobLengths,
             List<Vm> vmList,
@@ -629,6 +704,7 @@ public class WOA_TaskScheduling {
         }
     }
 
+    /** Parameter: hasil CloudSim; return: tidak ada. Menampilkan 20 hasil sukses. */
     private static void printCloudletResults(List<Cloudlet> list) {
         Log.println();
         Log.println("========== CLOUDLET RESULTS ==========");
@@ -667,6 +743,7 @@ public class WOA_TaskScheduling {
     }
 
     /**
+     * Parameter: hasil CloudSim dan VM; return: enam metrik untuk CSV.
      * Menghitung dan mencetak metrik (sama dengan referensi MET, kecuali utilisasi yang berbasis PE).
      *
      * @return {makespan, degreeOfImbalance, averageWaitingTime,
@@ -732,6 +809,11 @@ public class WOA_TaskScheduling {
                     .min()
                     .orElse(0.0);
 
+        // DoI = (beban maksimum - beban minimum) / beban rata-rata.
+        /*
+         * Rumus DoI = (beban maksimum - beban minimum) / beban rata-rata.
+         * Nilai lebih kecil berarti pembagian beban antar VM lebih seimbang.
+         */
         double degreeOfImbalance =
                 averageLoad == 0.0
                 ? 0.0
@@ -743,9 +825,18 @@ public class WOA_TaskScheduling {
                     .mapToDouble(Cloudlet::getActualCPUTime)
                     .sum();
 
+        // Waiting time diukur sebagai rata-rata waktu mulai sejak simulasi t=0.
+        /*
+         * Rumus average waiting time = jumlah waktu mulai Cloudlet / jumlah
+         * hasil. Implementasi memakai start sejak simulasi t=0 sebagai proksi antrean.
+         */
         double averageWaitingTime =
                 totalWaitingTime / results.size();
 
+        // Throughput = jumlah Cloudlet / makespan.
+        /*
+         * Rumus throughput = jumlah Cloudlet selesai / makespan.
+         */
         double throughput =
                 makespan == 0.0
                 ? 0.0
@@ -763,11 +854,18 @@ public class WOA_TaskScheduling {
             totalPes += vm.getNumberOfPes();
         }
 
+        // Utilisasi = total waktu CPU / (makespan x total PE) x 100%.
+        /*
+         * Rumus utilization = total waktu CPU Cloudlet /
+         * (makespan x total PE VM) x 100 persen.
+         */
         double utilization =
                 makespan == 0.0
                 ? 0.0
                 : (totalActualCpuTime / (makespan * totalPes)) * 100.0;
 
+        // Rumus legacy memakai jumlah VM sebagai pembagi dan dipertahankan
+        // agar hasil dapat dibandingkan dengan referensi MET.
         double utilizationLegacy =
                 makespan == 0.0
                 ? 0.0
@@ -797,6 +895,10 @@ public class WOA_TaskScheduling {
     }
 
     /** Menambahkan satu baris hasil ke file CSV (header dibuat otomatis). */
+    /**
+     * Parameter: path, identitas run, jumlah hasil, metrik, makespan estimasi,
+     * dan waktu penjadwalan; return: tidak ada. Menulis header dan satu baris CSV.
+     */
     private static void appendCsv(
             Path path,
             int numTasks,
